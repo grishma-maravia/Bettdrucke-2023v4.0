@@ -4,7 +4,7 @@ $(document).ready(function (){
     const input = document.querySelector('.cl-po--input input[type=file]');
     const log = document.querySelector('.cl-po--upload-files');
 
-    input.addEventListener('change', updateValue);
+    input?.addEventListener('change', updateValue);
 
     function updateValue(e) {
       $('.cl-po--upload-files').addClass('success-icon');
