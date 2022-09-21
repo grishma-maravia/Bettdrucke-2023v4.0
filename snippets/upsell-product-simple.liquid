@@ -1,0 +1,120 @@
+{{ 'upsell-product-simple.css' | asset_url | stylesheet_tag }}
+
+{% for collection in product.collections %}
+	{% if collection.title == 'Deckenbezüge mit Druck' %}
+
+      {% comment %}Find comparable product by title - Suggested PILLOW Upsell on cover Product Pages {% endcomment %}
+      {% if product.title contains 'Baumwollbezug' %}
+          {% assign cover_title_base = product.title | remove: 'Baumwollbezug' | strip %}
+	  {% endif %}
+	  {% if product.title contains 'Bettbezug' %}
+          {% assign cover_title_base = product.title | remove: 'Bettbezug' | strip %}
+      {% endif %}
+
+      <div class="UpsellProd_MainWrapper">
+      {% comment %}Place Upsell product under the buy button - Suggested PILLOW Upsell on Cover Product Pages {% endcomment %}
+      {% layout none %}
+      {% paginate collections['kissenbezuge-und-kissen-mit-druck'].products by 1000 %}
+        {% for product in collections['kissenbezuge-und-kissen-mit-druck'].products %}
+          {% if product.title contains cover_title_base %}
+        	<h2 class="SuggestedUpProd_Heading"> Bezug + Kissen kombinieren & <span class="SuggestedUpProd_lineSparen">10% sparen!</span> </h2>
+            {% for variant in product.variants %}
+              {% if variant.option1 == "Ohne (Nur Kissenbezug)" and variant.option2 == "40 x 80 cm" %}
+                {%- assign image_url = variant.image.src | image_url: width: 300 -%}
+                <form class="SuggestedUpProd_ContentWr" method="post" action="/cart/add">
+                  <input type="hidden" name="id" value="{{ variant.id }}">
+                  <a href="{{ product.url }}" style="align-self: center;">
+                    <img class="SuggestedUpProd_imageWr" 
+                         data-rimg="lazy"
+                         data-rimg-template="{{ image_url }}"
+                         src="{{ image_url }}">
+                  </a>
+                  <div class="SuggestedUpProd_infoWr">
+                    <a class="UpsellProd_title" href="{{ product.url }}" style="text-decoration: none;">
+                      <h2 class="UpsellProd_title">{{ product.title }}</h2>
+                    </a>
+                    <div>
+                      <span class="Suggested_Price--highlight" style="font-weight:bold">
+                        {{ variant.price | money_without_trailing_zeros }}
+                      </span>
+                      <span class="Suggested_Price--compareAt">
+                        {{ variant.compare_at_price | money_without_trailing_zeros }}
+                      </span>
+
+                      <div class="SuggestedUpPro_variantText">
+                         Option: Ohne (Nur Kissenbezug) <br>
+                         Größe: 40 x 80 cm
+                      </div>
+                    </div>
+                    <button class="SuggestedUpProd_buttonWr small_button" type="submit">Hinzufügen</button>
+                  </div>
+                </form>
+               {% endif %}
+             {% endfor %}
+          {% endif %}
+        {% endfor %}
+      {% endpaginate %}
+      </div>
+	{% endif %}
+
+
+	{% if collection.title == 'Kissenbezüge und Kissen mit Druck' %}
+
+      {% comment %}Find comparable product by title - Suggested COVER Upsell on Pillow Product Pages {% endcomment %}
+      {% if product.title contains 'Kissen' %}
+          {% assign cushion_title_base = product.title | remove: 'Kissen' | strip %}
+      {% endif %}
+
+      <div class="UpsellProd_MainWrapper">
+      {% comment %}Place Upsell product under the buy button - Suggested COVER Upsell on Pillow Product Pages {% endcomment %}
+      {% layout none %}
+      {% paginate collections['deckenbezuge-mit-druck'].products by 1000 %}
+        {% for product in collections['deckenbezuge-mit-druck'].products %}
+          {% if product.title contains cushion_title_base %}
+        	<h2 class="SuggestedUpProd_Heading"> Bezug + Kissen kombinieren & <span class="SuggestedUpProd_lineSparen">10% sparen!</span> </h2>
+            {% for variant in product.variants %}
+              {% if variant.option1 contains "135 x 200 cm" %}
+                {%- assign image_url = variant.image.src | image_url: width: 300 -%}
+                <form class="SuggestedUpProd_ContentWr" method="post" action="/cart/add">
+                  <input type="hidden" name="id" value="{{ variant.id }}">
+                  <a href="{{ product.url }}" style="align-self: center;">
+                    <img class="SuggestedUpProd_imageWr" 
+                         data-rimg="lazy"
+                         data-rimg-template="{{ image_url }}"
+                         src="{{ image_url }}">
+                  </a>
+                  <div class="SuggestedUpProd_infoWr">
+                    <a href="{{ product.url }}" style="text-decoration: none;">
+                      <h2 class="UpsellProd_title">{{ product.title }}</h2>
+                    </a>
+                    <div>
+                      <span class="Suggested_Price--highlight" style="font-weight:bold">
+                        {{ variant.price | money_without_trailing_zeros }}
+                      </span>
+                      <span class="Suggested_Price--compareAt">
+                        {{ variant.compare_at_price | money_without_trailing_zeros }}
+                      </span>
+
+                      <div class="SuggestedUpPro_variantText">
+                          Größe: 135 x 200 cm
+                      </div>
+                    </div>
+                    <button class="SuggestedUpProd_buttonWr small_button" type="submit">Hinzufügen</button>
+                  </div>
+                </form>
+               {% endif %}
+             {% endfor %}
+          {% endif %}
+        {% endfor %}
+      {% endpaginate %}
+      </div>
+	{% endif %}
+
+{% endfor %}
+
+
+{% assign suggestedCollection = collection %}
+{% assign mainCollection = collection %}
+    <script type="text/javascript">
+      window.mainCollectionCoversProducts = {{ collection.products | json }};
+    </script>

@@ -1,0 +1,52 @@
+.jdgm-widget .jdgm-temp-hidden, .jdgm-write-rev-link, .jdgm-rev-widg__sort-wrapper, .jdgm-branding-footer{
+  display: none !important;
+}
+.jdgm-all-reviews-widget, .jdgm-rev-widg, .jdgm-quest, .jdgm-rev{
+  border: unset !important;
+}
+#judgeme_product_reviews, .jdgm-all-reviews-widget{
+  max-width: 900px !important;
+  margin: auto !important;
+}
+.jdgm-rev-widg__header, .jdgm-rev-widg__summary{
+  text-align: center;
+  display: contents;
+}
+.jdgm-rev__content{
+  margin-left: 61px
+}
+.jdgm-star{
+  color: #FE8761 !important
+}
+.jdgm-rev__icon{
+  background-color: #E7F6FD !important;
+}
+
+/* Hide verified label and add one to all products */
+.jdgm-rev__author:before{
+  content: "Verifiziert";
+  display: inline-block;
+  color: #ffffff;
+  background-color: rgb(49, 39, 131);
+  padding: 3px 7px;
+  font-size: 11px;
+  line-height: 1;
+  vertical-align: middle;
+  margin-right: 4px;
+  top:-2px;
+  position: relative;
+  top: -1px
+}
+.jdgm-rev__icon:after, .jdgm-rev__buyer-badge{
+  display: none !important;
+}
+.ProductForm_CheckPoints_Ulwrapper li{
+  list-style: none;
+}
+.ProductForm_CheckPoints_Ulwrapper li .iconmoon-check{
+  margin-left: -20px;
+  color:rgb(21, 112, 184)
+}
+.spb-productdescfont:focus, .spb-productdescfont:hover {
+  border-color: #1570b8 !important;
+}

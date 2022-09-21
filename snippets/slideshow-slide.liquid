@@ -1,0 +1,15 @@
+{% if settings.promotional_hero_hp_cover %}
+
+	{% render 'slideshow-slide-promotional' 
+              section: section,
+              block: block,
+              block_index: forloop.index0 %}
+
+{% else %}
+
+	{% render 'slideshow-slide-standard' 
+              section: section,
+              block: block,
+              block_index: forloop.index0 %}
+
+{% endif %}

@@ -1,0 +1,18 @@
+.kr-privacy-icon, .kr-important-icon{
+  position: relative; top: 2px; color: #fe8761;
+}
+.kr-important-icon{
+  left: 3px; padding-right: 6px; font-weight: bold;
+}
+.kr-privacy-icon{
+  font-size: 18px;
+}
+.cl-po--swatch {
+    border-width: 2px!important;
+}
+.cl-po--option{
+  margin-bottom: 10px !important;
+}
+#clqpzgw9nkgl .cl-po--option{
+  margin-bottom: 20px !important;
+}

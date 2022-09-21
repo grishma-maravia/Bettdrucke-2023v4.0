@@ -1,0 +1,225 @@
+{% liquid
+  assign block_slide_image = settings.promotional_hero_image
+  assign block_slide_image_mobile = settings.mobile_promotional_hero_image
+  
+  comment
+    assign block_slide_title = block.settings.title | escape
+    assign block_subheading = block.settings.text | escape
+  endcomment
+  
+  assign block_promo_art = settings.button_one_label | escape
+  assign block_button_label = settings.button_1_text | escape
+  assign block_button_link = settings.button_1_link
+  assign block_button_label_2 = block.settings.button_two_label | escape
+  assign block_button_link_2 = block.settings.button_two_link
+  assign block_image_position = block.settings.image_position
+  assign block_text_alignment = block.settings.text_alignment
+  assign block_text_color = block.settings.color
+  assign block_background_link = block.settings.link
+
+  assign block_crop_images = 'center'
+  if section.settings.slideshow_height == 'original'
+    assign block_crop_images = false
+  endif
+
+  if block.settings.show_overlay
+    assign block_overlay_color = block.settings.overlay_color
+    assign block_overlay_opacity = block.settings.overlay_opacity
+  endif
+
+  assign block_button_1_class = 'slideshow-slide__button--' | append: block.settings.button_one_style
+  assign block_button_2_class = 'slideshow-slide__button--' | append: block.settings.button_two_style
+%}
+
+{%- assign placeholder_number = block_index | modulo: 2 | plus: 1 -%}
+{%- assign placeholder = 'lifestyle-' | append: placeholder_number -%}
+{%- assign slide_number = block_index | plus: 1 -%}
+{%- assign overlay_opacity = 0 -%}
+{%- if block_overlay_opacity > 0 -%}
+  {%- assign overlay_opacity = block_overlay_opacity | times: 0.01 -%}
+{%- endif -%}
+
+
+{% style %}
+  .slideshow-slide__content--text-center{
+	display: flex;
+	flex-direction: column;
+	max-width: 350px;
+  }
+  .promo_buttonWrapper a.promo_slideButton{
+    position: relative;
+    margin-top: 10px !important;
+  }
+  .slideshow-slide__button--primary{
+	background-color: {{ settings.button_color }};
+	color: {{ settings.text_button_color }};
+	border: none !important;
+  }
+  .slideshow-slide__button--primary:hover{
+	background-color: {{ settings.text_button_color_hover }} !important;
+  }
+
+  @media screen and (min-width: 720px){
+    .slideshow-slide__content{
+      left: 25% !important;
+    }
+    .slideshow--text-below-image-false .promo_slideContent{
+      top: {{ settings.promo_art_y_content }}%;
+    }
+  }
+  @media screen and (max-width: 719px){
+	.slideshow--text-below-image-false .slideshow-slide__content{
+	  max-height: 100%;
+	  padding: 20px;
+	}
+    .promo_art{
+      max-height: 250px;
+    }
+    .slideshow--text-below-image-false .promo_slideContent{
+      top: {{ settings.promo_art_y_content_mobile }}%;
+    }
+  }
+
+{% endstyle %}
+<div
+  class="slideshow-slide {% if block_slide_image_mobile != blank %}slideshow-slide--mobile{% endif %} {{ block_class }}"
+  aria-label="{{ 'sections.slideshow.slide_counter' | t: count: slide_number, total: section.blocks.size }}"
+  {% if block_text_color != blank %}data-text-color="{{ block_text_color }}"{% endif %}
+  tabindex="-1"
+  data-slideshow-slide
+  data-slide-index="{{ block_index }}"
+  {{ block.shopify_attributes }}
+>
+  {%- if block_background_link != blank -%}
+    <a
+      href="{{ block_background_link }}"
+      class="slideshow-slide__background-link"
+      aria-label="{{ block_slide_title }} {{ block_subheading }}"
+    >
+  {%- endif -%}
+    <div
+      class="
+        slideshow-slide__image-wrapper
+        {% if block_image_position %}
+          slideshow-slide__image-wrapper--position-{ block_image_position }
+        {% endif %}
+      "
+      data-slide-image-wrapper
+    >
+      {%- if block_slide_image != blank -%}
+        {%
+          render 'rimg',
+          img: block_slide_image,
+          class: 'slideshow-slide__image slideshow-slide__image--desktop',
+          size: '2000x',
+          crop: block_crop_images,
+          lazy: true,
+          canvas: true,
+        %}
+      {%- else -%}
+        {{ placeholder |  placeholder_svg_tag: 'slideshow-slide__image slideshow-slide__placeholder' }}
+      {%- endif -%}
+
+      {%- if block_slide_image_mobile != blank -%}
+        {%
+          render 'rimg',
+          img: block_slide_image_mobile,
+          class: 'slideshow-slide__image slideshow-slide__image--mobile',
+          size: '800x',
+          crop: block_crop_images,
+          lazy: true,
+          canvas: true,
+        %}
+      {%- endif -%}
+
+      {%- if block_overlay_opacity != 0 and block_overlay_color != 'rgba(0,0,0,0)' -%}
+        <div
+          class="
+            slideshow-slide__overlay
+            {% if block_overlay_style != blank %}
+              slideshow-slide__overlay--{{ block_overlay_style }}
+            {% endif %}
+          "
+          style="
+            {% if block_overlay_color != blank %}
+              background-color: {{ block_overlay_color }};
+            {% endif %}
+            opacity: {{ overlay_opacity }};
+          "
+        ></div>
+      {%- endif -%}
+    </div>
+  {%- if block_background_link != blank -%}
+    </a>
+  {%- endif -%}
+  <div
+    class="
+      promo_slideContent
+      slideshow-slide__content
+      slideshow-slide__content--{{ block.id }}
+      {% if block_text_alignment %}slideshow-slide__content--text-{{ block_text_alignment }}{% endif %}
+    "
+    data-slide-content
+  >
+    {%- if block_background_link != blank -%}
+      <a
+        href="{{ block_background_link }}"
+        class="slideshow-slide__content-background-link"
+      >
+    {%- endif -%}
+
+    {%- if block_preheading != blank -%}
+      <p class="slideshow-slide__preheading">
+        {{ block_preheading }}
+      </p>
+    {%- endif -%}
+
+    {%- if block_slide_title != blank -%}
+      <h2 class="slideshow-slide__heading">
+        {{ block_slide_title }}
+      </h2>
+    {%- endif -%}
+
+      <img
+          src="{{ settings.promo_art }}"
+          alt="Best friends' promotional"
+          data-rimg="noscript"
+          srcset="{{ settings.promo_art }}"
+          class="promo_art"
+      >
+    
+    {%- if block_subheading != blank -%}
+      <div class="slideshow-slide__text">
+        {{ block_subheading }}
+      </div>
+    {%- endif -%}
+
+    {%- if block_background_link != blank -%}
+      </a>
+    {%- endif -%}
+
+    {%- if block_button_label != blank -%}
+      {% if block_button_link != blank %}
+    	<div class="promo_buttonWrapper">
+          <a href="{{ block_button_link }}"
+      {% else %}
+        <span
+      {% endif %}
+        class="
+          slideshow-slide__button
+          promo_slideButton
+          {{ block_button_1_class }}
+        "
+      >
+        {{ block_button_label }}
+      {%- if block_button_link != blank -%}
+          </a>
+  		</div>
+      {%- else -%}
+        </span>
+      {%- endif -%}
+    {%- endif -%}
+
+  </div>
+</div>
+{% comment %}Inject @pixelunion/pxs-slideshow/slideshow-slide end{% endcomment %}

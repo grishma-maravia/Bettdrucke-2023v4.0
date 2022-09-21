@@ -1,0 +1,18 @@
+{% style %}
+.shipping-info-wrapper{
+  display: flex;
+  color: green;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.shipping-info{
+  font-size: 14px;
+  padding-left: 8px;
+  margin-top: 4px;
+}
+{% endstyle %}
+
+<div class="shipping-info-wrapper">
+  <span class="icon-delivery" style="font-size: 22px;"></span>
+  <span class="shipping-info">{{ product.metafields.my_fields.shipping_info }}</span>
+</div>

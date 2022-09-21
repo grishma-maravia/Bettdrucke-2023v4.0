@@ -1,0 +1,35 @@
+
+#countdown_announcement{
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: -17px;
+}
+.countdown_text{
+  color: #f68566;
+  background-color: #ffffff;
+  padding: 0px 5px;
+  margin: 0 3px;
+  border-radius: 0px;
+}
+
+
+@media screen and (min-width: 1024px){
+  .announcement-bar-text{
+    padding-right: 18px;
+  }
+}
+@media screen and (max-width: 719px){
+  .announcement-bar-text-mobile{
+    display: unset;
+  }
+  #countdown_announcement{
+    margin-left: -10px;
+    display: inline-block;
+    font-size: 13.125px;
+  }
+}
+@media (max-width: 568px){
+  #countdown_announcement{
+    margin-top: 10px;
+  }
+}

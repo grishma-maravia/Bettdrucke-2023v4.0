@@ -1,0 +1,363 @@
+{{ 'product.css' | asset_url | stylesheet_tag }}
+{{ 'judge-me-main-product.css' | asset_url | stylesheet_tag }}
+
+{% comment %}
+  @param product {Object}
+    The product object
+  @param layout {String}
+    The layout type
+  @param is_product_modal {Boolean}
+    Is the snippet being loaded in a Quick shop
+  @param is_featured_product {Boolean}
+    Is the snippet being loaded in a Featured product
+  @param onboarding {Boolean}
+    Is there onboarding content
+  @param show_dynamic_checkout_button {Boolean}
+    If true, show dynamic checkout button
+  @param select_first_available_variant {Boolean}
+    If true, select the first available variant
+  @param gallery_aspect_ratio {String}
+    This is the gallery aspect ratio, can be one of 'natural', 'short', 'square', 'long'
+  @param gallery_thumbnail_position {String}
+    This is the gallery thumbnail position, can be one of 'below', or 'left'
+  @param gallery_image_crop {Boolean}
+    Whether to crop images
+  @param gallery_hover_zoom {String}
+    This is the hover zoom setting, which is either 'disabled', 'separate', or 'replace'
+  @param gallery_click_to_zoom {String}
+    This is the click to zoom setting, which is either 'disabled', 'mobile', 'desktop', or 'always'
+{% endcomment %}
+
+{% assign onboarding = onboarding | default: false %}
+{% assign layout = layout | default: nil %}
+{% assign is_featured_product = is_featured_product | default: false %}
+
+{% liquid
+  assign selected_variant = product.selected_variant
+
+  if product.variants.size == 1 or select_first_available_variant
+    assign selected_variant = product.selected_or_first_available_variant
+  endif
+%}
+
+{% assign compare_at_price = selected_variant.compare_at_price %}
+{% assign price = selected_variant.price %}
+{% assign sku = selected_variant.sku %}
+{% assign product_available = product.available %}
+
+{% comment %}For a potential divider in the product.description we need to split the content{% endcomment %}
+{% assign readmore_split = product.description | split: '<!-- more -->' %}
+
+{% if onboarding %}
+  {% assign compare_at_price = 2999 %}
+  {% assign price = 1999 %}
+{% endif %}
+
+{% assign on_sale = false %}
+{% if compare_at_price > price %}
+  {% assign on_sale = true %}
+{% endif %}
+
+{% assign consistent_saved = false %}
+{% capture consistent_savings %}
+  {%
+    render 'consistent-savings',
+    variants: product.variants,
+    on_sale: on_sale
+  %}
+{% endcapture %}
+{% if consistent_savings contains 'true' %}
+  {% assign consistent_saved = true %}
+{% endif %}
+
+{%- capture share_buttons -%}
+  {% assign social_image = false %}
+  {% if product.featured_image %}
+    {% assign social_image = product.featured_image | img_url: '1024x' %}
+  {% endif %}
+  {% assign social_url = shop.url | append: product.url %}
+  {%-
+    render 'share-buttons',
+    snippet_title: 'general.share_buttons.title',
+    social_image: social_image,
+    social_title: product.title,
+    social_url: social_url
+  -%}
+{%- endcapture  -%}
+
+<article class="product--outer">
+
+  {% render 'product-gallery',
+    product: product,
+    select_first_available_variant: select_first_available_variant,
+    aspect_ratio: gallery_aspect_ratio,
+    thumbnail_position: gallery_thumbnail_position,
+    image_crop: gallery_image_crop,
+    gallery_click_to_zoom: gallery_click_to_zoom,
+    gallery_hover_zoom: gallery_hover_zoom
+  %}
+
+  <div class="product-main">
+    <div class="product-details" data-product-details>
+      {% for block in section.blocks %}
+        <div class="product-details__block" {{ block.shopify_attributes }}>
+          {% case block.type %}
+            {% when 'title' %}
+              {% if is_product_modal %}
+                <h2 class="product-title">
+                  <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+                </h2>
+              {% else %}
+                {% if template == 'index' %}
+                  <h2 class="product-title">
+                {% else %}
+                  <h1 class="product-title">
+                {% endif %}
+                  {% unless onboarding %}
+                    {{ product.title }}
+                  {% else %}
+                    {{ 'onboarding.product.title' | t }}
+                  {% endunless %}
+                {% if template == 'index' %}
+                  </h2>
+                {% else %}
+                  </h1>
+                {% endif %}
+              {% endif %}
+            {% when 'vendor' %}
+              {% if product.vendor != blank or onboarding %}
+                <div class="product-vendor">
+                  {% unless onboarding %}
+                    {%- capture vendor_link -%}
+                      {{ product.vendor | link_to_vendor }}
+                    {%- endcapture -%}
+                    {{ 'product.general.by_vendor_html' | t: vendor_link: vendor_link }}
+                  {% else %}
+                    {{ 'onboarding.product.by_vendor' | t }}
+                  {% endunless %}
+                </div>
+              {% endif %}
+          
+            {% when 'judge_me_badge' %}
+          	{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false, product: product %}
+
+            {% when 'sku' %}
+              {% unless onboarding %}
+                <div
+                  class="
+                    product-sku
+                    {% if sku == empty %}product-sku--empty{% endif %}
+                  "
+                >
+                  {{ 'product.general.sku_html' | t: sku: sku | strip_newlines }}
+                </div>
+              {% endunless %}
+
+            {% when 'description' %}
+              {% if readmore_split[0] != blank %}
+                <div class="product-description rte" data-product-description>
+                  {{ readmore_split[0] }}
+                </div>
+              {% endif %}
+          
+            {% when 'form' %}
+              <div
+                class="product-form--regular"
+                data-product-form-regular >
+                <div data-product-form-area>
+                  {% if is_product_modal %}
+                    <div data-product-quickshop-message class="product-message--container"></div>
+                  {% endif %}
+
+                  {% unless onboarding %}
+                      {% render 'product-form',
+                                product: product,
+                                show_dynamic_checkout_button: show_dynamic_checkout_button,
+                                selected_variant: selected_variant,
+                                is_product_modal: is_product_modal,
+                                class_root: 'product',
+                                price: price,
+                                price_varies: false,
+                                compare_at_price: compare_at_price,
+                                compare_at_price_varies: false,
+                                on_sale: on_sale,
+                                emphasize_price: false,
+                                show_original: true,
+                                show_range: false,
+                                include_unit_price: true,
+                                include_tax_line: true,
+                                include_hidden_price: true,
+                                product_available: product_available,
+                                show_saved: true,
+                                include_range: false,
+                      %}
+                  {% endunless %}
+                </div>
+              </div>
+
+            {% when 'text' %}
+              <div class="product-text">
+                {{ block.settings.text }}
+              </div>
+          
+            {% when 'share' %}
+              <div class="product-share">
+                {{ share_buttons | strip_newlines }}
+              </div>
+          
+            {% when '@app' %}
+              <div class="product-app">
+                {% render block %}
+              </div>
+          
+            {% when 'discount-message' %}
+              {% render 'discount-message' %}
+          
+          	{% when 'quality-icons' %}
+              <div class="quality_icons_MainContainer">
+                <div>
+	              <span class="icon-high-customer-satisfaction"></span>
+                  <p class="quality_icons_Text">Zufriedene <br> Kunden</p>
+                </div>
+                <div>
+                  <span class="icon-hight-printing-quality"></span>
+                  <p class="quality_icons_Text">Höchste Druckqualität</p>
+                </div>
+                <div>
+                  <span class="icon-personalized-design"></span>
+                  <p class="quality_icons_Text">Personalisiertes Design</p>
+                </div>
+                <div>
+                  <span class="icon-easy-to-acquire"></span>
+                  <p class="quality_icons_Text">Bequemer Kauf auf Rechnung</p>
+                </div>
+              </div>
+
+            {% when 'view-product-link' %}
+              <a
+                class="button-primary promo-block--button__featured"
+                href="{{ product.url | within: collection }}"
+                data-product-details-link
+              >
+                {{ block.settings.text | escape }}
+              </a>
+          
+			{% when 'upsell-product-simple' %}
+			  {% render 'upsell-product-simple' %}
+      
+            {% when 'upsell-product-options' %}
+              {% render 'upsell-product-options', upsell_product: upsell_product  %}
+
+          {% endcase %}
+        </div>
+      {% endfor %}
+   
+      {% comment %} Add upsell product with option variants and upload button {% endcomment %}
+      {% comment %}
+      {% form 'product', product, id: "add-to-cart" %}
+      	{% assign upsell_product = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
+      	{% assign current_upsell_variant = upsell_product.selected_or_first_available_variant %}
+         {{ product.title }}
+      
+      	  {% comment %}
+          <select name="id">
+            {% for variant in upsell_product.variants %}
+              <option value="{{ variant.id }}"
+                {% if variant == current_upsell_variant %}selected="selected"{% endif %}
+              >
+                {{ variant.title }} - {{ variant.price | money }}
+              </option>
+            {% endfor %}
+          </select>
+      	  {% endcomment %}
+      
+      	<variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+            {%- for option in upsell_product.options_with_values -%}
+            <div class="product-form__input product-form__input--dropdown">
+              <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+                {{ option.name }}
+              </label>
+              <div class="select">
+                <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                        class="select__select"
+                        name="options[{{ option.name | escape }}]"
+                        form="{{ product_form_id }}"
+                        >
+                  {%- for value in option.values -%}
+                  <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                    {{ value }}
+                  </option>
+                  {%- endfor -%}
+                </select>
+              </div>
+            </div>
+            {%- endfor -%}
+
+            <script type="application/json">
+                        {{ upsell_product.variants | json }}
+            </script>
+          </variant-selects>
+      
+
+        <!-- form content -->
+        {% comment %}<input type="submit" name="add" value="Add to cart" class="btn btn--purchase" onclick="addItem('add-to-cart'); return false; ">{% endcomment %}
+
+        <input type="hidden" name="add-to-cart" value="{{ upsell_product.selected_or_first_available_variant.id }}" disabled>
+        <div class="product-form__buttons">
+          <button
+                  type="submit"
+                  name="add"
+                  class="product-form__submit button button--full-width button--primary"
+                  {% if upsell_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                  >
+            
+            <span>
+              {%- if upsell_product.selected_or_first_available_variant.available -%}
+              Add to cart
+              {%- else -%}
+              Sold out
+              {%- endif -%}
+            </span>
+                        
+          </button>
+        </div>
+      
+      {% endform %}
+      {% endcomment %}      
+      
+      {% if layout == 'layout--three-col' %}
+        <div class="product-form--regular" data-product-form-regular>
+          <div data-product-form-area>
+            {% if is_product_modal %}
+              <div data-product-quickshop-message class="product-message--container"></div>
+            {% endif %}
+
+            {% unless onboarding %}
+              {%
+                render 'product-form',
+                product: product,
+                show_dynamic_checkout_button: show_dynamic_checkout_button,
+                selected_variant: selected_variant,
+                is_product_modal: is_product_modal,
+              %}
+            {% endunless %}
+
+            {% if is_product_modal == false %}
+              {{ share_buttons | strip_newlines }}
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if layout == 'layout--three-col' %}
+    <div class="product-form--alt" data-product-form-alt></div>
+  {% endif %}
+</article>
+
+{% if readmore_split[1] != blank and is_featured_product != true and is_product_modal != true %}
+  <div class="product-readmore rte" data-product-readmore>
+    {{ readmore_split[1] }}
+  </div>
+{% endif %}

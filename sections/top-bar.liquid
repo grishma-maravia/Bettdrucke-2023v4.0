@@ -1,0 +1,95 @@
+<style>
+.top_bar_main{
+  background: {{section.settings.background_color}};
+  color: {{section.settings.color}};
+}
+.top_bar_wrapper{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top_bar_right .site-navigation{
+  background: {{section.settings.background_color}};
+  padding: 0;
+}
+.top_bar_right .site-navigation .navmenu-depth-1{
+  max-width: inherit;
+}
+.top_bar_right .site-navigation .navmenu-depth-1 > li{
+  padding: 0;
+}
+.top_bar_right .site-navigation .navmenu-depth-1 > li a{
+  padding: 5px 15px;
+}
+@media only screen and (max-width: 768px){
+  .top_bar_right{
+    display: none;
+  }
+  .top_bar_wrapper{
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 640px){
+  .top_bar_wrapper{
+    font-size: 11px;
+  }
+}
+</style>
+<div class="top_bar_main" style="top: 0px; position: relative;">
+  <div class="top_bar_wrapper">
+    <div class="top_bar_left">
+      {{ section.settings.text }}
+    </div>
+    <div class="top_bar_right">
+      <nav class="site-navigation">
+        {% if section.settings.secondary_menu != blank %}
+          {% render 'navlist',
+            menu_list: linklists[section.settings.secondary_menu].links,
+            depth: 1,
+            max_depth: 1,
+            aria_expanded: true,
+            navmenu_classes: 'site-navigation__secondary-menu',
+          %}
+        {% endif %}
+      </nav>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Top bar",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#e6f5fc"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Font color",
+        "default": "#302783"
+      },
+      {
+        "type": "html",
+        "id": "text",
+        "label": "HTML text"
+      },
+      {
+        "type": "link_list",
+        "id": "secondary_menu",
+        "label": "Secondary menu"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,95 @@
+{{ 'accordion.css' | asset_url | stylesheet_tag }}
+
+  {% if section.settings.title != blank %}
+	<h2 class="accordion__heading">{{ section.settings.title }}</h2>
+  {% endif %}
+
+  {% for block in section.blocks %}
+  	{% case block.type %}
+  	  {% when 'paragraph' %}
+		<p>{{ block.settings.paragraph }}</p>
+
+  	  {% when 'new_question' %}
+		<div>
+          <button class="accordion_button"><h2 class="accordion_title">{{ block.settings.accordion_title}}</h2><span class="accordion_arrow icon-keyboard_arrow_down"></span></button>
+          <div class="accordion_text" style="display: none">
+              <p>{{ block.settings.accordion_content }}</p>
+          </div>
+		</div>
+    {% endcase %}
+  {% endfor %}
+
+
+<script>
+var acc = document.getElementsByClassName("accordion_button");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var accordion_show = this.nextElementSibling;
+    var arrow = document.getElementsByClassName("accordion_arrow");
+    if (accordion_show.style.display === "block") {
+      accordion_show.style.display = "none";
+    } else {
+      accordion_show.style.display = "block";
+      accordion_show.classList.add("fadeIn");
+      arrow.classList.add(" rotate");
+    }
+  });
+}
+</script>
+
+{% schema %}
+{
+  "name": "Accordion Questions",
+  "class": "accordion--container",
+  "settings": [
+	{
+	  "type": "text",
+	  "id": "title",
+	  "label": "Title",
+	  "default": "Add your title here"
+	}
+  ],
+  "blocks": [
+	{
+	  "type": "paragraph",
+	  "name": "Paragraph",
+	  "settings": [
+		{
+		  "type": "richtext",
+		  "id": "paragraph",
+		  "label": "Paragraph",
+		  "default": "<p>Add your content here</p>"
+		}
+	  ]
+	},
+    {
+      "type": "new_question",
+      "name": "New Question",
+	  "settings": [
+		{
+          "type": "text",
+          "id": "accordion_title",
+          "label": "Accordion Title",
+		  "default": "Queston Titel"
+        },
+		{
+          "type": "liquid",
+          "id": "accordion_content",
+          "label": "Answer Info",
+          "default": "Here you can write any answer or style the content with HTML and Liquid"
+        }
+	  ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordion",
+      "settings": {}
+    }
+  ]
+}
+
+{% endschema %}
