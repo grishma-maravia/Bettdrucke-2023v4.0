@@ -42106,7 +42106,7 @@ class DynamicSlideshow extends pxs_slideshow_dist_index_es {
   }
 
   _setContentHeight() {
-    const currentSlide = this.slides[this.flickity.selectedIndex];
+    const currentSlide = this.slides[this.flickity?.selectedIndex];
     const slideContent = currentSlide.querySelector('.slideshow-slide__content'); // Determine absolute height
 
     const getAbsoluteHeight = el => {
