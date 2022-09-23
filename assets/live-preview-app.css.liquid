@@ -19,7 +19,6 @@
 label.cl-po--input.cl-po--upload-button, label.cl-po--label{
   font-family: "Nunito Sans",sans-serif !important;
   font-style: normal !important;
-  font-size: var(--font-size-button-small) !important;
 }
 label.cl-po--input.cl-po--upload-button {
   padding: 10px 20px !important;
@@ -47,7 +46,16 @@ label.cl-po--label{
   font-weight: 700 !important;
   color: rgb(29, 29, 29) !important;
 }
-
 .UpsellProdOpt_ImageUploadButton label.cl-po--input.cl-po--upload-button {
   padding: 8px 15px !important;
+}
+@media only screen and (min-width: 720px){
+  label.cl-po--input.cl-po--upload-button, label.cl-po--label{
+    font-size: var(--font-size-button-small) !important;
+  }
+}
+@media only screen and (max-width: 719px){
+  label.cl-po--input.cl-po--upload-button, label.cl-po--label{
+    font-size: var(--font-size-button) !important;
+  }
 }
