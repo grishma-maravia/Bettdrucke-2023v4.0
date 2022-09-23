@@ -254,12 +254,13 @@
    
       {% comment %} Add upsell product with option variants and upload button {% endcomment %}
       {% comment %}
+      
       {% form 'product', product, id: "add-to-cart" %}
       	{% assign upsell_product = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
       	{% assign current_upsell_variant = upsell_product.selected_or_first_available_variant %}
          {{ product.title }}
       
-      	  {% comment %}
+      	
           <select name="id">
             {% for variant in upsell_product.variants %}
               <option value="{{ variant.id }}"
@@ -269,7 +270,7 @@
               </option>
             {% endfor %}
           </select>
-      	  {% endcomment %}
+      	  
       
       	<variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
             {%- for option in upsell_product.options_with_values -%}
@@ -300,7 +301,7 @@
       
 
         <!-- form content -->
-        {% comment %}<input type="submit" name="add" value="Add to cart" class="btn btn--purchase" onclick="addItem('add-to-cart'); return false; ">{% endcomment %}
+        <input type="submit" name="add" value="Add to cart" class="btn btn--purchase" onclick="addItem('add-to-cart'); return false; ">
 
         <input type="hidden" name="add-to-cart" value="{{ upsell_product.selected_or_first_available_variant.id }}" disabled>
         <div class="product-form__buttons">
