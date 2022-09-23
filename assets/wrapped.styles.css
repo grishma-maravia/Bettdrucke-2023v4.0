@@ -1,6 +1,4 @@
-.product-form--atc {
-  font-size: unset;
-}
+
 [data-controller="wrapped-product"] {
   margin-bottom: 1em;
   margin-top: 0.25em;
