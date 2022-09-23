@@ -6,13 +6,11 @@
   font-size: var(--font-size-body-smaller) !important;
 
 }
-#clxdu7wxiynh .cl-po--label, .cl-po--input{
-  font-size: var(--font-size-body) !important;
-}
 .cl-po--input{
   border-color: #a7a2d6 !important;
   border-radius: 3px !important;
   padding: 10px 20px !important;
+  font-size: var(--font-size-body) !important;
 }
 
 .cl-po--upload-button{
