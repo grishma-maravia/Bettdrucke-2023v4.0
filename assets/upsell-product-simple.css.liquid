@@ -68,7 +68,16 @@ h2.UpsellProd_title, .UpsellProd_title:focus, .UpsellProd_title:active, .UpsellP
     padding: 23px 11px 17px 11px;
   }
 }
-
+@media only screen and (min-width: 720px){
+  .SuggestedUpProd_buttonWr{
+    font-size: var(--font-size-button-small);
+  }
+}
+@media only screen and (max-width: 719spx){
+  .SuggestedUpProd_buttonWr{
+    font-size: var(--font-size-button);
+  }
+}
 .Suggested_Price--highlight{
   color:#ba2e2e
 }
@@ -87,7 +96,6 @@ h2.UpsellProd_title, .UpsellProd_title:focus, .UpsellProd_title:active, .UpsellP
   width: fit-content;
   background-color: #009fe3;
   color: {{ settings.color_button_text }};
-  font-size: var(--font-size-button-small);
   letter-spacing: {{ settings.type_button_spacing | divided_by: 100.0 | append: 'em' }};
   font-family: {{ fonts_type_button_family }};
   font-style: {{ fonts_type_button_style }};
@@ -106,7 +114,6 @@ h2.UpsellProd_title, .UpsellProd_title:focus, .UpsellProd_title:active, .UpsellP
   border: 1px solid #cecece;
   box-shadow: 0 3px 8px #0000001a;
 }
-
 .UpProdOpt_infoWr{
   display: flex;
 }
