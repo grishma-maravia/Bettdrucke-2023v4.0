@@ -17,15 +17,21 @@
   margin-bottom: 20px !important;
 }
 label.cl-po--input.cl-po--upload-button {
-  font-family: {{ fonts_type_body_family }} !important;
-  font-style: {{ fonts_type_body_style }} !important;
-  font-weight: {{ fonts_type_body_weight }} !important;
-  font-size: var(--font-size-body) !important; 
-  z-index: 1 !important;
-  width: 100% !important;
-  padding: 0.375rem 0.625rem !important;
-  color: {{ settings.color_input_text }} !important;
-  background-color: {{ settings.color_input_background }} !important;
-  border: 1px solid {{ settings.color_input_border }} !important;
-  border-radius: 3px !important;
+  padding: 10px 20px !important;
+  width: fit-content !important;
+  background-color: #009fe3 !important;
+  color: #fff !important;
+  font-size: var(--font-size-button-small) !important;
+  letter-spacing: 0em !important;
+  font-family: ;
+  font-style: ;
+  font-weight: ;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: width 125ms cubic-bezier(.4,0,.2,1),height 125ms cubic-bezier(.4,0,.2,1),border-color 125ms cubic-bezier(.4,0,.2,1),background-color 125ms cubic-bezier(.4,0,.2,1),box-shadow 125ms cubic-bezier(.4,0,.2,1);
+  border: none;
+  border: 1px solid white;
+  margin-top: 5px;
 }
