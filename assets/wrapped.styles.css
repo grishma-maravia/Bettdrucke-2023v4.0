@@ -1,5 +1,8 @@
-
 [data-controller="wrapped-product"] {
   margin-bottom: 1em;
   margin-top: 0.25em;
+}
+
+.product-form--atc {
+  font-size: inherit; 
 }
