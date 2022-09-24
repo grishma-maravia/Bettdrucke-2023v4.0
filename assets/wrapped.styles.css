@@ -3,6 +3,10 @@
   margin-top: 0.25em;
 }
 
+[data-controller="wrapped-item"] {
+  margin-bottom: 0.5em;
+}
+
 .product-form--atc {
   font-size: inherit; 
 }
