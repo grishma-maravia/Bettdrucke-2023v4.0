@@ -10,7 +10,3 @@
 [data-controller="wrapped-item"] [data-features--checkbox-target="wrapper"] span.checkbox_label {
   font-size: 90%;
 }
-
-.product-form--atc {
-  font-size: inherit;
-}
