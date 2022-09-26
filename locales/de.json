@@ -49,7 +49,9 @@
       "no_stock": "Ausverkauft",
       "incoming_stock": "Mehr auf den Weg!",
       "pre_order": "Bald verfügbar",
-      "continue_selling": "Auf Lager"
+      "continue_selling": "Auf Lager",
+      "only": "Nur",
+      "available": "verfügbar"
     },
     "color_swatches": {
       "swatches_count": {

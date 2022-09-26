@@ -88,26 +88,27 @@
   {% endif %}
 {% endcapture %}
 
+{% if variant.inventory_quantity < 15 and variant.inventory_quantity > 0 and variant.inventory_management %}
 <div class="product-stock-level-wrapper" {{ attr }}>
-  {% if variant.inventory_management %}
-    <span class="{{ stock_badge_classes }}">
-      {% if verbose %}
-        <span class="product-stock-level__availability">
-          {{ 'product.status.availability' | t }}:
-        </span>
-      {% endif %}
-
-      <span class="product-stock-level__text">
-        {% if verbose and stock_level == 'high' %}
-          {%
-            render 'icon-library',
-            id: 'icon-checkmark-circle',
-          %}
-        {% endif %}
-        <div class="product-stock-level__badge-text">
-          {{ stock_badge_text }}
-        </div>
+  <span class="{{ stock_badge_classes }}">
+    {% if verbose %}
+      <span class="product-stock-level__availability">
+        {{ 'product.status.availability' | t }}:
       </span>
+    {% endif %}
+    <span class="product-stock-level__text">
+      {{ 'product.status.only' | t }} 
+      {{ variant.inventory_quantity }} 
+      {% if verbose and stock_level == 'high' %}
+        {%
+          render 'icon-library',
+          id: 'icon-checkmark-circle',
+        %}
+      {% endif %}
+      <div class="product-stock-level__badge-text">
+          &nbsp;{{ 'product.status.available' | t }}
+      </div>
     </span>
-  {% endif %}
+  </span>
 </div>
+{% endif %}

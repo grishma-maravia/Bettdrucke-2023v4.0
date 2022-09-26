@@ -21313,3 +21313,60 @@ a.jdgm-branding-footer {
       top: 50px;
   }
 }
+
+/* inventory status css */
+.product-stock-level-wrapper {
+  line-height: 1;
+  margin: 1.0rem 0;
+}
+.product-stock-level-wrapper[data-stock-variant-selected=true] {
+  display: block;
+}
+.product-stock-level-wrapper[data-stock-variant-selected=false] {
+  display: none;
+}
+
+.product-stock-level {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.product-stock-level--high .product-stock-level__badge-text::first-letter {
+  text-transform: uppercase;
+}
+
+.product-stock-level--continue-selling,
+.product-stock-level--high,
+.product-stock-level--pre-order,
+.product-stock-level--incoming {
+  color: #60a061;
+}
+
+.product-stock-level--none {
+  color: #BF262F;
+}
+
+.product-stock-level--low {
+  color: #E99114;
+}
+
+.product-stock-level__text {
+  display: flex;
+  align-items: center;
+  color: #e2211f;
+  font-weight: bold;
+}
+.product-stock-level__text svg {
+  margin-right: 0.25rem;
+}
+
+.product-stock-level__badge-text {
+  display: block;
+}
+
+.product-stock-level__availability {
+  font-weight: bold;
+  margin-right: 0.25rem;
+  color: #1d1d1d;
+}

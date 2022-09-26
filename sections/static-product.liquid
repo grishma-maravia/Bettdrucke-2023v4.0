@@ -248,6 +248,45 @@
           "label": "Select upsell product"
         }
       ]
+    },
+    {
+      "type": "inventory_status",
+      "name": "t:sections.product.blocks.inventory_status.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "radio",
+          "id": "inventory_display",
+          "label": "t:sections.product.blocks.inventory_status.inventory_display.label",
+          "info": "t:sections.product.blocks.inventory_status.inventory_display.info",
+          "options": [
+            {
+              "value": "all_products",
+              "label": "t:sections.product.blocks.inventory_status.inventory_display.option_1"
+            },
+            {
+              "value": "low_stock_threshold",
+              "label": "t:sections.product.blocks.inventory_status.inventory_display.option_2"
+            },
+            {
+              "value": "low_stock_only",
+              "label": "t:sections.product.blocks.inventory_status.inventory_display.option_3"
+            },
+            {
+              "value": "hidden",
+              "label": "t:sections.product.blocks.inventory_status.inventory_display.option_4"
+            }
+          ],
+          "default": "hidden"
+        },
+        {
+          "type": "checkbox",
+          "id": "inventory_transfer_notice",
+          "label": "t:sections.product.blocks.inventory_status.inventory_transfer_notice.label",
+          "info": "t:sections.product.blocks.inventory_status.inventory_transfer_notice.info",
+          "default": true
+        }
+      ]
     }
   ]
 }

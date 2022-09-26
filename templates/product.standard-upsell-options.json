@@ -1,1 +1,290 @@
-{"sections":{"main":{"type":"static-product","blocks":{"title":{"type":"title","settings":{}},"78b42d68-63b8-4881-b43e-364618faa47a":{"type":"shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}},"vendor":{"type":"vendor","disabled":true,"settings":{}},"22588340-367b-4c4e-9663-6faec0b85cad":{"type":"shopify:\/\/apps\/live-product-options\/blocks\/app-block\/88bfdf40-5e27-4962-a966-70c8d1e87757","disabled":true,"settings":{"product":"{{product}}"}},"8853a8f0-4a99-4903-a78a-ff40f21228dc":{"type":"price","settings":{}},"form":{"type":"form","settings":{}},"411d5d07-def9-4b18-aba9-216da8b7cdca":{"type":"discount-message","settings":{}},"0e15848f-890c-4efd-a876-c7e063fcd117":{"type":"quality-icons","settings":{}},"share":{"type":"share","disabled":true,"settings":{}},"description":{"type":"description","settings":{}}},"block_order":["title","78b42d68-63b8-4881-b43e-364618faa47a","vendor","22588340-367b-4c4e-9663-6faec0b85cad","8853a8f0-4a99-4903-a78a-ff40f21228dc","form","411d5d07-def9-4b18-aba9-216da8b7cdca","0e15848f-890c-4efd-a876-c7e063fcd117","share","description"],"settings":{"gallery_aspect_ratio":"natural","gallery_image_crop":false,"gallery_thumbnail_position":"below","gallery_video_autoplay":true,"gallery_video_looping":true,"gallery_hover_zoom":"disabled","gallery_click_to_zoom":"disabled"}},"recently-viewed":{"type":"static-recently-viewed","disabled":true,"settings":{"enable_recently_viewed_products":false}},"16448436619a39d054":{"type":"dynamic-custom-liquid","settings":{"custom_liquid":""}},"1644829222939494e3":{"type":"dynamic-highlights-banner","blocks":{"164482922194ad7929-0":{"type":"highlight","settings":{"icon":"icon-upload_image","select_icon_size":"80px","mini_icon":"icon-1","title":"Foto auswählen","text":"<p>Wählen Sie Ihren Lieblingsmoment aus und laden Sie das Foto über unsere Produktseite hoch.<\/p>","link":""}},"164482922194ad7929-1":{"type":"highlight","settings":{"icon":"icon-settings","select_icon_size":"80px","mini_icon":"icon-2","title":"Foto überprüfen","text":"<p>Achten Sie darauf, dass das Foto unseren Anforderungen entspricht, damit es die gewünschte Druckqualität erhält.<\/p>","link":""}},"164482922194ad7929-2":{"type":"highlight","settings":{"icon":"icon-wait_purchase","select_icon_size":"80px","mini_icon":"icon-3","title":"Bestellen und vorfreudig warten","text":"<p>Die Fotodrucke werden in präziser Handarbeit sehr zügig gefertigt. Sie erhalten innerhalb weniger Tage Ihr persönliches Produkt.<\/p>","link":""}}},"block_order":["164482922194ad7929-0","164482922194ad7929-1","164482922194ad7929-2"],"settings":{"section_spacing":false,"section_width":"full-width","icon_layout":"center","title_color":"#fe8761","title_size":"25px","color":"#1d1d1d","icon_color":"#fe8761","background_color":"#ffffff","mobile_layout":"single_column"}},"16432089955404871d":{"type":"dynamic-image-with-text","settings":{"section_heading":"","image":"shopify:\/\/shop_images\/fotodecke-product-page.jpg","crop":"center","desktop_height":"natural","mobile_height":"natural","desktop_image_alignment":"right","mobile_image_alignment":"top","heading":"Wie unsere Fotodrucke überzeugen","subheading":"<p><strong>Ihr Fotodruck und Ihre Gestaltung<\/strong><br\/>Werden Sie kreativ und entwerfen Sie Ihr eigenes Fotoprodukt - ganz nach Ihrem Geschmack! Laden Sie ein Foto Ihrer Wahl hoch und wählen Sie Ihre Präferenzen aus.<\/p><p><strong>Beste und langlebige Druckqualität<\/strong><br\/>Unsere Fotodrucke werden in eigener Produktion und in Handarbeit hergestellt. Wir verwenden dabei die neuesten Drucktechnologien, die eine herausragende Druckqualität und eine lange Lebensdauer garantieren. <\/p><p><strong>Hochwertige Materialien<\/strong><\/p><p>Für den Druck verwenden wir ausgewählte Materialien. Unsere Textilprodukte bestehen aus 100% Baumwolle und sind daher besonders atmungsaktiv und angenehm für die Haut. Das Material nimmt den Fotodruck ideal auf, ohne zu versteifen.<\/p>","text_alignment":"left","button_label":"Button","button_link":""}},"1644317057e99b8dd0":{"type":"dynamic-image-with-text","settings":{"section_heading":"","image":"shopify:\/\/shop_images\/fotokissen-bettdrucke3_1.jpg","crop":"center","desktop_height":"natural","mobile_height":"natural","desktop_image_alignment":"left","mobile_image_alignment":"top","heading":"Unsere Tipps für ein gelungenes Design","subheading":"<p><strong>Die ideale Dateigröße<br\/><\/strong>Stellen Sie sicher, dass Ihr Foto eine hohe Auflösung hat. Ist die Auflösung zu niedrig, können wir keinen hochwertigen Druck garantieren. Gerade wenn Sie das Motiv groß darstellen lassen wollen, muss die Auflösung sehr hoch sein. <\/p><p><strong>Die perfekte Position<br\/><\/strong>Am besten sieht der Druck auf der Decke aus, wenn das Motiv mittig platziert ist. Sollte das bei Ihrem Foto nicht der Fall sein, können Sie das Foto vorab zuschneiden. <br\/><br\/><strong>Das scharf gestochene Motiv<br\/><\/strong>Unserer Erfahrung nach werden die Fotodrucke am besten, wenn das Motiv nicht verschwommen, sondern scharf gestochen ist. <\/p>","text_alignment":"left","button_label":"Button","button_link":""}},"reviews":{"type":"static-product-reviews","settings":{}},"1644577175ace7de15":{"type":"accordion","blocks":{"6922aeb4-59b9-48be-b6ba-4aae6313a5d6":{"type":"paragraph","disabled":true,"settings":{"paragraph":"<p>Add your content here<\/p>"}},"5331438c-d286-4b61-8765-5685bddbb192":{"type":"new_question","settings":{"accordion_title":"Welche Auflösung sollte mein Foto haben?","accordion_content":"Damit wir einen hochwertigen Druck erstellen können, ist es wichtig, dass Sie uns ein Foto zur Verfügung stellen, das die entsprechende Auflösung hat. Stellen Sie sicher, dass das hochgeladene Foto ein Mindest-DPI-Wert von 72 hat."}},"1c017ccb-34c1-46d0-b719-74dd44beb191":{"type":"new_question","settings":{"accordion_title":"Welche Dateiformate werden akzeptiert?","accordion_content":"Sie können Ihr Foto in einer der folgenden Dateiformate hochladen: .jpg\/.jpeg, .png, .gif oder .webp."}},"36b40bc1-c9c3-43b5-92f1-45f5ee4473b1":{"type":"new_question","settings":{"accordion_title":"Kann ich das Produkt retournieren?","accordion_content":"Leider ist ein Umtausch oder eine Rückgabe von personalisierten Produkten nicht möglich. Da das Produkt mit Ihrem persönlichen Foto bedruckt wird, kann es nicht weiterverkauft werden. Stellen Sie also vorab sicher, dass Sie ein ausgewähltes Foto in der richtigen Größe und Auflösung hochladen. Bei Reklamationen zum Druck selbst melden Sie sich gerne bei unserem Kundenservice."}},"eb2cd3b2-5d36-4510-b6e7-1c29b648e70f":{"type":"new_question","disabled":true,"settings":{"accordion_title":"Queston Titel","accordion_content":"Here you can write any answer or style the content with HTML and Liquid"}}},"block_order":["6922aeb4-59b9-48be-b6ba-4aae6313a5d6","5331438c-d286-4b61-8765-5685bddbb192","1c017ccb-34c1-46d0-b719-74dd44beb191","36b40bc1-c9c3-43b5-92f1-45f5ee4473b1","eb2cd3b2-5d36-4510-b6e7-1c29b648e70f"],"settings":{"title":"Häufige Fragen"}},"1644489579742e4bb1":{"type":"apps","blocks":{"bd455495-81f5-4b5b-8a78-35185a51138c":{"type":"shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}}},"block_order":["bd455495-81f5-4b5b-8a78-35185a51138c"],"settings":{"include_padding":true}},"recommendations":{"type":"static-product-recommendations","settings":{"show_product_recommendations":true,"product_recommendations_heading":"Diese Produkte könnten Ihnen auch gefallen"}}},"order":["main","recently-viewed","16448436619a39d054","1644829222939494e3","16432089955404871d","1644317057e99b8dd0","reviews","1644577175ace7de15","1644489579742e4bb1","recommendations"]}
+{
+  "sections": {
+    "main": {
+      "type": "static-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "78b42d68-63b8-4881-b43e-364618faa47a": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "22588340-367b-4c4e-9663-6faec0b85cad": {
+          "type": "shopify:\/\/apps\/live-product-options\/blocks\/app-block\/88bfdf40-5e27-4962-a966-70c8d1e87757",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "8853a8f0-4a99-4903-a78a-ff40f21228dc": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+          }
+        },
+        "5f831677-2735-49c0-a614-cd4ce1339efd": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_display": "all_products",
+            "inventory_transfer_notice": true
+          }
+        },
+        "28030614-8b78-4323-b3d7-7e6383f8005a": {
+          "type": "shopify:\/\/apps\/gift-wrap-and-options-wrapped\/blocks\/app-block.product\/1714fc7d-e525-4a14-8c3e-1b6ed95734c5",
+          "settings": {
+          }
+        },
+        "411d5d07-def9-4b18-aba9-216da8b7cdca": {
+          "type": "discount-message",
+          "settings": {
+          }
+        },
+        "0e15848f-890c-4efd-a876-c7e063fcd117": {
+          "type": "quality-icons",
+          "settings": {
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "78b42d68-63b8-4881-b43e-364618faa47a",
+        "vendor",
+        "22588340-367b-4c4e-9663-6faec0b85cad",
+        "8853a8f0-4a99-4903-a78a-ff40f21228dc",
+        "form",
+        "5f831677-2735-49c0-a614-cd4ce1339efd",
+        "28030614-8b78-4323-b3d7-7e6383f8005a",
+        "411d5d07-def9-4b18-aba9-216da8b7cdca",
+        "0e15848f-890c-4efd-a876-c7e063fcd117",
+        "share",
+        "description"
+      ],
+      "settings": {
+        "gallery_aspect_ratio": "natural",
+        "gallery_image_crop": false,
+        "gallery_thumbnail_position": "below",
+        "gallery_video_autoplay": true,
+        "gallery_video_looping": true,
+        "gallery_hover_zoom": "disabled",
+        "gallery_click_to_zoom": "disabled"
+      }
+    },
+    "recently-viewed": {
+      "type": "static-recently-viewed",
+      "disabled": true,
+      "settings": {
+        "enable_recently_viewed_products": false
+      }
+    },
+    "16448436619a39d054": {
+      "type": "dynamic-custom-liquid",
+      "settings": {
+        "custom_liquid": ""
+      }
+    },
+    "1644829222939494e3": {
+      "type": "dynamic-highlights-banner",
+      "blocks": {
+        "164482922194ad7929-0": {
+          "type": "highlight",
+          "settings": {
+            "icon": "icon-upload_image",
+            "select_icon_size": "80px",
+            "mini_icon": "icon-1",
+            "title": "Foto auswählen",
+            "text": "<p>Wählen Sie Ihren Lieblingsmoment aus und laden Sie das Foto über unsere Produktseite hoch.<\/p>",
+            "link": ""
+          }
+        },
+        "164482922194ad7929-1": {
+          "type": "highlight",
+          "settings": {
+            "icon": "icon-settings",
+            "select_icon_size": "80px",
+            "mini_icon": "icon-2",
+            "title": "Foto überprüfen",
+            "text": "<p>Achten Sie darauf, dass das Foto unseren Anforderungen entspricht, damit es die gewünschte Druckqualität erhält.<\/p>",
+            "link": ""
+          }
+        },
+        "164482922194ad7929-2": {
+          "type": "highlight",
+          "settings": {
+            "icon": "icon-wait_purchase",
+            "select_icon_size": "80px",
+            "mini_icon": "icon-3",
+            "title": "Bestellen und vorfreudig warten",
+            "text": "<p>Die Fotodrucke werden in präziser Handarbeit sehr zügig gefertigt. Sie erhalten innerhalb weniger Tage Ihr persönliches Produkt.<\/p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "164482922194ad7929-0",
+        "164482922194ad7929-1",
+        "164482922194ad7929-2"
+      ],
+      "settings": {
+        "section_spacing": false,
+        "section_width": "full-width",
+        "icon_layout": "center",
+        "title_color": "#fe8761",
+        "title_size": "25px",
+        "color": "#1d1d1d",
+        "icon_color": "#fe8761",
+        "background_color": "#ffffff",
+        "mobile_layout": "single_column"
+      }
+    },
+    "16432089955404871d": {
+      "type": "dynamic-image-with-text",
+      "settings": {
+        "section_heading": "",
+        "image": "shopify:\/\/shop_images\/fotodecke-product-page.jpg",
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "right",
+        "mobile_image_alignment": "top",
+        "heading": "Wie unsere Fotodrucke überzeugen",
+        "subheading": "<p><strong>Ihr Fotodruck und Ihre Gestaltung<\/strong><br\/>Werden Sie kreativ und entwerfen Sie Ihr eigenes Fotoprodukt - ganz nach Ihrem Geschmack! Laden Sie ein Foto Ihrer Wahl hoch und wählen Sie Ihre Präferenzen aus.<\/p><p><strong>Beste und langlebige Druckqualität<\/strong><br\/>Unsere Fotodrucke werden in eigener Produktion und in Handarbeit hergestellt. Wir verwenden dabei die neuesten Drucktechnologien, die eine herausragende Druckqualität und eine lange Lebensdauer garantieren. <\/p><p><strong>Hochwertige Materialien<\/strong><\/p><p>Für den Druck verwenden wir ausgewählte Materialien. Unsere Textilprodukte bestehen aus 100% Baumwolle und sind daher besonders atmungsaktiv und angenehm für die Haut. Das Material nimmt den Fotodruck ideal auf, ohne zu versteifen.<\/p>",
+        "text_alignment": "left",
+        "button_label": "Button",
+        "button_link": ""
+      }
+    },
+    "1644317057e99b8dd0": {
+      "type": "dynamic-image-with-text",
+      "settings": {
+        "section_heading": "",
+        "image": "shopify:\/\/shop_images\/fotokissen-bettdrucke3_1.jpg",
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "left",
+        "mobile_image_alignment": "top",
+        "heading": "Unsere Tipps für ein gelungenes Design",
+        "subheading": "<p><strong>Die ideale Dateigröße<br\/><\/strong>Stellen Sie sicher, dass Ihr Foto eine hohe Auflösung hat. Ist die Auflösung zu niedrig, können wir keinen hochwertigen Druck garantieren. Gerade wenn Sie das Motiv groß darstellen lassen wollen, muss die Auflösung sehr hoch sein. <\/p><p><strong>Die perfekte Position<br\/><\/strong>Am besten sieht der Druck auf der Decke aus, wenn das Motiv mittig platziert ist. Sollte das bei Ihrem Foto nicht der Fall sein, können Sie das Foto vorab zuschneiden. <br\/><br\/><strong>Das scharf gestochene Motiv<br\/><\/strong>Unserer Erfahrung nach werden die Fotodrucke am besten, wenn das Motiv nicht verschwommen, sondern scharf gestochen ist. <\/p>",
+        "text_alignment": "left",
+        "button_label": "Button",
+        "button_link": ""
+      }
+    },
+    "reviews": {
+      "type": "static-product-reviews",
+      "settings": {
+      }
+    },
+    "1644577175ace7de15": {
+      "type": "accordion",
+      "blocks": {
+        "6922aeb4-59b9-48be-b6ba-4aae6313a5d6": {
+          "type": "paragraph",
+          "disabled": true,
+          "settings": {
+            "paragraph": "<p>Add your content here<\/p>"
+          }
+        },
+        "5331438c-d286-4b61-8765-5685bddbb192": {
+          "type": "new_question",
+          "settings": {
+            "accordion_title": "Welche Auflösung sollte mein Foto haben?",
+            "accordion_content": "Damit wir einen hochwertigen Druck erstellen können, ist es wichtig, dass Sie uns ein Foto zur Verfügung stellen, das die entsprechende Auflösung hat. Stellen Sie sicher, dass das hochgeladene Foto ein Mindest-DPI-Wert von 72 hat."
+          }
+        },
+        "1c017ccb-34c1-46d0-b719-74dd44beb191": {
+          "type": "new_question",
+          "settings": {
+            "accordion_title": "Welche Dateiformate werden akzeptiert?",
+            "accordion_content": "Sie können Ihr Foto in einer der folgenden Dateiformate hochladen: .jpg\/.jpeg, .png, .gif oder .webp."
+          }
+        },
+        "36b40bc1-c9c3-43b5-92f1-45f5ee4473b1": {
+          "type": "new_question",
+          "settings": {
+            "accordion_title": "Kann ich das Produkt retournieren?",
+            "accordion_content": "Leider ist ein Umtausch oder eine Rückgabe von personalisierten Produkten nicht möglich. Da das Produkt mit Ihrem persönlichen Foto bedruckt wird, kann es nicht weiterverkauft werden. Stellen Sie also vorab sicher, dass Sie ein ausgewähltes Foto in der richtigen Größe und Auflösung hochladen. Bei Reklamationen zum Druck selbst melden Sie sich gerne bei unserem Kundenservice."
+          }
+        },
+        "eb2cd3b2-5d36-4510-b6e7-1c29b648e70f": {
+          "type": "new_question",
+          "disabled": true,
+          "settings": {
+            "accordion_title": "Queston Titel",
+            "accordion_content": "Here you can write any answer or style the content with HTML and Liquid"
+          }
+        }
+      },
+      "block_order": [
+        "6922aeb4-59b9-48be-b6ba-4aae6313a5d6",
+        "5331438c-d286-4b61-8765-5685bddbb192",
+        "1c017ccb-34c1-46d0-b719-74dd44beb191",
+        "36b40bc1-c9c3-43b5-92f1-45f5ee4473b1",
+        "eb2cd3b2-5d36-4510-b6e7-1c29b648e70f"
+      ],
+      "settings": {
+        "title": "Häufige Fragen"
+      }
+    },
+    "1644489579742e4bb1": {
+      "type": "apps",
+      "blocks": {
+        "bd455495-81f5-4b5b-8a78-35185a51138c": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "bd455495-81f5-4b5b-8a78-35185a51138c"
+      ],
+      "settings": {
+        "include_padding": true
+      }
+    },
+    "recommendations": {
+      "type": "static-product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "Diese Produkte könnten Ihnen auch gefallen"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recently-viewed",
+    "16448436619a39d054",
+    "1644829222939494e3",
+    "16432089955404871d",
+    "1644317057e99b8dd0",
+    "reviews",
+    "1644577175ace7de15",
+    "1644489579742e4bb1",
+    "recommendations"
+  ]
+}
