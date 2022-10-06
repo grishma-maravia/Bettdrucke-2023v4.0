@@ -230,26 +230,28 @@
       if(window.Shopify&&window.Shopify.designMode)document.documentElement.className+=' in-theme-editor';
       if(('ontouchstart' in window)||window.DocumentTouch&&document instanceof DocumentTouch)document.documentElement.className=document.documentElement.className.replace(/\bno-touch\b/,'has-touch');
     </script>
-    
-    <a class="skip-to-main" href="#site-main">{{ 'general.accessibility.skip_to_content' | t }}</a>
-    {% section 'static-utility-bar' %}
-    {% section 'top-bar' %}
-    <header id="header" class="site-header site-header-nav--open" role="banner" data-site-header >
-      {% section 'static-header' %}
-      {% section 'static-announcement' %}
-    </header>
-    <div class="intersection-target" data-header-intersection-target></div>
-    <div class="site-main-dimmer" data-site-main-dimmer></div>
-    <main id="site-main" class="site-main" aria-label="Main content" tabindex="-1">
-      {{ content_for_layout }}
-      {% if template.name == "product" %}
-      <div class="back_to_selection back_to_selection-hide" id="backtoselectionID">
-        <a href="#site-main" class="button-primary">Zur Auswahl</a>
-      </div>  
-      {% endif %}
-    </main>
 
-    {% section 'static-footer' %}
+    {% comment %} Theme modified to add our own SLIDE CART - div wrappers added plus the my-cart section - Yurith {% endcomment %}
+    <div class="my-container" data-drawer-push>
+      <a class="skip-to-main" href="#site-main">{{ 'general.accessibility.skip_to_content' | t }}</a>
+      {% section 'static-utility-bar' %}
+      {% section 'top-bar' %}
+      <header id="header" class="site-header site-header-nav--open" role="banner" data-site-header >
+        {% section 'static-header' %}
+        {% section 'static-announcement' %}
+      </header>
+      <div class="intersection-target" data-header-intersection-target></div>
+      <div class="site-main-dimmer" data-site-main-dimmer></div>
+      <main id="site-main" class="site-main" aria-label="Main content" tabindex="-1">
+        {{ content_for_layout }}
+        {% if template.name == "product" %}
+        <div class="back_to_selection back_to_selection-hide" id="backtoselectionID">
+          <a href="#site-main" class="button-primary">Zur Auswahl</a>
+        </div>  
+        {% endif %}
+      </main>
+      {% section 'static-footer' %}
+    </div>
     
     {% comment %}
       Below are various templates used in JavaScript
