@@ -115,7 +115,6 @@
       gtag('config', 'AW-10853667179');
     </script>
     
-    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWDYYVY63K"></script>
     <script>
@@ -130,15 +129,16 @@
 
     {% render 'judgeme_core' %}
     {% comment %} ICOMOON Link {% endcomment %}
-    <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/163995/BETT/style-cf.css?3lj35f">
+      <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/163995/BETT/style-cf.css?3lj35f">
     {% comment %} Countdown JS {% endcomment %}
-    	{{ 'countdown.js' | asset_url | script_tag }}
+      {{ 'countdown.js' | asset_url | script_tag }}
     {% comment %} Hide and show Menu JS {% endcomment %}
-        {{ 'hide-and-show-menu.js' | asset_url | script_tag }}
-    {% comment %}Addons to the Live Preview App - checked green icon when uploading a file {% endcomment %}
-      {% comment %} Custom JS and JQuery Library and StarApps - Yurith {% endcomment %}
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        {{ 'success-icon.js' | asset_url | script_tag }}       	
+      {{ 'hide-and-show-menu.js' | asset_url | script_tag }}
+    {% comment %} Addons to the Live Preview App - checked green icon when uploading a file {% endcomment %}
+      {{ 'success-icon.js' | asset_url | script_tag }}
+    {% comment %} Custom JS and JQuery Library and StarApps - Yurith {% endcomment %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+           	
   
   {% if content_for_header contains 'rio.pwztag.com' %}{% render 'productwiz-rio', product: product, shop: shop, installGuard: true %}{% endif %}
 </head>
