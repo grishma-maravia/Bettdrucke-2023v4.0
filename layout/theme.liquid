@@ -8,20 +8,6 @@
     <link rel="preconnect" href="https://fonts.shopifycdn.com">
     <link rel="preconnect" href="https://v.shopify.com">
     <link rel="preconnect" href="https://cdn.shopifycloud.com">
-
-    <script type="application/json" data-ajax-cart-initial-state>
-        {{ cart | json }}
-    </script>
-    
-    <script type="module">
-        import '{{ "liquid-ajax-cart-v1.10.3.js" | asset_url }}';
-    </script>
-    
-    <script type="application/json" data-ajax-cart-configuration>
-        {
-          "addToCartCssClass": "js-my-cart-open"
-        }
-    </script>
     
     {% comment %} Custom JS and JQuery Library and StarApps - Yurith {% endcomment %}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
