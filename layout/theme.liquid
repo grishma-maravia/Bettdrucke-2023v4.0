@@ -153,77 +153,75 @@
    
     <!-- APPHQ Slide Cart: Making the rewards available to the customer when a customer buys the same item twice -->
     <script> 
-    window.SLIDECART_UPDATED = async function(cart) {
-      let newCart = cart
-      
-      let duplicatedItems = []
-      let items = newCart.items
-      
-      items.forEach((item)=>{
-        if(item.quantity >= 2){
-          duplicatedItems = [...true]
+      window.SLIDECART_UPDATED = async function(cart) {
+        let newCart = cart
+        
+        let duplicatedItems = []
+        let items = newCart.items
+        
+        items.forEach((item)=>{
+          if(item.quantity >= 2){
+            duplicatedItems = [...true]
+          }
+          
+        })
+  
+        if (duplicatedItems.length > 0){
+          newCart.item_count = 2
+        } else {
+          newCart.item_count = 1
         }
         
-      })
-
-      if (duplicatedItems.length > 0){
-        newCart.item_count = 2
-      } else {
-        newCart.item_count = 1
+        window.SLIDECART_SET_CART(newCart)
       }
-      
-      window.SLIDECART_SET_CART(newCart)
-    }
-  </script>
+    </script>
     
-<style>
-    #slidecarthq header.header {
-        order: 1;
-    }
-
-    #slidecarthq .rewards {
-        order: 2;
-    }
-
-    #slidecarthq .items {
-        order: 3;
-    }
-
-    #slidecarthq .note {
-        order: 4;
-    }
-
-    #slidecarthq .upsells {
-        order: 5;
-    }
-
-    #slidecarthq .discount-box {
-        order: 6;
-    }
-
-    #slidecarthq .announcements {
-        order: 7;
-    }
-
-    #slidecarthq footer.footer.sticky-footer {
-        order: 8;
-    }
-
-    .footer-row:first-child {
-      display: none!important;
-    }
-
-    #slidecarthq .footer-row ~ .footer-row:last-of-type {
-      border-top: 0px solid!important;
-      padding-top: 0px!important;
-    }
-
-    #slidecarthq .header {
-      padding: 15px;
-    }
-  
-</style>
+    <style>
+        #slidecarthq header.header {
+            order: 1;
+        }
     
+        #slidecarthq .rewards {
+            order: 2;
+        }
+    
+        #slidecarthq .items {
+            order: 3;
+        }
+    
+        #slidecarthq .note {
+            order: 4;
+        }
+    
+        #slidecarthq .upsells {
+            order: 5;
+        }
+    
+        #slidecarthq .discount-box {
+            order: 6;
+        }
+    
+        #slidecarthq .announcements {
+            order: 7;
+        }
+    
+        #slidecarthq footer.footer.sticky-footer {
+            order: 8;
+        }
+    
+        .footer-row:first-child {
+          display: none!important;
+        }
+    
+        #slidecarthq .footer-row ~ .footer-row:last-of-type {
+          border-top: 0px solid!important;
+          padding-top: 0px!important;
+        }
+    
+        #slidecarthq .header {
+          padding: 15px;
+        }
+    </style>
     <!-- END APPHQ Slide Cart: Making the rewards available to the customer when a customer buys the same item twice CP -->
     
     <!-- Google Tag Manager (noscript) -->
