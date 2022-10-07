@@ -1,4 +1,16 @@
+<script type="application/json" data-ajax-cart-initial-state>
+    {{ cart | json }}
+</script>
 
+<script type="module">
+    import '{{ "liquid-ajax-cart-v1.10.3.js" | asset_url }}';
+</script>
+
+<script type="application/json" data-ajax-cart-configuration>
+    {
+      "addToCartCssClass": "js-my-cart-open"
+    }
+</script>
 
 {% comment %} Promo variant id - we need the id of one of the variants {% endcomment %}
 {% if settings.gift_product_variant_id != blank %}
@@ -14,7 +26,7 @@
 
     function suggestedUpsells() {
         // Slider for suggested upsell products
-        document.querySelector('.owl-carousel').owlCarousel?({
+        $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 10,
             responsiveClass: true,
