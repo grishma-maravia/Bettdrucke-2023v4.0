@@ -72,8 +72,8 @@
   padding: 0;
 }
 .icon-dog-face, .icon-dog-body{
-  width: 71.6px;
-  height: 71.6px;
+  min-width: 71.6px;
+  min-height: 71.6px;
 }
 .variants-ui__option-value-label .option-value-input + .icon-dog-body:before{
   content: "\e915";
