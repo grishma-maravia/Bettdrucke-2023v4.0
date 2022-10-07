@@ -245,10 +245,7 @@
                     
     <div class="my-container" data-drawer-push>
       <div class="MyCart_BodyWrapper">
-        <div id="MyCart_SectionsWrapper" class="MyCart_SectionsWrapper open-cart">
-          {% section 'my-cart-upsells' %}
-          {% section 'my-cart' %}
-        </div>
+
         <a class="skip-to-main" href="#site-main">{{ 'general.accessibility.skip_to_content' | t }}</a>
         {% section 'static-utility-bar' %}
         {% section 'top-bar' %}
@@ -267,7 +264,7 @@
           {% endif %}
         </main>
         {% section 'static-footer' %}
-        {% render 'my-cart-overlay' %}
+
 
     
     {% comment %}
@@ -497,7 +494,12 @@
       </div>
     </div>
     {% comment %}Inject product-gallery-zoom end{% endcomment %}
-    
+        <div id="MyCart_SectionsWrapper" class="MyCart_SectionsWrapper open-cart">
+          {% section 'my-cart-upsells' %}
+          {% section 'my-cart' %}
+        </div>
+        {% render 'my-cart-overlay' %}
+        
       </div>
     </div>
     {% comment %}Inject body wrapper for SlideCart closing divs end - Yurith {% endcomment %}
