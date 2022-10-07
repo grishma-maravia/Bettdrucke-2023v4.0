@@ -24,7 +24,7 @@
   {% assign product_smart_buttons = false %}
 {% endif %}
 
-{% assign product_form_class = '' %}
+{% assign product_form_class = 'js-ajax-cart-request-in-progress ' %}
 
 {% if show_dcb %}
   {% if product_smart_buttons or quickshop_smart_buttons %}
@@ -739,7 +739,6 @@
       type="submit" value="Add to cart"
       {% if selected_variant and selected_variant.available == false %}disabled{% endif %}
       onclick="overlayOn()"
-      js-ajax-cart-request-in-progress
       {% comment %} data-product-atc {% endcomment %}
       
     >
