@@ -14,8 +14,8 @@ window.addEventListener("scroll", myScrollFunc);
 $(document).scroll(function() {
   var y = $(this).scrollTop();
   if (y > 1450) {
-    $('.back_to_selection').fadeIn(5000);
+    $('.back_to_selection').fadeIn(1000);
   } else {
-    $('.back_to_selection').fadeOut(5000);
+    $('.back_to_selection').fadeOut(1000);
   }
 });
