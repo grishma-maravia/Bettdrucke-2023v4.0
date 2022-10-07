@@ -116,6 +116,8 @@
     </div>
 
     <div class="cart-item--info">
+
+      {% comment %}
       <div
         class="cart-item--quantity form-fields--qty"
         data-quantity-wrapper
@@ -128,8 +130,7 @@
               {% if item.quantity >= 10 %}tabindex="-1"{% endif %}
               aria-label="{{ 'general.general.quantity' | t }}"
               data-quantity-select
-              data-cartitem-quantity
-              data-ajax-cart-request-button>
+              data-cartitem-quantity>
               {% for i in (1..9) %}
                 <option {% if i == item.quantity %}selected {% endif %}value="{{ i }}">
                   {{ i }}
@@ -150,7 +151,6 @@
           <input
             class="form-field-input form-field-number form-field-filled"
             value="{{ item.quantity }}"
-            data-ajax-cart-quantity-input="{{ forloop.index }}"
             name="updates[]"
             id="updates_{{ item.key }}"
             type="text"
@@ -192,7 +192,73 @@
           {% render 'icon-remove' %}
         </a>
       </div>
+      {% endcomment %}
+              <h2 class="CartItem__Title Heading">
+          <a href="{{ line_item.url }}">{{ line_item.product.title }}</a>
+        </h2>
 
+        <div class="CartItem__Meta Heading Text--subdued">
+          {%- unless line_item.product.has_only_default_variant -%}
+            <p class="CartItem__Variant">{{ line_item.variant.title }}</p>
+          {%- endunless -%}
+
+          {%- if line_item.selling_plan_allocation -%}
+            <p class="CartItem__PlanAllocation">{{ line_item.selling_plan_allocation.selling_plan.name }}</p>
+          {%- endif -%}
+
+          {% comment %}
+            {%- if line_item.properties != empty -%}
+              <ul class="CartItem__PropertyList">
+                {%- for property in line_item.properties -%}
+                  {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+
+                  {%- if property.last == blank or first_character_in_key == '_' -%}
+                    {%- continue -%}
+                  {%- endif -%}
+
+                  <li class="CartItem__Property"
+                      data-ajax-cart-property-input="{{ forloop.index }}[{{ property.first }}]">{{ property.first }}: {{ property.last }}</li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          {% endcomment %}
+
+
+          <div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
+            <div class="CartItem__QuantitySelector">
+              <div class="QuantitySelector">
+                
+                <!-- data-ajax-cart-request-button ajaxifies the "Minus one" button -->
+                <a class="myCart_button" 
+                   data-ajax-cart-requst-button
+                   href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ line_item.quantity | minus: 1 }}" >
+                  <svg width="10" viewBox="0 0 12 2" xmlns="http://www.w3.org/2000/svg"><path d="M11.25 0H.75C.3 0 0 .4 0 1s.3 1 .75 1h10.5c.45 0 .75-.4.75-1s-.3-1-.75-1z" fill="#7A7A7A" fill-rule="nonzero"></path></svg>
+                </a>
+                <!-- Input -->
+                <input class="myCart_input" 
+                       data-ajax-cart-quantity-input="{{ forloop.index }}" 
+                       name="updates[]" 
+                       value="{{ line_item.quantity }}" 
+                       type="number" />
+                <!-- data-ajax-cart-request-button ajaxifies the "Plus one" button -->
+                <a class="myCart_button"
+                   href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ line_item.quantity | plus: 1 }}"
+                   data-ajax-cart-request-button
+                   >
+                  <svg width="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M11 5H7V1a1 1 0 00-2 0v4H1a1 1 0 000 2h4v4a1 1 0 002 0V7h4a1 1 0 000-2z" fill="currentColor" fill-rule="nonzero"></path></svg>
+                </a>
+                
+              </div>
+            </div>
+
+            <a href="{{ routes.cart_change_url }}?quantity=0&line={{ forloop.index }}" 
+               class="CartItem__Remove Link Link--underline Link--underlineShort" 
+               data-quantity="0" data-line="{{ forloop.index }}" 
+               data-action="remove-item">{{ 'cart.items.remove' | t }}</a>
+          </div>
+
+        {{ item_actions }}
+        
     </div>
   </div>
 </li>
