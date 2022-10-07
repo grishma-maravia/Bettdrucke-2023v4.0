@@ -71,7 +71,7 @@
 .option-value-input + .variant-ui__image{
   padding: 0;
 }
-.icon-dog-face, .icon-dog-body, .icon-dog-face:before, .icon-dog-body:before, .icon-dog-face:after, .icon-dog-body:after{
+.mdc-ripple-surface.mdc-ripple-upgraded:after, .icon-dog-face, .icon-dog-body, .icon-dog-face:before, .icon-dog-body:before, .icon-dog-face:after, .icon-dog-body:after{
   width: 71.6px !important;
   height: 71.6px !important;
 }
