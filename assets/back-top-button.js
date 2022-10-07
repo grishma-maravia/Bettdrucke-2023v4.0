@@ -16,6 +16,6 @@ $(document).scroll(function() {
   if (y > 1450) {
     $('.back_to_selection').fadeIn(1000);
   } else {
-    $('.back_to_selection').fadeOut(500);
+    $('.back_to_selection').fadeOut(300);
   }
 });
