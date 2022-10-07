@@ -740,7 +740,7 @@
       data-ajax-cart-toggle-class-button="js-my-cart-open"
       {% if selected_variant and selected_variant.available == false %}disabled{% endif %}
       onclick="overlayOn()"
-      data-product-atc
+      {% comment %}data-product-atc{% endcomment %}
     >
       <span class="atc-button--text">
         {% unless selected_variant and selected_variant.available == false %}
