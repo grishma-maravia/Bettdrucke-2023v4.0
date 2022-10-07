@@ -453,10 +453,10 @@
                     <span
                       class="
                         {% unless show_swatches %}
-                            {% if value == 'Kopfdruck' and product.metafields.bett_field.face_icon != blank %}
+                            {% if option.value == 'Kopfdruck' and product.metafields.bett_field.face_icon != blank %}
                               {{ product.metafields.bett_field.face_icon }}
                             {% endif %}
-                            {% if value == 'Ganzkörperdruck' %}
+                            {% if option.value == 'Ganzkörperdruck' and product.metafields.bett_field.body_icon != blank %}
                               {{ product.metafields.bett_field.body_icon }}
                             {% endif %}
                             variant-ui__image
