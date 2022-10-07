@@ -8,7 +8,29 @@
     <link rel="preconnect" href="https://fonts.shopifycdn.com">
     <link rel="preconnect" href="https://v.shopify.com">
     <link rel="preconnect" href="https://cdn.shopifycloud.com">
-
+    
+    {% render 'judgeme_core' %}
+    {% comment %} ICOMOON Link {% endcomment %}
+      <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/163995/BETT/style-cf.css?3lj35f">
+    {% comment %} Custom JS and JQuery Library and StarApps - Yurith {% endcomment %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% comment %}  Owl carousel library for adding sliders to the theme - Yurith {% endcomment %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" media="all">
+    {% comment %} Countdown JS {% endcomment %}
+      {{ 'countdown.js' | asset_url | script_tag }}
+    {% comment %} Addons to the Live Preview App - checked green icon when uploading a file {% endcomment %}
+      {%- if template.name == 'product' -%}
+        {{ 'success-icon.js' | asset_url | script_tag }}
+      {% endif %}
+    {% comment %} Hide and show Menu JS {% endcomment %}
+      {{ 'hide-and-show-menu.js' | asset_url | script_tag }}
+    {% comment %}  Gift item styles - with slidecart styles - Yurith
+                   Add FREE GIFT to slide cart code - Yurith {% endcomment %}
+      {{ 'my-cart-styles.css' | asset_url | stylesheet_tag }}
+      {% render 'my-cart-scripts', settings: settings %}
+      {% render 'my-cart-free-gift-scripts', settings: settings %}
+      
     <title>
       {{- page_title -}}
 
@@ -125,27 +147,7 @@
 
     <meta name="google-site-verification" content="l44XiT2zXUv54UImzZGdtdiGuqLxlZ28nUAgb-7Zs3Q" />
 
-    {% render 'judgeme_core' %}
-    {% comment %} ICOMOON Link {% endcomment %}
-      <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/163995/BETT/style-cf.css?3lj35f">
-    {% comment %} Custom JS and JQuery Library and StarApps - Yurith {% endcomment %}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    {% comment %}  Owl carousel library for adding sliders to the theme - Yurith {% endcomment %}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" media="all">
-    {% comment %} Countdown JS {% endcomment %}
-      {{ 'countdown.js' | asset_url | script_tag }}
-    {% comment %} Addons to the Live Preview App - checked green icon when uploading a file {% endcomment %}
-      {%- if template.name == 'product' -%}
-        {{ 'success-icon.js' | asset_url | script_tag }}
-      {% endif %}
-    {% comment %} Hide and show Menu JS {% endcomment %}
-      {{ 'hide-and-show-menu.js' | asset_url | script_tag }}
-    {% comment %}  Gift item styles - with slidecart styles - Yurith
-                   Add FREE GIFT to slide cart code - Yurith {% endcomment %}
-      {{ 'my-cart-styles.css' | asset_url | stylesheet_tag }}
-      {% render 'my-cart-scripts', settings: settings %}
-      {% render 'my-cart-free-gift-scripts', settings: settings %}
+
     
   
     {% if content_for_header contains 'rio.pwztag.com' %}{% render 'productwiz-rio', product: product, shop: shop, installGuard: true %}{% endif %}
