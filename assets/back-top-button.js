@@ -1,10 +1,11 @@
-myID = document.getElementById("backtoselectionID");
+const backToSelection = document.getElementById("backtoselectionID");
+
 var myScrollFunc = function() {
   var y = window.scrollY;
   if (y >= 1450) {
-    myID.className = "back_to_selection back_to_selection-show";
+    backToSelection.className = "back_to_selection back_to_selection-show";
   } else {
-    myID.className = "back_to_selection back_to_selection-hide";
+    backToSelection.className = "back_to_selection back_to_selection-hide";
   }
 };
 
