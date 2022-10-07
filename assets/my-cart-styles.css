@@ -65,7 +65,7 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
   right: 0;
   justify-content: space-between;
   transition: transform .5s;
-  /*transform: translateX(100%);*/
+  transform: translateX(100%);
 }
 .MyCart_FooterWrapper, #MyCart_Slider, .MyCart_EmptyMessage, .MyCart_PriceContainer, .MyCart_FlexColumn{
   display: flex;
