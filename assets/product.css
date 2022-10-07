@@ -71,17 +71,18 @@
 .option-value-input + .variant-ui__image{
   padding: 0;
 }
+.variants-ui__option-value-label .option-value-input+.icon-cat-body:before {
+  content: "\e91b";
+}
+
+.variants-ui__option-value-label .option-value-input+.icon-cat-face:before {
+  content: "\e91c";
+}
 .variants-ui__option-value-label .option-value-input + .icon-dog-body:before{
   content: "\e915";
 }
 .variants-ui__option-value-label .option-value-input + .icon-dog-face:before{
   content: "\e918";
-}
-.variants-ui__option-value-label .option-value-input + .icon-human-body:before{
-  content: "\e917";
-}
-.variants-ui__option-value-label .option-value-input + .icon-human-face:before{
-  content: "\e916";
 }
 .variants-ui__option-value-label .option-value-input+.icon-horse-body:before {
   content: "\e91d";
@@ -89,6 +90,12 @@
 
 .variants-ui__option-value-label .option-value-input+.icon-horse-face:before {
   content: "\e91e";
+}
+.variants-ui__option-value-label .option-value-input + .icon-human-body:before{
+  content: "\e917";
+}
+.variants-ui__option-value-label .option-value-input + .icon-human-face:before{
+  content: "\e916";
 }
 .option-value-input + .variant-ui__imageHead{
   background-image: url('https://cdn.shopify.com/s/files/1/0621/3235/5303/files/Group_40.svg?v=1658747609');
