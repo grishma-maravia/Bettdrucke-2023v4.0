@@ -212,8 +212,7 @@
         >
         <span
           class="site-header-cart--count {% if cart.item_count > 0 %}visible{% endif %}"
-          data-header-cart-count="{% if cart.item_count > 0 %}{{ cart.item_count }}{% endif %}"
-          data-ajax-cart-bind-state="cart.item_count">
+          data-header-cart-count="{% if cart.item_count > 0 %}{{ cart.item_count }}{% endif %}">
         </span>
         <span class="site-header-cart-icon site-header-cart-icon--svg">
           {% if section.settings.cart_icon == 'icon-bag' %}
