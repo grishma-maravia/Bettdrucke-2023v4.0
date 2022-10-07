@@ -72,12 +72,13 @@
   import { cartRequestAdd, cartRequestChange, subscribeToCartStateUpdate } from '{{ "liquid-ajax-cart-v1.10.0.js" | asset_url }}';
 
   const addToCartButton = document.querySelector(".product-form--atc-button");
+  addToCartButton.addEventListener("submit", event {
+    console.log("submting");
+  });
 
   subscribeToCartStateUpdate(state => {
     addCartTotalDiscount();
-    addToCartButton.addEventListener("submit", event {
-      console.log("submting");
-    });
+
   });
   
   export function addCartTotalDiscount() {   
