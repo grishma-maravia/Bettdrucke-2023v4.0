@@ -721,6 +721,7 @@ if (!("liquidAjaxCart" in window))
                 console.error(`Liquid Ajax Cart: can't parse configuration JSON from the "${L.computed.configurationAttribute}" script`), console.error(t)
             }
         }(), document.addEventListener("submit", (t => {
+              console.log("submit event from Liquid Ajax Cart");
                 var e, r;
                 const o = t.target;
                 let n;
