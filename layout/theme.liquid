@@ -133,7 +133,9 @@
     {% comment %} Hide and show Menu JS {% endcomment %}
       {{ 'hide-and-show-menu.js' | asset_url | script_tag }}
     {% comment %} Addons to the Live Preview App - checked green icon when uploading a file {% endcomment %}
-      {{ 'success-icon.js' | asset_url | script_tag }}
+      {%- if template.name == 'product' -%}
+        {{ 'success-icon.js' | asset_url | script_tag }}
+      {% endif %}
     {% comment %} Custom JS and JQuery Library and StarApps - Yurith {% endcomment %}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {% comment %}  Gift item styles - with slidecart styles - Yurith
