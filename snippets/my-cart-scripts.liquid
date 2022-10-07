@@ -120,8 +120,8 @@
 </script>
 
 <script>
-  const form = $("form.product-form--atc-button");
-  console.log("addToCartButton");
+  const form = document.querySelector("form.product-form--atc-button");
+  console.log("form");
   console.log(form);
   form.addEventListener("submit", event => {
     console.log("submiting");
