@@ -1,16 +1,4 @@
-<script type="application/json" data-ajax-cart-initial-state>
-    {{ cart | json }}
-</script>
 
-<script type="module">
-    import '{{ "liquid-ajax-cart-v1.10.0.js" | asset_url }}';
-</script>
-
-<script type="application/json" data-ajax-cart-configuration>
-    {
-      "addToCartCssClass": "js-my-cart-open"
-    }
-</script>
 
 {% comment %} Promo variant id - we need the id of one of the variants {% endcomment %}
 {% if settings.gift_product_variant_id != blank %}
