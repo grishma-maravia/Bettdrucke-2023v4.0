@@ -149,6 +149,7 @@
           <input
             class="form-field-input form-field-number form-field-filled"
             value="{{ item.quantity }}"
+            data-ajax-cart-quantity-input="{{ forloop.index }}"
             name="updates[]"
             id="updates_{{ item.key }}"
             type="text"
