@@ -1,13 +1,13 @@
-<template data-options>
+<template data-options data-ajax-cart-section>
   {
     "totalPrice": {{ cart.total_price | money | json }}
   }
 </template>
 
-<template data-html="list">
+<template data-html="list" data-ajax-cart-section>
   {% render 'cart-item-list' %}
 </template>
 
-<template data-html="discounts">
+<template data-html="discounts" data-ajax-cart-section>
   {% render 'cart-discounts' %}
 </template>
