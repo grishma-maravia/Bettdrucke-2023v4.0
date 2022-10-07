@@ -475,7 +475,7 @@
                       {% endif %}
                     >
                       {% unless show_swatches %}
-                        {% unless option.name == 'Style' and product.handle == 'personalisiertes-3d-kissen-mit-hunden' %}
+                        {% unless option.name == 'Style' and product.metafields.bett_field.face_icon == blank and product.metafields.bett_field.body_icon == blank %}
                           {{ value }}
                         {% endunless %}
                       {% else %}
