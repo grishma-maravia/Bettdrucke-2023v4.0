@@ -132,12 +132,12 @@
       {{ 'countdown.js' | asset_url | script_tag }}
     {% comment %} Hide and show Menu JS {% endcomment %}
       {{ 'hide-and-show-menu.js' | asset_url | script_tag }}
+    {% comment %} Custom JS and JQuery Library and StarApps - Yurith {% endcomment %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {% comment %} Addons to the Live Preview App - checked green icon when uploading a file {% endcomment %}
       {%- if template.name == 'product' -%}
         {{ 'success-icon.js' | asset_url | script_tag }}
       {% endif %}
-    {% comment %} Custom JS and JQuery Library and StarApps - Yurith {% endcomment %}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {% comment %}  Gift item styles - with slidecart styles - Yurith
                    Add FREE GIFT to slide cart code - Yurith {% endcomment %}
       {{ 'my-cart-styles.css' | asset_url | stylesheet_tag }}
