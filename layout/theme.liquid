@@ -568,11 +568,9 @@
       window.addEventListener('keydown', handleFirstTab);
     })();
     </script>
-
     {% unless settings.reduce_animations %}
       {{ 'ripple.css' | asset_url | stylesheet_tag }}
     {% endunless %}
-
     <script
       src="{{ 'instantPage.min.js' | asset_url }}"
       type="module"
