@@ -224,38 +224,33 @@
           {% endcomment %}
 
 
-          <div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
-            <div class="CartItem__QuantitySelector">
-              <div class="QuantitySelector">
-                
-                <!-- data-ajax-cart-request-button ajaxifies the "Minus one" button -->
-                <a class="myCart_button" 
-                   data-ajax-cart-requst-button
-                   href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ line_item.quantity | minus: 1 }}" >
-                  <svg width="10" viewBox="0 0 12 2" xmlns="http://www.w3.org/2000/svg"><path d="M11.25 0H.75C.3 0 0 .4 0 1s.3 1 .75 1h10.5c.45 0 .75-.4.75-1s-.3-1-.75-1z" fill="#7A7A7A" fill-rule="nonzero"></path></svg>
-                </a>
-                <!-- Input -->
-                <input class="myCart_input" 
-                       data-ajax-cart-quantity-input="{{ forloop.index }}" 
-                       name="updates[]" 
-                       value="{{ line_item.quantity }}" 
-                       type="number" />
-                <!-- data-ajax-cart-request-button ajaxifies the "Plus one" button -->
-                <a class="myCart_button"
-                   href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ line_item.quantity | plus: 1 }}"
-                   data-ajax-cart-request-button
-                   >
-                  <svg width="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M11 5H7V1a1 1 0 00-2 0v4H1a1 1 0 000 2h4v4a1 1 0 002 0V7h4a1 1 0 000-2z" fill="currentColor" fill-rule="nonzero"></path></svg>
-                </a>
-                
+              <div class="cart-template__quantity" style="max-width: 100px;">
+                <label for="Quantity-{{ section.id }}" class="visually-hidden">{{ 'cart.general.item_quantity' | t }}</label>
+                <div class="product-form__item product-form__quantity" data-quantity-wrapper>
+                  
+                  <!-- data-ajax-cart-request-button ajaxifies the "Minus one" button -->
+                  <a class="MyCart_QuantityButtonItem" 
+                     data-ajax-cart-request-button 
+                     href="{{ routes.cart_change_url }}?line={{ item_index }}&quantity={{ item.quantity | minus: 1 }}" >
+                    <svg width="10" viewBox="0 0 12 2" xmlns="http://www.w3.org/2000/svg"><path d="M11.25 0H.75C.3 0 0 .4 0 1s.3 1 .75 1h10.5c.45 0 .75-.4.75-1s-.3-1-.75-1z" fill="#7A7A7A" fill-rule="nonzero"></path></svg>
+                  </a>
+                  
+              	  <!-- Input -->
+              	  <input class="MyCart_InputItem" 
+                     data-ajax-cart-quantity-input="{{ item_index }}" 
+                     name="updates[]" 
+                     value="{{ item.quantity }}" 
+                     type="number" />
+                  
+                  <!-- data-ajax-cart-request-button ajaxifies the "Plus one" button -->
+                  <a class="MyCart_QuantityButtonItem"
+                     data-ajax-cart-request-button 
+                     href="{{ routes.cart_change_url }}?line={{ item_index }}&quantity={{ item.quantity | plus: 1 }}">
+                    <svg width="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M11 5H7V1a1 1 0 00-2 0v4H1a1 1 0 000 2h4v4a1 1 0 002 0V7h4a1 1 0 000-2z" fill="currentColor" fill-rule="nonzero"></path></svg>
+                  </a>
+                  
+                </div>
               </div>
-            </div>
-
-            <a href="{{ routes.cart_change_url }}?quantity=0&line={{ forloop.index }}" 
-               class="CartItem__Remove Link Link--underline Link--underlineShort" 
-               data-quantity="0" data-line="{{ forloop.index }}" 
-               data-action="remove-item">{{ 'cart.items.remove' | t }}</a>
-          </div>
 
         {{ item_actions }}
         
