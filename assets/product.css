@@ -71,6 +71,10 @@
 .option-value-input + .variant-ui__image{
   padding: 0;
 }
+.variants-ui__option-value-label .option-value-input + .icon-dog-face{
+  width: 71.6px;
+  height: 71.6px;
+}
 .variants-ui__option-value-label .option-value-input + .icon-dog-body:before{
   content: "\e915";
 }
