@@ -453,7 +453,7 @@
                     <span
                       class="
                         {% unless show_swatches %}
-                            {% if option.name == 'Style' %}
+                            {% if option.name == 'Style' and product.metafields.bett_field.face_icon != blank and product.metafields.bett_field.body_icon != blank %}
                               {% if value == 'Kopfdruck' or value == 'Kopf' %}
                                 {{ product.metafields.bett_field.face_icon }}
                               {% endif %}
