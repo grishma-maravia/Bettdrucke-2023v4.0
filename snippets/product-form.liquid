@@ -454,8 +454,8 @@
                       class="
                         {% unless show_swatches %}
                             {% if option.name == 'Style' and product.handle == 'personalisiertes-3d-kissen-mit-hunden' %}
-                              {% if value == 'Kopfdruck' %}
-                                icon-dog-face
+                              {% if value == 'Kopfdruck' or value == 'Kopf' %}
+                                {{ product.metafields.face-icon }}
                               {% endif %}
                               {% if value == 'Ganzkörperdruck' %}
                                 icon-dog-body
