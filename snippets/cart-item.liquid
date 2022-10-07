@@ -128,7 +128,8 @@
               {% if item.quantity >= 10 %}tabindex="-1"{% endif %}
               aria-label="{{ 'general.general.quantity' | t }}"
               data-quantity-select
-              data-cartitem-quantity>
+              data-cartitem-quantity
+              data-ajax-cart-request-button>
               {% for i in (1..9) %}
                 <option {% if i == item.quantity %}selected {% endif %}value="{{ i }}">
                   {{ i }}
