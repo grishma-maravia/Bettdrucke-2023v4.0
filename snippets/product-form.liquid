@@ -738,8 +738,9 @@
       class="product-form--atc-button {% if selected_variant and selected_variant.available == false %}disabled{% endif %}"
       type="submit" value="Add to cart"
       {% if selected_variant and selected_variant.available == false %}disabled{% endif %}
-      data-product-atc
       onclick="overlayOn()"
+      <!-- data-product-atc -->
+      
     >
       <span class="atc-button--text">
         {% unless selected_variant and selected_variant.available == false %}
