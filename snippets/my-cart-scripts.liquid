@@ -1,12 +1,12 @@
-<script async type="application/json" data-ajax-cart-initial-state>
+<script type="application/json" data-ajax-cart-initial-state>
     {{ cart | json }}
 </script>
 
-<script async type="module">
+<script type="module">
     import '{{ "liquid-ajax-cart-v1.10.0.js" | asset_url }}';
 </script>
 
-<script async type="application/json" data-ajax-cart-configuration>
+<script type="application/json" data-ajax-cart-configuration>
     {
       "addToCartCssClass": "js-my-cart-open"
     }
@@ -21,12 +21,11 @@
 {% endif %}
 
 
-<script async type="module">
+<script type="module">
     import { cartRequestAdd, cartRequestChange, subscribeToCartStateUpdate } from '{{ "liquid-ajax-cart-v1.10.0.js" | asset_url }}';
 
     function suggestedUpsells() {
         // Slider for suggested upsell products
-
         $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 10,
