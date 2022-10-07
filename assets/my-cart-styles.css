@@ -72,7 +72,7 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
   flex-direction: column;
 }
 #MyCart_Overlay{
-  z-index: 19;
+  z-index: 700;
   position:fixed;
   top:0;
   right:0;
