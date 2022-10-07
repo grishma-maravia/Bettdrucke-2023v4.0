@@ -558,25 +558,20 @@
     {% render 'structured-data' %}
 
     <script>
-    (function () {
-      function handleFirstTab(e) {
-        if (e.keyCode === 9) { // the "I am a keyboard user" key
-          document.body.classList.add('user-is-tabbing');
-          window.removeEventListener('keydown', handleFirstTab);
+      (function () {
+        function handleFirstTab(e) {
+          if (e.keyCode === 9) { // the "I am a keyboard user" key
+            document.body.classList.add('user-is-tabbing');
+            window.removeEventListener('keydown', handleFirstTab);
+          }
         }
-      }
-      window.addEventListener('keydown', handleFirstTab);
-    })();
+        window.addEventListener('keydown', handleFirstTab);
+      })();
     </script>
     {% unless settings.reduce_animations %}
       {{ 'ripple.css' | asset_url | stylesheet_tag }}
     {% endunless %}
-    <script
-      src="{{ 'instantPage.min.js' | asset_url }}"
-      type="module"
-      defer
-    >
-    </script>
+    <script src="{{ 'instantPage.min.js' | asset_url }}" type="module" defer ></script>
     
     <!-- CleverApp CODE Start -->{% if template.name == 'product'%}{% include 'clever' %}{% endif %}<!-- CleverApp END --> 
     
