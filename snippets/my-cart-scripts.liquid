@@ -1,12 +1,12 @@
-<script type="application/json" data-ajax-cart-initial-state>
+<script async type="application/json" data-ajax-cart-initial-state>
     {{ cart | json }}
 </script>
 
-<script type="module">
+<script async type="module">
     import '{{ "liquid-ajax-cart-v1.10.0.js" | asset_url }}';
 </script>
 
-<script type="application/json" data-ajax-cart-configuration>
+<script async type="application/json" data-ajax-cart-configuration>
     {
       "addToCartCssClass": "js-my-cart-open"
     }
