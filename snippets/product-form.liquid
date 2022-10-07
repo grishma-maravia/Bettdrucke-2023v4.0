@@ -455,9 +455,7 @@
                         {% unless show_swatches %}
                             {% if option.name == 'Style' and product.metafields.bett_field.face_icon != blank %}
                               {% if value == 'Kopfdruck' %}
-                                {%- if product.metafields.bett_field.face_icon != blank -%}
-                                  {{ product.metafields.bett_field.face_icon }}
-                                {%- endif -%}
+                                {{ product.metafields.bett_field.face_icon }}
                               {% endif %}
                               {% if value == 'Ganzkörperdruck' and product.metafields.bett_field.body_icon != blank %}
                                 {{ product.metafields.bett_field.body_icon }}
