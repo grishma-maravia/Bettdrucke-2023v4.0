@@ -453,13 +453,15 @@
                     <span
                       class="
                         {% unless show_swatches %}
-                            {% if option.value == 'Kopfdruck' and product.metafields.bett_field.face_icon != blank %}
-                              {{ product.metafields.bett_field.face_icon }}
+                            {% if option.name == 'Style' %}
+                              {% if value == 'Kopfdruck' and product.metafields.bett_field.face_icon != blank %}
+                                {{ product.metafields.bett_field.face_icon }}
+                              {% endif %}
+                              {% if value == 'Ganzkörperdruck' and product.metafields.bett_field.body_icon != blank %}
+                                {{ product.metafields.bett_field.body_icon }}
+                              {% endif %}
+                              variant-ui__image
                             {% endif %}
-                            {% if option.value == 'Ganzkörperdruck' and product.metafields.bett_field.body_icon != blank %}
-                              {{ product.metafields.bett_field.body_icon }}
-                            {% endif %}
-                            variant-ui__image
                             variants-ui__option-value-name
                             {{ option_value_name_classes }}
                         {% else %}
