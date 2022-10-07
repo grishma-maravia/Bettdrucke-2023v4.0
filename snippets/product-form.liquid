@@ -739,6 +739,7 @@
       type="submit" value="Add to cart"
       {% if selected_variant and selected_variant.available == false %}disabled{% endif %}
       onclick="overlayOn()"
+      js-ajax-cart-request-in-progress
       {% comment %} data-product-atc {% endcomment %}
       
     >
