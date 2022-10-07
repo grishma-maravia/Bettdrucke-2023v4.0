@@ -1,110 +1,196 @@
-<div class="CartItem">
-      <div class="CartItem__ImageWrapper AspectRatio">
-        <div class="AspectRatio" style="--aspect-ratio: {{ line_item.image.aspect_ratio }}">
-          <img class="CartItem__Image" src="{{ line_item.image | img_url: '240x' }}" alt="{{ line_item.image.alt | escape }}">
-        </div>
-      </div>
+{% assign compare_at_price = 0 %}
 
-      <div class="CartItem__Info">
-        <h2 class="CartItem__Title Heading">
-          <a href="{{ line_item.url }}">{{ line_item.product.title }}</a>
-        </h2>
+{% for variant in item.product.variants %}
+  {% if variant.id == item.variant.id and variant.compare_at_price > item.price %}
+    {% assign compare_at_price = variant.compare_at_price %}
+    {% break %}
+  {% endif %}
+{% endfor %}
 
-        <div class="CartItem__Meta Heading Text--subdued">
-          {%- unless line_item.product.has_only_default_variant -%}
-            <p class="CartItem__Variant">{{ line_item.variant.title }}</p>
-          {%- endunless -%}
+{%- assign item_has_discounts = false -%}
+{%- if item.line_level_discount_allocations.size > 0 -%}
+  {%- assign item_has_discounts = true -%}
+{%- endif -%}
 
-          {%- if line_item.selling_plan_allocation -%}
-            <p class="CartItem__PlanAllocation">{{ line_item.selling_plan_allocation.selling_plan.name }}</p>
-          {%- endif -%}
+<li
+  class="cart-item"
+  data-cartitem
+  data-cartitem-id="{{ item.variant_id }}"
+  data-cartitem-key="{{ item.key }}"
+  data-cartitem-price="{{ item.price }}">
+  <figure class="cart-item--image-wrapper">
+    <a href="{{ item.url }}">
+      {% if item.image %}
+        {%
+          render 'rimg',
+          img: item.image,
+          alt: item.title,
+          size: '120x'
+        %}
+      {% else %}
+        {{ 'image' | placeholder_svg_tag: 'placeholder--image' }}
+      {% endif %}
+    </a>
+  </figure>
 
-          {% comment %}
-            {%- if line_item.properties != empty -%}
-              <ul class="CartItem__PropertyList">
-                {%- for property in line_item.properties -%}
-                  {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+  <div class="cart-item--inner">
 
-                  {%- if property.last == blank or first_character_in_key == '_' -%}
-                    {%- continue -%}
-                  {%- endif -%}
+    <div class="cart-item--content">
+      <h2 class="cart-item--content-title">
+        <a href="{{ item.url }}">
+          {{ item.product.title }}
+        </a>
+      </h2>
 
-                  <li class="CartItem__Property"
-                      data-ajax-cart-property-input="{{ forloop.index }}[{{ property.first }}]">{{ property.first }}: {{ property.last }}</li>
-                {%- endfor -%}
-              </ul>
-            {%- endif -%}
-          {% endcomment %}
+      {% unless item.product.has_only_default_variant %}
+        {% for option in item.product.options %}
+          <div class="cart-item--product-options">
+            <span class="cart-item--option-name">{{ option }}</span>
+            {{ item.variant.options[forloop.index0] }}
+          </div>
+        {% endfor %}
+      {% endunless %}
 
-          <div class="CartItem__PriceList">
-            {%- if line_item.original_price != line_item.final_price -%}
-              <span class="CartItem__Price Price Price--highlight">{{ line_item.final_price | money }}</span>
-              <span class="CartItem__OriginalPrice Price Price--compareAt">{{ line_item.original_price | money }}</span>
+      {% if item.selling_plan_allocation.selling_plan %}
+        <span class="cart-item--line-item-subscriptions">{{ item.selling_plan_allocation.selling_plan.name }}</span>
+      {% endif %}
+
+      <div class="cart-item--content-price">
+        <span class="cart-item--price-title">
+          {{ 'cart.general.price' | t }}
+        </span>
+
+        {% if compare_at_price > item.price or item.original_price > item.final_price %}
+          <span class="visually-hidden">{{ 'product_price.price.original' | t }}</span>
+          <s class="cart-item--sale-price money">
+            {%- if item_has_discounts -%}
+              {{ item.original_price | money }}
             {%- else -%}
-              <span class="CartItem__Price Price">{{ line_item.final_price | money }}</span>
-            {%- endif -%}
+              {{ compare_at_price | money }}
+            {%- endif %}
+          </s>
+          <span class="visually-hidden">{{ 'product_price.price.current' | t }}</span>
+        {% endif %}
 
-            {%- if line_item.line_level_discount_allocations != blank -%}
-              <ul class="CartItem__DiscountList">
-                {%- for discount_allocation in line_item.line_level_discount_allocations -%}
-                  <li class="CartItem__Discount">
-                    {%- render 'icon' with 'sale' -%}{{ discount_allocation.discount_application.title }}: -{{ discount_allocation.amount | money }}
-                  </li>
-                {%- endfor -%}
-              </ul>
-            {%- endif -%}
-          </div>
+        <span class="money {% if item_has_discounts %}cart-item--discount-price{% endif %}">
+          {%- if item_has_discounts -%}
+            {{ item.final_price | money }}
+          {%- else -%}
+            {{ item.original_price | money }}
+          {%- endif %}
+        </span>
+      </div>
 
-          {%- if line_item.unit_price_measurement -%}
-            <div class="CartItem__UnitPriceMeasurement">
-              <div class="UnitPriceMeasurement Heading Text--subdued">
-                <span class="UnitPriceMeasurement__Price">{{ line_item.unit_price | money }}</span>
-                <span class="UnitPriceMeasurement__Separator">/ </span>
+      {% capture total_quantity %}<span class="cart-item--total-quantity" data-total-quantity>{{ item.unit_price_measurement.quantity_value }}{{ item.unit_price_measurement.quantity_unit }}</span>{% endcapture %}
+      {% capture unit_price %}<span class="cart-item--unit-price-amount money" data-unit-price-amount>{{ item.unit_price | money }}</span>{% endcapture %}
+      {% capture unit_measure %}<span class="cart-item--unit-price-measure" data-unit-price-measure>{%- if item.unit_price_measurement.reference_value != 1 -%}{{ item.unit_price_measurement.reference_value }}{%- endif %}{{ item.unit_price_measurement.reference_unit }}</span>{% endcapture %}
 
-                {%- if line_item.unit_price_measurement.reference_value != 1 -%}
-                  <span class="UnitPriceMeasurement__ReferenceValue">{{ line_item.unit_price_measurement.reference_value }}</span>
-                {%- endif -%}
+      {% if item.unit_price_measurement %}
+        <div class="cart-item--unit-price">
+          {{ 'product_price.price.price_per_unit_html' | t: total_quantity: total_quantity, unit_price: unit_price, unit_measure: unit_measure | strip_newlines }}
+        </div>
+      {% endif %}
 
-                <span class="UnitPriceMeasurement__ReferenceUnit">{{ line_item.unit_price_measurement.reference_unit }}</span>
-              </div>
+      {%- if item_has_discounts -%}
+        <ul class="discount-list" aria-label="{{ 'product.general.discounts' | t }}">
+          {% for discount_allocation in item.line_level_discount_allocations %}
+            <li class="discount-list-item">
+              {% render 'icon-library', id: 'icon-sale-tag' %}
+              {{ discount_allocation.discount_application.title }}
+              (-<span class="money">{{ discount_allocation.amount | money }}</span>)
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if show_sku %}
+        <div
+          class="
+            cart-item--sku
+            {% if item.sku == empty %}cart-item--sku-empty{% endif %}
+          "
+        >
+          {{ 'product.general.sku_html' | t: sku: item.sku | strip_newlines }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="cart-item--info">
+      <div
+        class="cart-item--quantity form-fields--qty"
+        data-quantity-wrapper
+        >
+        <div class="form-field form-field--qty-select {% if item.quantity < 10 %}visible{% else %}hidden{% endif %}">
+          <div class="form-field-select-wrapper">
+            <select
+              class="form-field-input form-field-select form-field-filled"
+              id="quantity_{{ item.key | replace: ':', '_' }}"
+              {% if item.quantity >= 10 %}tabindex="-1"{% endif %}
+              aria-label="{{ 'general.general.quantity' | t }}"
+              data-quantity-select
+              data-cartitem-quantity>
+              {% for i in (1..9) %}
+                <option {% if i == item.quantity %}selected {% endif %}value="{{ i }}">
+                  {{ i }}
+                </option>
+              {% endfor %}
+              <option value="10">
+                10+
+              </option>
+            </select>
+            <label class="form-field-title" for="quantity_{{ item.key | replace: ':', '_' }}">
+              {{ 'general.general.quantity' | t }}
+            </label>
+            {% render 'icon-chevron-down-small' %}
             </div>
-          {%- endif -%}
         </div>
 
-        {%- capture item_actions -%}
-          <div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
-            <div class="CartItem__QuantitySelector">
-              <div class="QuantitySelector">
-                
-                <!-- data-ajax-cart-request-button ajaxifies the "Minus one" button -->
-                <a class="myCart_button" 
-                   data-ajax-cart-requst-button
-                   href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ line_item.quantity | minus: 1 }}" >
-                  <svg width="10" viewBox="0 0 12 2" xmlns="http://www.w3.org/2000/svg"><path d="M11.25 0H.75C.3 0 0 .4 0 1s.3 1 .75 1h10.5c.45 0 .75-.4.75-1s-.3-1-.75-1z" fill="#7A7A7A" fill-rule="nonzero"></path></svg>
-                </a>
-                <!-- Input -->
-                <input class="myCart_input" 
-                       data-ajax-cart-quantity-input="{{ forloop.index }}" 
-                       name="updates[]" 
-                       value="{{ line_item.quantity }}" 
-                       type="number" />
-                <!-- data-ajax-cart-request-button ajaxifies the "Plus one" button -->
-                <a class="myCart_button"
-                   href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ line_item.quantity | plus: 1 }}"
-                   data-ajax-cart-request-button
-                   >
-                  <svg width="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M11 5H7V1a1 1 0 00-2 0v4H1a1 1 0 000 2h4v4a1 1 0 002 0V7h4a1 1 0 000-2z" fill="currentColor" fill-rule="nonzero"></path></svg>
-                </a>
-                
-              </div>
-            </div>
-
-            <a href="{{ routes.cart_change_url }}?quantity=0&line={{ forloop.index }}" 
-               class="CartItem__Remove Link Link--underline Link--underlineShort" 
-               data-quantity="0" data-line="{{ forloop.index }}" 
-               data-action="remove-item">{{ 'cart.items.remove' | t }}</a>
-          </div>
-        {%- endcapture -%}
-
-        {{ item_actions }}
+        <div class="form-field form-field--qty-input {% if item.quantity < 10 %}hidden{% else %}visible{% endif %}">
+          <input
+            class="form-field-input form-field-number form-field-filled"
+            value="{{ item.quantity }}"
+            name="updates[]"
+            id="updates_{{ item.key }}"
+            type="text"
+            pattern="\d*"
+            {% if item.quantity < 10 %}tabindex="-1"{% endif %}
+            aria-label="{{ 'general.general.quantity' | t }}"
+            data-quantity-input
+            data-cartitem-quantity>
+          <label class="form-field-title" for="updates_{{ item.key }}">
+            {{ 'general.general.quantity' | t }}
+          </label>
+        </div>
       </div>
+
+      <div class="cart-item--total">
+        <span class="visually-hidden">{{ 'cart.general.total_line_price' | t }}</span>
+        {%- if item_has_discounts -%}
+          <span class="visually-hidden">{{ 'product_price.price.original' | t }}</span>
+          <s class="original-price money">{{ item.original_line_price | money }}</s>
+          <span class="visually-hidden">{{ 'product_price.price.current' | t }}</span>
+        {%- endif -%}
+        <div
+          class="money {% if item_has_discounts %}cart-item--discount-price{% endif %}"
+          aria-live="polite"
+          data-cartitem-total
+        >
+          {{ item.final_line_price | money }}
+        </div>
+      </div>
+
+      <div class="cart-item--remove">
+        <a
+          href="{{ routes.cart_change_url }}?line={{ item_index }}&amp;quantity=0"
+          class="cart-item--remove-link"
+          data-cartitem-remove
+          data-no-instant
+          aria-label="remove {{ item.product.title | escape }}"
+        >
+          {% render 'icon-remove' %}
+        </a>
+      </div>
+
+    </div>
+  </div>
+</li>
