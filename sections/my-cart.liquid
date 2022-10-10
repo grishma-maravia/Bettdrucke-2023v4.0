@@ -2,12 +2,13 @@
 
 <div class="MyCart_FloatingCart">
   <div id="MyCart_Slider" data-ajax-cart-section>
-    <form id="MyCart_Form" action="{{ routes.cart_url }}" method="post" class="my-cart" data-ajax-cart-section-scroll>
+    <form id="MyCart_Form" action="{{ routes.cart_url }}" 
+          method="post" class="my-cart" data-ajax-cart-section-scroll>
           {% comment %} data-ajax-cart-section makes the element's HTML update
           when the cart gets changed {% endcomment %}
       <div>
         <div class="MyCart_Header close-cart">
-          <h2 class="MyCart_Heading">Warenkorb</h2>
+          <h2 class="MyCart_Heading Heading u-h5"">Warenkorb</h2>
           <a class="MyCart_CloseSlideCart" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity=0"
              onclick="overlayOff()"
              data-ajax-cart-toggle-class-button="js-my-cart-open">
@@ -41,13 +42,13 @@
                   </a>
                 </div>
                 {% comment %} image {% endcomment %}
-                <div>
+                <div class="MyCart_ImageItemWrapper">
                   <img class="MyCart_ImageItem" src="{{ item.image | image_url: width: 300 }} ">
                 </div>
                 <div class="MyCart_ContentItem">
                   {% assign item_index = forloop.index %}
                   {% comment %} item title {% endcomment %}
-                  <h2 class="MyCart_H2">
+                  <h2 class="MyCart_H2 Heading u-h5">
                     <a class="MyCart_H2" href="{{ item.url }}">{{ item.product.title }}</a>
                   </h2>
                   {% for option in item.options_with_values %}
@@ -80,12 +81,12 @@
                       {{ item.final_line_price | money }}
                     </div>
                     {% endcomment %}
-                    <div class="Heading MyCart_PriceContainer">
+                    <div class="MyCart_PriceContainer">
                       {% if item.original_line_price > item.final_line_price %}
-                        <span class="MyCart_Price MyCart_HighlightedText">{{ item.final_line_price | money }}</span>
+                        <span class="Heading MyCart_Price MyCart_HighlightedText">{{ item.final_line_price | money }}</span>
                         <span class="MyCart_Price MyCart_ItemDiscount" style="text-decoration: line-through">{{ item.variant.compare_at_price | times: item.quantity | money }}</span>
                       {%- elsif item.variant.compare_at_price > item.original_price -%}
-                        <span class="MyCart_Price MyCart_HighlightedText">{{ item.final_line_price | money }}</span>
+                        <span class="Heading MyCart_Price MyCart_HighlightedText">{{ item.final_line_price | money }}</span>
                         <span class="MyCart_Price MyCart_ItemDiscount" style="text-decoration: line-through">{{ item.variant.compare_at_price | times: item.quantity | money }} </span>
                       {% else %}
                         <span class="MyCart_Price">{{ item.final_line_price | money }}</span>
@@ -150,7 +151,7 @@
         {% if cart.item_count != 0 %}
           <div class="MyCart_FooterContainer">              
             <div class="MyCart_FooterWrapper">
-              <div class="MyCart_FooterInfoWrapper MyCart_FooterText">
+              <div class="Heading MyCart_FooterInfoWrapper MyCart_FooterText">
                 {% assign price_to_compare = cart.total_price | money_without_trailing_zeros | plus: 0 %}
                 {% if price_to_compare > 99 %}
                   <p class="">Versand</p>
@@ -159,11 +160,11 @@
                   </p>
                 {% endif %}
               </div>
-              <div id="MyCart_TotalFinalWrapper" class="MyCart_FooterInfoWrapper MyCart_FooterText">
+              <div id="MyCart_TotalFinalWrapper" class="Heading MyCart_FooterInfoWrapper MyCart_FooterText">
                 <p class="">Zwischensumme</p>
                 <p class="MyCart_FinalPrice" data-ajax-cart-bind-state="cart.total_price | money_with_currency">{{ cart.total_price | money_with_currency }}</p>
               </div>
-              <button class="MyCart_CheckoutButton bttn" 
+              <button class="MyCart_CheckoutButton Button Button--primary Button--full" 
                       type="submit" 
                       name="checkout"
                       form="MyCart_Form">
