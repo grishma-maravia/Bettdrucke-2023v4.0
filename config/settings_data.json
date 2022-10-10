@@ -323,9 +323,9 @@
                 "weisses-kopfkissen"
               ],
               "enable_upsell_1": true,
-              "upsell_product_1": "personalisiertes-fotokissen-kissenbezug-mit-menschen",
-              "enable_upsell_2": true,
-              "upsell_product_2": "3d-kissen-mit-menschen",
+              "upsell_product_1": "personalisierte-fotodecke-bettbezug-mit-parchen-foto",
+              "enable_upsell_2": false,
+              "upsell_product_2": "",
               "enable_upsell_3": false,
               "upsell_product_3": "",
               "enable_upsell_4": false,
