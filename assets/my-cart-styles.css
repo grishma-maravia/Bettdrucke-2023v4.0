@@ -271,7 +271,7 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
   margin: 0;
 }
 /* Text style */
-.MyCart_H2 > a, .MyCart_H2, .MyCartUpsells_ProductHeader{
+.MyCart_H2 > a, .MyCartUpsells_ProductHeader{
   color: var(--color-gral-text);
 }
 .MyCart_ValueItem{
