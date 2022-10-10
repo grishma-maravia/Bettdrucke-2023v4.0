@@ -1,5 +1,5 @@
 
-{% assign upsell_product = all_products['personalisierte-fotodecke-bettbezug-mit-parchen-foto'] %}
+{% assign upsell_product = all_products[{{ upsell_product_1 }}] %}
 
 
 {% if upsell_product != null %}
