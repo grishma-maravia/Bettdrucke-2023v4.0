@@ -91,7 +91,6 @@
                   type="submit"
                   name="formUpsell_{{ upsell.id }}"
                   class="MyCartUpsells_SubmitButton button-primary"
-                  form="formUpsell_{{ upsell.id }}"
                   {% if upsell.selected_or_first_available_variant.available == false %}disabled{% endif %}
                   >
             <span>
