@@ -4,7 +4,7 @@
     
     <form action="/cart/add" method="post" id="formUpsell_{{ upsell.id }}">
   
-      <input name="id" type="hidden" value="{{ upsell.variants.first.id }}" id="product-select-{{ upsell.id }}" data-available="{{ upsell.selected_or_first_available_variant }}">
+      <input name="formUpsell_{{ upsell.id }}" type="hidden" value="{{ upsell.variants.first.id }}" id="product-select-{{ upsell.id }}" data-available="{{ upsell.selected_or_first_available_variant }}">
   
       {%- assign image_url = upsell.featured_image.src | image_url: width: 300 -%}
   
