@@ -78,10 +78,10 @@
                   type="submit"
                   name="id"
                   class="SuggestedUpProd_buttonWr small_button"
-                  {% if upsell_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                  {% if upsell_product_1.selected_or_first_available_variant.available == false %}disabled{% endif %}
                   >
             <span>
-              {%- if upsell_product.selected_or_first_available_variant.available -%}
+              {%- if upsell_product_1.selected_or_first_available_variant.available -%}
               Hinzufügen
               {%- else -%}
               Sold out
