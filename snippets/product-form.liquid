@@ -31,8 +31,9 @@
     {% assign product_form_class = 'smart-payment-enabled' %}
   {% endif %}
 {% endif %}
-
-{% form 'product', product, class: product_form_class %}
+{% comment %}Took out the attribute below from the form to make our slide cart work - Yurith {% endcomment %}
+{% comment %}, data-product-form: '' {% endcomment %}
+{% form 'product', product, class: product_form_class%}
 
   {% comment %}
     Display variant options for a product
