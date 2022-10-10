@@ -413,3 +413,8 @@
     </form>
   </div>
 {%- endif -%}
+
+{% comment %} The Live Preview App needs it to load the upload button {% endcomment %}
+<script type="application/json" id="ProductJson-{{ section.id }}">
+    {{ upsell_product_1 | json }}
+</script>
