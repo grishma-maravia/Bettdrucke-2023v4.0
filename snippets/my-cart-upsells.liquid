@@ -1,6 +1,6 @@
 {% assign upsell_product = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
 
-{% if upsell_product != blank %}
+{% if upsell_product_1 != blank %}
   {{ 'upsell-product-simple.css' | asset_url | stylesheet_tag }}
 
 <div class="MyCartUpsells_MainContainer UpsellProd_MainWrapper" id="cartUpsellWrapper_{{ upsell_product_1.id }}">
