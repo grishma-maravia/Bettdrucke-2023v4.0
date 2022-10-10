@@ -101,8 +101,15 @@
   </div>
 {%- endif -%}
 
+{% comment %} The Live Preview App needs it to load the upload button {% endcomment %}
+<script type="application/json" id="ProductJson-{{ section.id }}">
+    {{ upsell_product_1 | json }}
+</script>
 
 
+
+
+<!--
 {% if upsell_product_2 != blank %}
   {% assign upsell = upsell_product_2 %}
   <div class="MyCartUpsells_MainContainer" id="cartUpsellWrapper_{{ upsell.id }}">
@@ -414,8 +421,5 @@
     </form>
   </div>
 {%- endif -%}
+-->
 
-{% comment %} The Live Preview App needs it to load the upload button {% endcomment %}
-<script type="application/json" id="ProductJson-{{ section.id }}">
-    {{ upsell_product_1 | json }}
-</script>
