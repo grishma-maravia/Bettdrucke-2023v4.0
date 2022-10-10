@@ -319,7 +319,8 @@
             "type": "Trigger",
             "settings": {
               "product_list": [
-                "fotodecke"
+                "fotodecke",
+                "weisses-kopfkissen"
               ],
               "enable_upsell_1": true,
               "upsell_product_1": "personalisiertes-fotokissen-kissenbezug-mit-menschen",
