@@ -135,10 +135,11 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
 .MyCart_PriceItem{
   font-weight: 400;
 }
-.MyCart_Heading.Heading{
+.MyCart_Heading{
   text-align: center;
   text-transform: uppercase;
   margin: 8px 0;
+  font-size: 16px;
 }
 .MyCart_CloseSlideCart{
   position: absolute;
