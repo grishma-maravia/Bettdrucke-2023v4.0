@@ -3,7 +3,7 @@
 </script>
 
 <script type="module">
-    import '{{ "liquid-ajax-cart-v1.10.3.js" | asset_url }}';
+    import '{{ "liquid-ajax-cart-v1.10.0.js" | asset_url }}';
 </script>
 
 <script type="application/json" data-ajax-cart-configuration>
@@ -25,7 +25,6 @@
     import { cartRequestAdd, cartRequestChange, subscribeToCartStateUpdate } from '{{ "liquid-ajax-cart-v1.10.0.js" | asset_url }}';
 
     function suggestedUpsells() {
-      console.log("suggested upsell function ");
         // Slider for suggested upsell products
         $('.owl-carousel').owlCarousel({
             loop: true,
@@ -44,11 +43,8 @@
         const upsellActive = document.querySelectorAll(".MyCartUpsells_ItemWrapper");
         const upsellsWrapper = document.querySelector(".MyCartUpsells_SuggestedContainer");
         const suggestionsTitle = document.querySelector("#MyCartUpsells_MainTitle");
-        console.log("upsell active");
-        console.log(upsellActive);
 
         if (upsellActive.length > 0) {
-          console.log("upsell active");
             if (!suggestionsTitle) {
                 upsellsWrapper.insertAdjacentHTML("afterbegin", `<h2 id="MyCartUpsells_MainTitle" class="MyCart_H2 MyCartUpsells_MainTitle">Diese Produkte könnten Ihnen auch gefallen</h2>`)
             } else {
@@ -74,10 +70,9 @@
 
 <script type="module">
   import { cartRequestAdd, cartRequestChange, subscribeToCartStateUpdate } from '{{ "liquid-ajax-cart-v1.10.0.js" | asset_url }}';
-
+  
   subscribeToCartStateUpdate(state => {
     addCartTotalDiscount();
-
   });
   
   export function addCartTotalDiscount() {   
@@ -124,13 +119,6 @@
 </script>
 
 <script>
-  const form = document.querySelector("[action='/cart/add']");
-  console.log("form");
-  console.log(form);
-  form.addEventListener("submit", event => {
-    console.log("submiting");
-  });
-
   function overlayOn() {
     document.getElementById("MyCart_Overlay").style.display = "block";
   }
