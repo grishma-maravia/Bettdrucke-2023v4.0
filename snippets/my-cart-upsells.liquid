@@ -1,7 +1,8 @@
 
 {% assign upsell_product = all_products['personalisierte-fotodecke-bettbezug-mit-parchen-foto'] %}
 
-
+upsell_product: {{ upsell_product }}
+upsell_product_1: {{ upsell_product_1 }}
 {% if upsell_product != null %}
 {{ 'upsell-product-simple.css' | asset_url | stylesheet_tag }}
   
