@@ -126,6 +126,7 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
 .MyCart_H2 {
   color: #312783;
   font-size: 16px;
+  text-decoration: none;
 }
 .MyCart_H2, .MyCart_PriceItem{
   line-height: 1.2 !important;
