@@ -25,6 +25,7 @@
     import { cartRequestAdd, cartRequestChange, subscribeToCartStateUpdate } from '{{ "liquid-ajax-cart-v1.10.0.js" | asset_url }}';
 
     function suggestedUpsells() {
+      console.log("suggested upsell function ");
         // Slider for suggested upsell products
         $('.owl-carousel').owlCarousel({
             loop: true,
@@ -174,7 +175,6 @@
       priceElement.classList.remove("MyCart_HighlightedText");
     }
     UpsellOverlayOn();
-    suggestedUpsells();
   }
 
   function selectVariable() {
