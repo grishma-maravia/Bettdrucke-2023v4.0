@@ -1,3 +1,5 @@
+{% assign upsell_product = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
+
 {% if upsell_product_1 != blank %}
   {{ 'upsell-product-simple.css' | asset_url | stylesheet_tag }}
   {% assign upsell_product = upsell_product_1 %}
