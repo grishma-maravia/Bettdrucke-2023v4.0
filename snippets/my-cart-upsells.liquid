@@ -1,8 +1,7 @@
 {% assign upsell_product = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
 
-{% if upsell_product_1 != blank %}
+{% if upsell_product != blank %}
   {{ 'upsell-product-simple.css' | asset_url | stylesheet_tag }}
-  {% assign upsell_product = upsell_product_1 %}
 
 <div class="MyCartUpsells_MainContainer UpsellProd_MainWrapper" id="cartUpsellWrapper_{{ upsell_product_1.id }}">
   <h2 class="UpProdOpt_Heading"> Bezug + Kissen kombinieren & <span class="SuggestedUpProd_lineSparen">10% sparen!</span> </h2>
