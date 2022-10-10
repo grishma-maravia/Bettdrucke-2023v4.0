@@ -45,6 +45,7 @@
         const suggestionsTitle = document.querySelector("#MyCartUpsells_MainTitle");
 
         if (upsellActive.length > 0) {
+          console.log("upsell active");
             if (!suggestionsTitle) {
                 upsellsWrapper.insertAdjacentHTML("afterbegin", `<h2 id="MyCartUpsells_MainTitle" class="MyCart_H2 MyCartUpsells_MainTitle">Diese Produkte könnten Ihnen auch gefallen</h2>`)
             } else {
