@@ -1,12 +1,11 @@
 {% comment %} The Live Preview App needs it to load the upload button {% endcomment %}
-<script type="application/json" id="ProductJson-{{ section.id }}">
+<script type="application/json" id="ProductJson-{{ section.id }}" >
     {{ upsell_product_1 | json }}
 </script>
 
 {% if upsell_product_1 != blank %}
   {% assign upsell = upsell_product_1 %}
-  <div class="MyCartUpsells_MainContainer" 
-      id="cartUpsellWrapper_{{ upsell.id }}">
+  <div class="MyCartUpsells_MainContainer" id="cartUpsellWrapper_{{ upsell.id }}">
     
     <form action="/cart/add" method="post" id="formUpsell_{{ upsell.id }}">
   
@@ -90,7 +89,8 @@
           </div>
   
           {% comment %}Settings automatically the Live Preview App options{% endcomment %}
-          <div data-live-options="{{ upsell.id }}" class="MyCartUpsells_ImageUploadButton" style="margin-top:3px"></div>
+          <div data-live-options="{{ upsell.id }}" 
+               class="MyCartUpsells_ImageUploadButton" style="margin-top:3px"></div>
           
   
           <button
