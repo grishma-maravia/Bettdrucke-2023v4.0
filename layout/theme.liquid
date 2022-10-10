@@ -11,9 +11,6 @@
     
     {% comment %} Custom JS and JQuery Library and StarApps - Yurith {% endcomment %}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    {% comment %}  Owl carousel library for adding sliders to the theme - Yurith {% endcomment %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" media="all">
 
     <title>
       {{- page_title -}}
@@ -581,6 +578,10 @@
     {% if template.name == 'product' %}
       {{ 'back-top-button.js' | asset_url | script_tag }}
     {% endif %}
+    
+    {% comment %}  Owl carousel library for adding sliders to the theme - Yurith {% endcomment %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" media="all">
     
     {% comment %}  Gift item styles - Yurith
                    Add FREE GIFT to slide cart code - Yurith {% endcomment %}
