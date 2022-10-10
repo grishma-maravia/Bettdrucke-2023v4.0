@@ -735,7 +735,7 @@
       </div>
 
     <button
-      class=" {% if selected_variant and selected_variant.available == false %}disabled{% endif %}"
+      class="product-form--atc-button {% if selected_variant and selected_variant.available == false %}disabled{% endif %}"
       type="submit"
       {% if selected_variant and selected_variant.available == false %}disabled{% endif %}
       data-product-atc
