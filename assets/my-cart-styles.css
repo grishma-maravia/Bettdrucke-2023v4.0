@@ -123,6 +123,10 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
   border-bottom: 1px solid var(--color-light-border);
   z-index: 1;
 }
+.MyCart_H2 {
+  color: #312783;
+  font-size: 16px;
+}
 .MyCart_H2, .MyCart_PriceItem{
   line-height: 1.2 !important;
   margin: 0 0 5px;
