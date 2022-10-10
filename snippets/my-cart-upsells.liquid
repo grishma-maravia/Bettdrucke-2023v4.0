@@ -2,7 +2,8 @@
 
 {% if upsell_product != null %}
 {{ 'upsell-product-simple.css' | asset_url | stylesheet_tag }}
-  
+
+<div class="MyCartUpsells_MainContainer" id="cartUpsellWrapper_{{ upsell.id }}">
 <div class="UpsellProd_MainWrapper">
   <h2 class="UpProdOpt_Heading"> Bezug + Kissen kombinieren & <span class="SuggestedUpProd_lineSparen">10% sparen!</span> </h2>
   <form action="/cart/add" method="post" class="UpProdOpt_ContentWr">
@@ -93,6 +94,7 @@
       </div>
 	</div>
   </form>
+</div>
 </div>
 
 {% comment %} The Live Preview App needs it to load the upload button {% endcomment %}
