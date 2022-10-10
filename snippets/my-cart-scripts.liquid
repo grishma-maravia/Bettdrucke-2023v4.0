@@ -121,44 +121,6 @@
 </script>
 
 <script>
-  console.log("my cart scripts started");
-  function suggestedUpsells() {
-    console.log("suggestedUpsells function started");
-      // Slider for suggested upsell products
-      $('.owl-carousel').owlCarousel({
-          loop: true,
-          margin: 10,
-          responsiveClass: true,
-          responsive: {
-              0: {
-                  items: 1,
-                  nav: true,
-                  dots: false
-              }
-          }
-      });
-
-      // Heading for upsells
-      const upsellActive = document.querySelectorAll(".MyCartUpsells_ItemWrapper");
-      const upsellsWrapper = document.querySelector(".MyCartUpsells_SuggestedContainer");
-      const suggestionsTitle = document.querySelector("#MyCartUpsells_MainTitle");
-
-      if (upsellActive.length > 0) {
-          if (!suggestionsTitle) {
-              upsellsWrapper.insertAdjacentHTML("afterbegin", `<h2 id="MyCartUpsells_MainTitle" class="MyCart_H2 MyCartUpsells_MainTitle">Diese Produkte könnten Ihnen auch gefallen</h2>`)
-          } else {
-              //console.log("title already added");
-          }
-      }
-
-      const submitButtons = document.querySelectorAll(".MyCartUpsells_SubmitButton");
-      submitButtons.forEach(button => {
-          button.addEventListener("click", event => {
-              closeUpsell();
-          });
-      });
-  }
-  
   function overlayOn() {
     document.getElementById("MyCart_Overlay").style.display = "block";
   }
