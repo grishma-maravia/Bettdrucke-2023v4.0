@@ -1,6 +1,6 @@
-{% if upsell_product_1_1 != blank %}
-  {% assign upsell = upsell_product_1_1 %}
-  <div class="MyCartUpsells_MainContainer UpsellProd_MainWrapper" id="cartUpsellWrapper_{{ upsell.id }}">
+{% if upsell_product_1 != blank %}
+  {% assign upsell = upsell_product_1 %}
+  <div class="MyCartUpsells_MainContainer UpsellProd_MainWrapper" id="cartUpsellWrapper_{{ upsell_product_1.id }}">
     <h2 class="UpProdOpt_Heading"> Bezug + Kissen kombinieren & <span class="SuggestedUpProd_lineSparen">10% sparen!</span> </h2>
     <form action="/cart/add" method="post" class="UpProdOpt_ContentWr">
   
@@ -93,17 +93,17 @@
   </div>
 
   <script type="application/json" id="ProductJson-{{ section.id }}">
-    {{ upsell | json }}
+    {{ upsell_product_1 | json }}
   </script>
 
   <script>
   function letsDoThis() {
-    {% if upsell.options[0] %}var opt1 = document.getElementById('select-one').value;{% endif %}
-    {% if upsell.options[1] %}var opt2 = document.getElementById('select-two').value;{% endif %}
-    {% if upsell.options[2] %}var opt3 = document.getElementById('select-three').value;{% endif %}
+    {% if upsell_product_1.options[0] %}var opt1 = document.getElementById('select-one').value;{% endif %}
+    {% if upsell_product_1.options[1] %}var opt2 = document.getElementById('select-two').value;{% endif %}
+    {% if upsell_product_1.options[2] %}var opt3 = document.getElementById('select-three').value;{% endif %}
     var id = '';
-    {% for v in upsell.variants %}
-    if(opt1=="{{ v.option1 }}"{% if upsell.options[1] %} && opt2=="{{ v.option2 }}"{% endif %}{% if upsell.options[2] %} && opt3=="{{ v.option3 }}"{% endif %}) {
+    {% for v in upsell_product_1.variants %}
+    if(opt1=="{{ v.option1 }}"{% if upsell_product_1.options[1] %} && opt2=="{{ v.option2 }}"{% endif %}{% if upsell_product_1.options[2] %} && opt3=="{{ v.option3 }}"{% endif %}) {
       var id = {{ v.id }};
       var price = "{{ v.price | money }}";
     }
@@ -122,8 +122,8 @@
 
 
 
-{% if upsell_product_1_2 != blank %}
-  {% assign upsell = upsell_product_1_2 %}
+{% if upsell_product_2 != blank %}
+  {% assign upsell = upsell_product_2 %}
   <div class="MyCartUpsells_MainContainer" id="cartUpsellWrapper_{{ upsell.id }}">
     
     <form action="/cart/add" method="post" id="formUpsell_{{ upsell.id }}">
@@ -226,8 +226,8 @@
   </div>
 {%- endif -%}
 
-{% if upsell_product_1_3 != blank %}
-  {% assign upsell = upsell_product_1_3 %}
+{% if upsell_product_3 != blank %}
+  {% assign upsell = upsell_product_3 %}
   <div class="MyCartUpsells_MainContainer" id="cartUpsellWrapper_{{ upsell.id }}">
     
     <form action="/cart/add" method="post" id="formUpsell_{{ upsell.id }}">
@@ -330,8 +330,8 @@
   </div>
 {%- endif -%}
 
-{% if upsell_product_1_4 != blank %}
-  {% assign upsell = upsell_product_1_4 %}
+{% if upsell_product_4 != blank %}
+  {% assign upsell = upsell_product_4 %}
   <div class="MyCartUpsells_MainContainer" id="cartUpsellWrapper_{{ upsell.id }}">
     
     <form action="/cart/add" method="post" id="formUpsell_{{ upsell.id }}">
@@ -433,4 +433,3 @@
     </form>
   </div>
 {%- endif -%}
-
