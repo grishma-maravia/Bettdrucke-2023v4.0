@@ -1,9 +1,9 @@
 {% assign upsell_product = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
 
-{% if upsell_product_1 != blank %}
-  {{ 'upsell-product-simple.css' | asset_url | stylesheet_tag }}
-
-<div class="MyCartUpsells_MainContainer UpsellProd_MainWrapper" id="cartUpsellWrapper_{{ upsell_product_1.id }}">
+{% if upsell_product != null %}
+{{ 'upsell-product-simple.css' | asset_url | stylesheet_tag }}
+  
+<div class="UpsellProd_MainWrapper">
   <h2 class="UpProdOpt_Heading"> Bezug + Kissen kombinieren & <span class="SuggestedUpProd_lineSparen">10% sparen!</span> </h2>
   <form action="/cart/add" method="post" class="UpProdOpt_ContentWr">
 
@@ -94,9 +94,13 @@
 	</div>
   </form>
 </div>
+
+{% comment %} The Live Preview App needs it to load the upload button {% endcomment %}
 <script type="application/json" id="ProductJson-{{ section.id }}">
     {{ upsell_product | json }}
 </script>
+
+
 <script>
   function letsDoThis() {
     {% if upsell_product.options[0] %}var opt1 = document.getElementById('select-one').value;{% endif %}
@@ -118,7 +122,8 @@
     }
   }
 </script>
-{%- endif -%}
+
+{% endif %}
 
 
 
