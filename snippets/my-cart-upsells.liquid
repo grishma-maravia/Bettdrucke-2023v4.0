@@ -3,7 +3,7 @@
 {% if upsell_product != null %}
 {{ 'upsell-product-simple.css' | asset_url | stylesheet_tag }}
   
-<div class="UpsellProd_MainWrapper">
+<div class="MyCartUpsells_MainContainer UpsellProd_MainWrapper" id="cartUpsellWrapper_{{ upsell_product_1.id }}">
   <h2 class="UpProdOpt_Heading"> Bezug + Kissen kombinieren & <span class="SuggestedUpProd_lineSparen">10% sparen!</span> </h2>
   <form action="/cart/add" method="post" class="UpProdOpt_ContentWr">
 
