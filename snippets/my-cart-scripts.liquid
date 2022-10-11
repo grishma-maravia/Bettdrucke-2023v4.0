@@ -178,15 +178,17 @@
 
         upsellsBlock1 = upsellsBlock1.filter(upsell => {
             if (upsell.id) {
-              console.log("upsell id ");
-              console.log(upsell);
                 return upsell;
             }
         });
 
         upsellsBlock1.find(upsell => {
             if (productId == upsell.id) {
+                console.log("selectedUpsell ");
+                console.log(upsell);
+                console.log(productId);
                 selectedUpsell = upsell;
+                console.log(selectedUpsell);
             }
         });
     } else if (blockIndex == 2) {
