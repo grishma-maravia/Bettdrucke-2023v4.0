@@ -190,7 +190,7 @@
       {%  for block in section.blocks %}
         {% assign loop = forloop.index | plus: 0 %}
         // Add an exeption later
-        window.upsell = {{ all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] | json }}
+        window.upsell1_block{{ loop }} = {{ all_products[block.settings.upsell_product_1.handle] | json }}
         window.upsell2_block{{ loop }} = {{ all_products[block.settings.upsell_product_2.handle] | json }}
         window.upsell3_block{{ loop }} = {{ all_products[block.settings.upsell_product_3.handle] | json }}
         window.upsell4_block{{ loop }} = {{ all_products[block.settings.upsell_product_4.handle] | json }}
