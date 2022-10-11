@@ -1,5 +1,6 @@
 {% if upsell_product_1 != blank %}
-  {% assign upsell = upsell_product_1 %}
+  {% assign upsell = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
+  
   <div class="MyCartUpsells_MainContainer" id="cartUpsellWrapper_{{ upsell.id }}">
     
     <form action="/cart/add" method="post" id="formUpsell_{{ upsell.id }}">
