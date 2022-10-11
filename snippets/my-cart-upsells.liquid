@@ -103,24 +103,16 @@
     </form>
   
   </div>
-  
-
-  
 {%- endif -%}
 
 
-
-
-
-
-
-
-
-
-
-
 {% if upsell_product_2 != blank %}
-  {% assign upsell = upsell_product_2 %}
+  {% assign upsell = upsell_product_2_handle %}
+
+  <script type="application/json" id="ProductJson-{{ section.id }}">
+      {{ upsell_product_2 | json }}
+  </script>
+
   <div class="MyCartUpsells_MainContainer" id="cartUpsellWrapper_{{ upsell.id }}">
     
     <form action="/cart/add" method="post" id="formUpsell_{{ upsell.id }}">
