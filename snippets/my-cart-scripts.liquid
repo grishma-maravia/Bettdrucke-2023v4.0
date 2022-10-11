@@ -63,8 +63,8 @@
 
     const existingUpsellOptions = document.querySelector(".UpsellProdOpt_ImageUploadButton[data-live-options]");
     console.log("existingUpsellOptions");
-    console.log(existingUpsellOptions);
-
+    console.log(existingUpsellOptions.dataset.liveOptions);
+    ;
     subscribeToCartStateUpdate(state => {
       suggestedUpsells();
     });
