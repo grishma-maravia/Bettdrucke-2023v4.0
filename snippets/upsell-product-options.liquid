@@ -1,25 +1,3 @@
-{% if product.handle == 'fotodecke' %}
-  {% assign upsell_product = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
-{% elsif product.handle == 'personalisiertes-fotokissen-kissenbezug-mit-menschen' %}
-  {% assign upsell_product = all_products['fotodecke'] %}
-{% elsif product.handle == 'personalisierte-fotodecke-bettbezug-mit-tierfoto' %}
-  {% assign upsell_product = all_products['personalisiertes-fotokissen-kissen-mit-tieren'] %}
-{% elsif product.handle == 'personalisiertes-fotokissen-kissen-mit-tieren' %}
-  {% assign upsell_product = all_products['personalisierte-fotodecke-bettbezug-mit-tierfoto'] %}
-{% elsif product.handle == 'personalisierte-fotodecke-bettbezug-mit-familien-foto' %}
-  {% assign upsell_product = all_products['personalisiertes-fotokissen-kissen-mit-familien-foto'] %}
-{% elsif product.handle == 'personalisiertes-fotokissen-kissen-mit-familien-foto' %}
-  {% assign upsell_product = all_products['personalisierte-fotodecke-bettbezug-mit-familien-foto'] %}
-{% elsif product.handle == 'personalisierte-fotodecke-bettbezug-mit-tierfoto-kopfdruck' %}
-  {% assign upsell_product = all_products['personalisiertes-fotokissen-kissen-mit-tierkopfdruck'] %}
-{% elsif product.handle == 'personalisiertes-fotokissen-kissen-mit-tierkopfdruck' %}
-  {% assign upsell_product = all_products['personalisierte-fotodecke-bettbezug-mit-tierfoto-kopfdruck'] %}
-{% elsif product.handle == 'personalisierte-fotodecke-bettbezug-mit-parchen-foto' %}
-  {% assign upsell_product = all_products['personalisiertes-fotokissen-kissen-mit-parchen-foto'] %}
-{% elsif product.handle == 'personalisiertes-fotokissen-kissen-mit-parchen-foto' %}
-  {% assign upsell_product = all_products['personalisierte-fotodecke-bettbezug-mit-parchen-foto'] %}
-{% endif %}
-
 {% if upsell_product != null %}
 {{ 'upsell-product-simple.css' | asset_url | stylesheet_tag }}
   
