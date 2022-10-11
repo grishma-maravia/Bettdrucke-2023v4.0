@@ -61,10 +61,11 @@
     }
     suggestedUpsells();
 
-    const existingUpsellOptions = document.querySelector(".UpsellProdOpt_ImageUploadButton[data-live-options]");
-    console.log("existingUpsellOptions");
-    console.log(existingUpsellOptions.dataset.liveOptions);
-    ;
+    const existingUpsellOptions = document.querySelector(".UpsellProdOpt_ImageUploadButton[data-live-options]");  
+    const upsellOptionsId = existingUpsellOptions?dataset.liveOptions;
+    console.log("upsellOptionsId");
+    console.log(upsellOptionsId);
+  
     subscribeToCartStateUpdate(state => {
       suggestedUpsells();
     });
