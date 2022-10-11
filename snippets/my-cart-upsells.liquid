@@ -6,7 +6,7 @@
   </script>
   
   <div class="MyCartUpsells_MainContainer" id="cartUpsellWrapper_{{ upsell_product_1.id }}">
-    <form action="/cart/add" method="post">
+    <form action="/cart/add" method="post" id="formUpsell_{{ upsell.id }}">
       <input name="id" type="hidden" value="{{ upsell.variants.first.id }}" id="product-select-{{ upsell.id }}" data-available="{{ upsell.selected_or_first_available_variant }}">
   
       {%- assign image_url = upsell.featured_image.src | image_url: width: 300 -%}
@@ -87,6 +87,7 @@
   
           <button
                   type="submit"
+                  name="formUpsell_{{ upsell.id }}"
                   class="MyCartUpsells_SubmitButton Button Button--primary"
                   {% if upsell.selected_or_first_available_variant.available == false %}disabled{% endif %}
                   >
