@@ -74,6 +74,13 @@
   subscribeToCartStateUpdate(state => {
     addCartTotalDiscount();
   });
+  const livePreviewDivs = document.querySelector("[data-live-options]");
+  console.log("livePreviewDivs");
+  console.log(livePreviewDivs);
+
+  function hideDoubleUpsell (){
+    
+  }
   
   export function addCartTotalDiscount() {   
     const discountsWrapper = document.querySelector("#MyCart_DiscountWrapper");
