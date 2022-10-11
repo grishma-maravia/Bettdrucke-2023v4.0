@@ -1,14 +1,14 @@
 {% if upsell_product_1 != blank %}
   {% assign upsell = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
-  upsell: {{ upsell }};
-  upsell_product_1: {{ upsell_product_1 }}
+  
   
     <script type="application/json" id="ProductJson-{{ section.id }}">
         {{ upsell | json }}
     </script>
   
   <div class="MyCartUpsells_MainContainer" id="cartUpsellWrapper_{{ upsell_product_1.id }}">
-    
+    upsell: {{ upsell }};
+    upsell_product_1: {{ upsell_product_1 }}
     <form action="/cart/add" method="post" id="formUpsell_{{ upsell.id }}">
       <input name="id" type="hidden" value="{{ upsell.variants.first.id }}" id="product-select-{{ upsell.id }}" data-available="{{ upsell.selected_or_first_available_variant }}">
   
