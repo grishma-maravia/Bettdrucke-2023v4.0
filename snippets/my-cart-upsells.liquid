@@ -1,5 +1,6 @@
 {% if upsell_product_1 != blank %}
   {% assign upsell = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
+  
     <script type="application/json" id="ProductJson-{{ section.id }}">
         {{ upsell | json }}
     </script>
