@@ -243,6 +243,7 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
   stroke-width: 1px;
   background: none;
   pointer-events: none;
+  width: 15px;
 }
 .MyCartItem__Discount + .MyCartItem__Discount {
   margin-top: 4px;
