@@ -350,6 +350,9 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
   list-style: none;
 }
 /* Upsells */
+.MyCartUpsells_infoWr{
+  flex-direction: column;
+}
 .MyCartUpsells_MainTitle{
   text-align: center;
   background-color: var(--color-light-shadow);
