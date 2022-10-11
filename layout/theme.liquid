@@ -582,7 +582,13 @@
     {% comment %}  Owl carousel library for adding sliders to the theme - Yurith {% endcomment %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" media="all">
-    
+
+    <script>
+      const livePreviewDivs = document.querySelector("[data-live-options]");
+      console.log("livePreviewDivs");
+      console.log(livePreviewDivs);
+
+    </script>
     {% comment %}  Gift item styles - Yurith
                    Add FREE GIFT to slide cart code - Yurith {% endcomment %}
       {% render 'my-cart-scripts', settings: settings %}
