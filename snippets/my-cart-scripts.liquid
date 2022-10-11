@@ -64,11 +64,13 @@
     const existingUpsellOptions = document.querySelector(".UpsellProdOpt_ImageUploadButton[data-live-options]");  
     const upsellOptionsId = existingUpsellOptions?.dataset.liveOptions;
     if (upsellOptionsId){
-      console.log("upsellOptionsId");
-      console.log(upsellOptionsId);
       const existingCartUpsell = document.querySelector(`.MyCartUpsells_ImageUploadButton[data-live-options='${upsellOptionsId}']`);
-      console.log("existingCartUpsell");
-      console.log(existingCartUpsell);
+      
+      if (existingCartUpsell){
+        const dobleSuggestedUpsell = document.querySelector(`.SuggestedUpProd_buttonWr[data-upsell-id='${upsellOptionsId}']`);
+        console.log("dobleSuggestedUpsell");
+        console.log(dobleSuggestedUpsell);
+      }
     }
     
     console.log("upsellOptionsId");
