@@ -20,7 +20,7 @@
   {% assign upsell_product_page = all_products['personalisierte-fotodecke-bettbezug-mit-parchen-foto'] %}
 {% endif %}
 
-{% if upsell_product_1 != blank and product.handle != upsell_product_1_handle and upsell_product_1_handle != upsell_product_page.handle %}
+{% if upsell_product_1 != blank and upsell_product_1_handle != product.handle and upsell_product_1_handle != upsell_product_page.handle %}
   {% assign upsell = upsell_product_1_handle %}
 
   <script type="application/json" id="ProductJson-{{ section.id }}">
