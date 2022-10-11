@@ -56,7 +56,7 @@
                   {% endfor %}
                   {%- for property in item.properties -%}
                          {%- if property.first.first == '_' -%}{% continue %}{%- endif -%}
-                          <p class="MyCart_ValueItem"><b>{{ property.first }}: </b><span>{{ property.last }}</span></p>
+                          <p class="MyCart_ValueItem"><b>{{ property.first }}: </b><span>{{ property.last | remove: 'https://upload.cloudlift.app/s/bettdrucke-de' }}</span></p>
                   {%- endfor -%}
                   <div class="MyCart_QuantityItemWrapper">
                     {% comment %} quanity selector {% endcomment %}
