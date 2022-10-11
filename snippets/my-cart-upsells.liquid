@@ -1,4 +1,4 @@
-{% if upsell_product_1 != blank %}
+{% if upsell_product_1 != blank and product.handle != upsell_product_1_handle %}
   {% assign upsell = upsell_product_1_handle %}
 
   <script type="application/json" id="ProductJson-{{ section.id }}">
