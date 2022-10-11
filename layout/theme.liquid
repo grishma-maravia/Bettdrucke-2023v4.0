@@ -240,6 +240,8 @@
     {% comment %}Inject body wrapper for SlideCart opening divs end - Yurith     
                   <div class="my-container" data-drawer-push>
                     <div class="MyCart_BodyWrapper"> {% endcomment %}
+
+    {% render 'product-page-upsell-options' %}
                     
     <div class="my-container" data-drawer-push>
       <div class="MyCart_BodyWrapper">
@@ -497,6 +499,7 @@
       console.log("livePreviewDivs");
       console.log(livePreviewDivs);
       
+      {% assign upsellOptionsId =  %}
     </script>
     {% comment %}Inject product-gallery-zoom end{% endcomment %}
         <div id="MyCart_SectionsWrapper" class="MyCart_SectionsWrapper open-cart">
