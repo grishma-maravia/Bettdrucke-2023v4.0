@@ -24,7 +24,7 @@
 {{ 'upsell-product-simple.css' | asset_url | stylesheet_tag }}
   
 <div class="UpsellProd_MainWrapper">
-  <h2 class="UpProdOpt_Heading"> Bezug + Kissen kombinieren & <span class="SuggestedUpProd_lineSparen">10% sparen!</span> </h2>
+  <h2 class="UpProdOpt_Heading"> TEST Bezug + Kissen kombinieren & <span class="SuggestedUpProd_lineSparen">10% sparen!</span> </h2>
   <form action="/cart/add" method="post" class="UpProdOpt_ContentWr">
 
       <input
@@ -116,7 +116,7 @@
 </div>
 
 {% comment %} The Live Preview App needs it to load the upload button {% endcomment %}
-<script type="application/json" id="ProductJson-{{ section.id }}">
+<script type="application/json">
     {{ upsell_product | json }}
 </script>
 
