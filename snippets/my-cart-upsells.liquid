@@ -1,9 +1,9 @@
 {% if upsell_product_1 != blank %}
   {% assign upsell = upsell_product_1_handle %}
 
-    <script type="application/json" id="ProductJson-{{ section.id }}">
-        {{ upsell_product_1 | json }}
-    </script>
+  <script type="application/json" id="ProductJson-{{ section.id }}">
+      {{ upsell_product_1 | json }}
+  </script>
   
   <div class="MyCartUpsells_MainContainer" id="cartUpsellWrapper_{{ upsell_product_1.id }}">
     <form action="/cart/add" method="post" id="formUpsell_{{ upsell.id }}">
