@@ -1,5 +1,8 @@
 {% if upsell_product_1 != blank %}
   {% assign upsell = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
+    <script type="application/json" id="ProductJson-{{ section.id }}">
+        {{ upsell | json }}
+    </script>
   
   <div class="MyCartUpsells_MainContainer" id="cartUpsellWrapper_{{ upsell_product_1.id }}">
     
