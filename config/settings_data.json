@@ -49,7 +49,7 @@
     "swatches_swatch_trigger": "Farbe",
     "swatches_shape": "circle",
     "swatches_option_style": "color_swatch",
-    "swatches_custom_colors": "Rot: #FF0000\nGrün: #008800\nBlau: blue;\nBraun: #964B00;\nBunt: bunt.png;\nGelb: yellow;\nGold: #D4AC2B;\nDunkelblau: navy;\nHellblau: #4D96FF;\nLila: purple;\nPink: #F10086;\nRosa: #E4AEC5;\nSchwarz: black;\nTürkis: #6EDCD9;\nWeiß: #F7F7F7;\nKomplettdruck: komplettdruck.png;\nKopfdruck: kopfdruck.png;\nWeiß mit Pfoten: weiss-mit-pfoten.png\ndunkelblau mit Pfoten: grau-mit-pfoten.png\nGrün mit Pfoten: grün-mit-pfoten.png\nPink mit Pfoten: pink-mit-pfoten.png",
+    "swatches_custom_colors": "Rot: #FF0000\nGrün: #008800\nBlau: blue;\nBraun: #964B00;\nBunt: bunt.png;\nGelb: yellow;\nGold: #D4AC2B;\nDunkelblau: navy;\nHellblau: #4D96FF;\nLila: purple;\nPink: #F10086;\nRosa: #E4AEC5;\nSchwarz: black;\nTürkis: #6EDCD9;\nWeiß: #F7F7F7;\nKomplettdruck: komplettdruck.png;\nKopfdruck: kopfdruck.png;\nWeiß mit Pfoten: weiss-mit-pfoten.png;\nDunkelblau mit Pfoten: green;\nGrün mit Pfoten: grün-mit-pfoten.png;\nPink mit Pfoten: pink-mit-pfoten.png;",
     "product_show_vendor": false,
     "product_ratings_star_display": false,
     "product_grid_emphasize_price": false,
