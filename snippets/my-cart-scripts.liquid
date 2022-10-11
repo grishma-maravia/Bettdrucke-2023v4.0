@@ -342,10 +342,8 @@
     } else {
         document.getElementById('product-select-' + productId).value = '';
     }
-    console.log("available");
-    console.log(available);
+    
     if (available === true) {
-      console.log("Hinzufügen");
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton span').innerHTML = 'Hinzufügen';
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton').removeAttribute("disabled");
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton').classList.remove("Button--secondary");
