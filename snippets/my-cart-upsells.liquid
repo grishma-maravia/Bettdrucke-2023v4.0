@@ -103,9 +103,10 @@
           </button>
         </div>
     </form>
-  </div>
-  
-{% assign upsell_product = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
+
+
+
+    {% assign upsell_product = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
 
 {% if upsell_product != null %}
 {{ 'upsell-product-simple.css' | asset_url | stylesheet_tag }}
@@ -209,6 +210,10 @@
 
 
 {% endif %}
+  
+  </div>
+  
+
   
 {%- endif -%}
 
