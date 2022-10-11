@@ -207,8 +207,10 @@
     {% assign upsell_product_1 = all_products[upsell_product_1_handle] %}
     {% assign upsell_product_2_handle = block.settings.upsell_product_2 %}
     {% assign upsell_product_2 = all_products[upsell_product_2_handle] %}
-    {% assign upsell_product_3 = block.settings.upsell_product_3 %}
-    {% assign upsell_product_4 = block.settings.upsell_product_4 %}
+    {% assign upsell_product_3_handle = block.settings.upsell_product_3 %}
+    {% assign upsell_product_3 = all_products[upsell_product_3_handle] %}
+    {% assign upsell_product_4_handle = block.settings.upsell_product_4 %}
+    {% assign upsell_product_4 = all_products[upsell_product_4_handle] %}
     {% assign upsell_product_1_variant_id = block.settings.upsell_product_1_variant_id %}
     {% assign upsell_product_2_variant_id = block.settings.upsell_product_2_variant_id %}
     {% assign upsell_product_3_variant_id = block.settings.upsell_product_3_variant_id %}
