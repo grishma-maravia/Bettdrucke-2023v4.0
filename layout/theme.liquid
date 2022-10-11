@@ -241,7 +241,9 @@
                   <div class="my-container" data-drawer-push>
                     <div class="MyCart_BodyWrapper"> {% endcomment %}
 
-    {% render 'product-page-upsell-options' %}
+    {% if template.name == "product" %}
+      {% render 'product-page-upsell-options' %}
+    {% endif %}
                     
     <div class="my-container" data-drawer-push>
       <div class="MyCart_BodyWrapper">
