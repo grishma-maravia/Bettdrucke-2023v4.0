@@ -67,7 +67,7 @@
       const existingCartUpsell = document.querySelector(`.MyCartUpsells_ImageUploadButton[data-live-options='${upsellOptionsId}']`);
       
       if (existingCartUpsell){
-        const dobleSuggestedUpsell = document.querySelector(`.SuggestedUpProd_buttonWr[data-upsell-id='${upsellOptionsId}']`).parentElement.parentElement;
+        const dobleSuggestedUpsell = document.querySelectorAll(`.SuggestedUpProd_buttonWr[data-upsell-id='${upsellOptionsId}']`).parentElement.parentElement;
         console.log("dobleSuggestedUpsell");
         console.log(dobleSuggestedUpsell);
         dobleSuggestedUpsell.classList.add("hidden");
