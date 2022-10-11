@@ -349,7 +349,6 @@
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton').classList.remove("Button--secondary");
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton').classList.add("Button--primary");
     } else {
-      console.log("Ausverkauft");
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton span').innerHTML = 'Ausverkauft';
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton').setAttribute("disabled", "disabled");
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton').classList.remove("Button--primary");
