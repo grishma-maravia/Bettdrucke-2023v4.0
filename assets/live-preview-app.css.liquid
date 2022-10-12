@@ -23,8 +23,8 @@ label.cl-po--input.cl-po--upload-button, label.cl-po--label{
 label.cl-po--input.cl-po--upload-button {
   padding: 10px 20px !important;
   width: fit-content !important;
-  background-color: #ffffff !important;
-  color: #1d1d1d !important;
+  background-color: #a1daf8 !important;
+  color: #312783 !important;
   letter-spacing: 0em !important;
   font-weight: normal !important;
   display: inline-block;
@@ -33,7 +33,7 @@ label.cl-po--input.cl-po--upload-button {
   border-radius: 3px !important;
   transition: width 125ms cubic-bezier(.4,0,.2,1),height 125ms cubic-bezier(.4,0,.2,1),border-color 125ms cubic-bezier(.4,0,.2,1),background-color 125ms cubic-bezier(.4,0,.2,1),box-shadow 125ms cubic-bezier(.4,0,.2,1);
   border: none;
-  border: 1px solid #a7a2d6 !important;
+  border: 1px solid #312783 !important;
   margin-top: 5px;
   line-height: 16.9833px !important;
 }
@@ -44,6 +44,17 @@ label.cl-po--label{
 .UpsellProdOpt_ImageUploadButton label.cl-po--input.cl-po--upload-button {
   padding: 8px 15px !important;
 }
+
+.cl-po--upload-button span{
+  position: relative;
+}
+.cl-po--upload-button span:before{
+  content: "\e91f";
+  font-family: 'icomoon' !important;
+  padding-right: 4px;
+  vertical-align: top;
+}
+
 @media only screen and (min-width: 720px){
   label.cl-po--input.cl-po--upload-button, label.cl-po--label{
     font-size: var(--font-size-button-small) !important;
