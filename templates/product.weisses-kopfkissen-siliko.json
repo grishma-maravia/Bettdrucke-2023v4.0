@@ -1,0 +1,156 @@
+{
+  "sections": {
+    "main": {
+      "type": "static-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "8622f0b8-e616-4715-a3ee-b48b84b935bf": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+          }
+        },
+        "9212522f-9ad0-48c5-8ad0-0ff3438b2b1f": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_display": "all_products",
+            "inventory_transfer_notice": true
+          }
+        },
+        "eee48e0b-8745-4411-9e60-d0b00df1f99f": {
+          "type": "shopify:\/\/apps\/gift-wrap-and-options-wrapped\/blocks\/app-block.product\/1714fc7d-e525-4a14-8c3e-1b6ed95734c5",
+          "settings": {
+          }
+        },
+        "8e8b3674-7c62-47d6-bcc6-e116171c816f": {
+          "type": "discount-message",
+          "settings": {
+          }
+        },
+        "49cbe238-c67c-4672-93b1-37ac65098c1a": {
+          "type": "quality-icons",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "7b050d54-5aec-46d2-8fab-b0cc8f7841e5": {
+          "type": "upsell-product-simple",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "8622f0b8-e616-4715-a3ee-b48b84b935bf",
+        "vendor",
+        "price",
+        "form",
+        "9212522f-9ad0-48c5-8ad0-0ff3438b2b1f",
+        "eee48e0b-8745-4411-9e60-d0b00df1f99f",
+        "8e8b3674-7c62-47d6-bcc6-e116171c816f",
+        "49cbe238-c67c-4672-93b1-37ac65098c1a",
+        "description",
+        "7b050d54-5aec-46d2-8fab-b0cc8f7841e5"
+      ],
+      "settings": {
+        "gallery_aspect_ratio": "square",
+        "gallery_image_crop": true,
+        "gallery_thumbnail_position": "below",
+        "gallery_video_autoplay": true,
+        "gallery_video_looping": true,
+        "gallery_hover_zoom": "disabled",
+        "gallery_click_to_zoom": "disabled"
+      }
+    },
+    "1654783338f471bc77": {
+      "type": "dynamic-custom-liquid",
+      "settings": {
+        "custom_liquid": "{% render 'trust-section' %}"
+      }
+    },
+    "1645467672f94ad36a": {
+      "type": "dynamic-image-with-text",
+      "settings": {
+        "section_heading": "",
+        "image": "shopify:\/\/shop_images\/sincerely-media-yIpBnNckdrQ-unsplash_1_1.jpg",
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "left",
+        "mobile_image_alignment": "top",
+        "heading": "Die perfekte Grundlage",
+        "subheading": "<p>Dieses mit Silikon gefüllte Kissen ist für Menschen, die Wert auf einen komfortablen und bequemen Schlaf legen. Die Füllung des Kissens behält ihre Eigenschaften bei und verklumpt nicht. <\/p><p>Die synthetische Füllung des Kissens ist für Allergiker und Menschen geeignet, die auf natürliche Füllungen wie Federn oder Wolle allergisch reagieren.<\/p><p>Das Kissen bietet eine ideale Unterstützung für den Kopf und den Nackenbereich. Nach einem erholsamen Schlaf wachen wir regeneriert und ausgeruht auf, was sich auch auf unsere Stimmung am Tag auswirkt.<\/p><p>Die Standardgröße des Kissens bietet die Möglichkeit problemlos einen passenden Bezug zu wählen. Die synthetische Kisseneinlage macht es möglich, das Kissen zu waschen. Dies ist äußerst wichtig, um die Hygiene des Kissens, das mit der Gesichtshaut in Berührung kommt, zu erhalten.<\/p>",
+        "text_alignment": "left",
+        "button_label": "Button",
+        "button_link": ""
+      }
+    },
+    "1647359893affb598d": {
+      "type": "apps",
+      "blocks": {
+        "6e3cf7bb-2f23-4905-9214-3da1b2147c56": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "6e3cf7bb-2f23-4905-9214-3da1b2147c56"
+      ],
+      "settings": {
+        "include_padding": true
+      }
+    },
+    "recommendations": {
+      "type": "static-product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "Diese Produkte könnten Ihnen auch gefallen"
+      }
+    },
+    "reviews": {
+      "type": "static-product-reviews",
+      "settings": {
+      }
+    },
+    "recently-viewed": {
+      "type": "static-recently-viewed",
+      "disabled": true,
+      "settings": {
+        "enable_recently_viewed_products": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1654783338f471bc77",
+    "1645467672f94ad36a",
+    "1647359893affb598d",
+    "recommendations",
+    "reviews",
+    "recently-viewed"
+  ]
+}
