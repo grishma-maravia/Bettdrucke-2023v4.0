@@ -76,7 +76,7 @@
           </div>
         {% endif %}
   
-        {% if upsell_product_4 != blank %}
+        {% if enable_upsell_4 and upsell_product_4 != blank and upsell_product_4.handle != product.handle and upsell_product_4.handle != upsell_product_page.handle %}
           {% assign upsell = upsell_product_4 %}
           <div class="MyCart_ItemWrapper MyCartUpsells_ItemWrapper">
             <div class="MyCart_ImageItemWrapper">
