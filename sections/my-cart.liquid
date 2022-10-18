@@ -159,6 +159,10 @@
           <div class="owl-carousel">
             {%  for block in section.blocks %}
               {% assign product_list = block.settings.product_list %}
+              {% assign enable_upsell_1 = block.settings.enable_upsell_1 %}
+              {% assign enable_upsell_2 = block.settings.enable_upsell_2 %}
+              {% assign enable_upsell_3 = block.settings.enable_upsell_3 %}
+              {% assign enable_upsell_4 = block.settings.enable_upsell_4 %}
               {% assign upsell_product_1 = block.settings.upsell_product_1 %}
               {% assign upsell_product_2 = block.settings.upsell_product_2 %}
               {% assign upsell_product_3 = block.settings.upsell_product_3 %}
