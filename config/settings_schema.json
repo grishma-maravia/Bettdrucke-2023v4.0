@@ -1027,59 +1027,61 @@
     "settings": [
       {
         "type": "header",
-        "content": "HOMEPAGE. Cover image"
+        "content": "Homepage"
       },
       {
         "type": "checkbox",
         "id": "promotional_hero_hp_cover",
-        "label": "Enable Cover",
+        "label": "Enable Promotional Cover on Homepage",
+        "info": "[For editing:](https:\/\/therapiedecken.myshopify.com\/admin\/themes\/122250559627?key=snippets\/promotion-home-hero.liquid)",
         "default": false
       },
       {
         "type": "image_picker",
         "id": "promotional_hero_image",
-        "label": "Desktop image"
+        "label": "Desktop cover image"
       },
       {
         "type": "image_picker",
         "id": "mobile_promotional_hero_image",
-        "label": "Mobile image"
+        "label": "Mobile cover image",
+        "info": "If empty, desktop image should show up on mobile as well"
       },
       {
-        "type": "range",
-        "id": "promo_tablet_image_position",
-        "label": "Tablet: Image position",
-        "min": 0,
-        "max": 100,
-        "step": 10,
-        "unit": "%",
-        "default": 0
-      },
-      {
-        "type": "range",
-        "id": "promo_image_overlay_opacity",
-        "min": 0,
-        "max": 50,
-        "step": 5,
-        "unit": "%",
-        "label": "Image overlay",
-        "default": 0
+        "type": "select",
+        "id": "image_position",
+        "label": "Image position on mobile",
+        "options": [
+          {
+            "value": "center",
+            "label": "center"
+          },
+          {
+            "value": "left",
+            "label": "left"
+          },
+          {
+            "value": "right",
+            "label": "right"
+          }
+        ],
+        "default": "center"
       },
       {
         "type": "header",
-        "content": "HOMEPAGE. Art design"
+        "content": "Promo art"
       },
       {
         "type": "url",
         "id": "promo_art",
-        "label": "Art design"
+        "label": "Promo art url"
       },
       {
         "type": "range",
         "id": "promo_art_y_content",
         "label": "Desktop: Vertical position",
         "min": 0,
-        "max": 100,
+        "max": 150,
         "step": 5,
         "unit": "%",
         "default": 50
@@ -1088,26 +1090,15 @@
         "type": "range",
         "id": "promo_art_y_content_mobile",
         "label": "Mobile: Vertical position",
-        "min": 0,
-        "max": 100,
-        "step": 10,
+        "min": -150,
+        "max": 150,
+        "step": 5,
         "unit": "%",
-        "default": 50
+        "default": 0
       },
       {
         "type": "header",
-        "content": "HOMEPAGE. Button"
-      },
-      {
-        "type": "text",
-        "id": "button_1_text",
-        "label": "Text",
-        "default": "Mehr Erfahren"
-      },
-      {
-        "type": "url",
-        "id": "button_1_link",
-        "label": "Link"
+        "content": "Button"
       },
       {
         "type": "color",
@@ -1118,14 +1109,45 @@
       {
         "type": "color",
         "id": "text_button_color",
-        "label": "Text color",
+        "label": "Text",
         "default": "#222323"
       },
       {
         "type": "color",
         "id": "text_button_color_hover",
-        "label": "Hover: Text color",
+        "label": "Hover: Text",
         "default": "#222323"
+      },
+      {
+        "type": "text",
+        "id": "button_1_text",
+        "label": "Text",
+        "default": "Button label"
+      },
+      {
+        "type": "url",
+        "id": "button_1_link",
+        "label": "Link"
+      },
+      {
+        "type": "range",
+        "id": "promo_art_y_btn",
+        "label": "Desktop: Space between art and button",
+        "min": -150,
+        "max": 150,
+        "step": 5,
+        "unit": "px",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "promo_art_y_btn_mobile",
+        "label": "Mobile: Space between art and button",
+        "min": -150,
+        "max": 150,
+        "step": 5,
+        "unit": "px",
+        "default": 0
       }
     ]
   }
