@@ -13,7 +13,7 @@
         {% endif %}
         
         {% assign upsell_count = upsell_count | plus: 1 %}
-        {% if upsell_product_1 != blank and upsell_product_1.handle != product.handle and upsell_product_1.handle != upsell_product_page.handle %}
+        {% if enable_upsell_1 and upsell_product_1 != blank and upsell_product_1.handle != product.handle and upsell_product_1.handle != upsell_product_page.handle %}
           {% assign upsell = upsell_product_1 %}
           <div class="MyCart_ItemWrapper MyCartUpsells_ItemWrapper">
             <div class="MyCart_ImageItemWrapper">
@@ -34,7 +34,7 @@
           </div>
         {% endif %}
   
-        {% if upsell_product_2 != blank %}
+        {% if enable_upsell_2 and upsell_product_2 != blank %}
           {% assign upsell = upsell_product_2 %}
           <div class="MyCart_ItemWrapper MyCartUpsells_ItemWrapper">
             <div class="MyCart_ImageItemWrapper">
