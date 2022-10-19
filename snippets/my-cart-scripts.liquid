@@ -62,6 +62,12 @@
     suggestedUpsells();
   
     subscribeToCartStateUpdate(state => {
+      const upSlideCart = $("section.atc-banner--container");
+      console.log("upSlideCart");
+      console.log(upSlideCart);
+      if (upSlideCart){
+        upSlideCart.css("display", "none");
+      }
       suggestedUpsells();
     });
 

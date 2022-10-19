@@ -43,6 +43,7 @@
     "low_stock_threshold": 15,
     "product_option_style": "radio",
     "show_dynamic_checkout_button": false,
+    "enable_cart_redirection": false,
     "swatches_enable": true,
     "swatches_product_card_size": 32,
     "swatches_product_page_size": 64,
@@ -379,12 +380,6 @@
           "message_enabled": false,
           "message_max_length": 250,
           "variant_selector_type": "select"
-        }
-      },
-      "15132424025755801183": {
-        "type": "shopify:\/\/apps\/upload-lift-image-upload\/blocks\/app-embed\/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
-        "disabled": false,
-        "settings": {
         }
       }
     }
