@@ -31262,6 +31262,9 @@ class PaymentTerms {
 
 class ProductDetails {
   constructor(options) {
+    console.log("=== form area: ");
+    console.log(options.$formArea);
+    
     this.$window = jquery_default()(window);
     this.$formArea = options.$formArea;
     this.$details = options.$details;
@@ -31560,6 +31563,7 @@ class ProductDetails {
 
   _updateSwatchLabel(variant) {
     if (this.settings.swatches_enable) {
+      if (!this.$form || this.$form.length == 0) return;
       const swatchLabel = this.$form[0].querySelector('[data-option-swatch-value]');
 
       if (swatchLabel) {
