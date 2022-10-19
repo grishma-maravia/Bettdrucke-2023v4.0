@@ -31,9 +31,8 @@
     {% assign product_form_class = 'smart-payment-enabled' %}
   {% endif %}
 {% endif %}
-{% comment %}Took out the attribute below from the form to make our slide cart work - Yurith {% endcomment %}
-{% comment %}, data-product-form: '' {% endcomment %}
-{% form 'product', product, class: product_form_class%}
+
+{% form 'product', product, class: product_form_class, data-product-form: '' %}
 
   {% comment %}
     Display variant options for a product
@@ -740,7 +739,6 @@
       type="submit"
       {% if selected_variant and selected_variant.available == false %}disabled{% endif %}
       data-product-atc
-      onclick="overlayOn()"
     >
       <span class="atc-button--text">
         {% unless selected_variant and selected_variant.available == false %}
