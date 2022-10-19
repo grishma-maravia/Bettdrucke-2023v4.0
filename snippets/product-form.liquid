@@ -454,12 +454,12 @@
                     <span
                       class="
                         {% unless show_swatches %}
-                            {% if option.name == 'Style' and product.handle == 'personalisiertes-3d-kissen-mit-hunden' %}
-                              {% if value == 'Kopfdruck' %}
-                                icon-dog-face
+                            {% if option.name == 'Style' and product.metafields.bett_field.face_icon != blank and product.metafields.bett_field.body_icon != blank %}
+                              {% if value == 'Kopfdruck' or value == 'Kopf' %}
+                                {{ product.metafields.bett_field.face_icon }}
                               {% endif %}
-                              {% if value == 'Ganzkörperdruck' %}
-                                icon-dog-body
+                              {% if value == 'Ganzkörperdruck' or value == 'Ganzkörper' %}
+                                {{ product.metafields.bett_field.body_icon }}
                               {% endif %}
                               variant-ui__image
                             {% endif %}
@@ -476,7 +476,7 @@
                       {% endif %}
                     >
                       {% unless show_swatches %}
-                        {% unless option.name == 'Style' and product.handle == 'personalisiertes-3d-kissen-mit-hunden' %}
+                        {% unless option.name == 'Style' and product.metafields.bett_field.face_icon != blank and product.metafields.bett_field.body_icon != blank %}
                           {{ value }}
                         {% endunless %}
                       {% else %}

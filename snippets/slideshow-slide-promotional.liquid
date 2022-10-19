@@ -58,7 +58,11 @@
   .slideshow-slide__button--primary:hover{
 	background-color: {{ settings.text_button_color_hover }} !important;
   }
-
+  @media screen and (min-width:720px) and (max-width:1023px){
+    .slideshow-slide__image--desktop{
+      object-position: {{ settings.promo_tablet_image_position }}%;
+    }
+  }
   @media screen and (min-width: 720px){
     .slideshow-slide__content{
       left: 25% !important;
@@ -144,7 +148,7 @@
             {% if block_overlay_color != blank %}
               background-color: {{ block_overlay_color }};
             {% endif %}
-            opacity: {{ overlay_opacity }};
+            opacity: {{ settings.promo_image_overlay_opacity | times: 0.01 }};
           "
         ></div>
       {%- endif -%}
