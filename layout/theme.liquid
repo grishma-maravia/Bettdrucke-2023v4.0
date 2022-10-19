@@ -71,6 +71,7 @@
 
     <link rel="preload" href="{{ settings.type_menu | font_url }}" as="font" crossorigin="anonymous">
     <link rel="preload" as="style" href="{{ 'theme.css' | asset_url }}">
+    {{ 'upsell-product-simple.css' | asset_url | stylesheet_tag }}
 
     {{ content_for_header }}
 
