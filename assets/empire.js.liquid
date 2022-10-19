@@ -31262,6 +31262,9 @@ class PaymentTerms {
 
 class ProductDetails {
   constructor(options) {
+    console.log("=== form area: ");
+    console.log(options.$formArea);
+    
     this.$window = jquery_default()(window);
     this.$formArea = options.$formArea;
     this.$details = options.$details;
