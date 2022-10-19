@@ -262,10 +262,12 @@
           
 			{% when 'upsell-product-simple' %}
 			  {% render 'upsell-product-simple' %}
-      
+
+            {% comment %}
             {% when 'upsell-product-options' %}
               {% render 'upsell-product-options', upsell_product: upsell_product  %}
-
+            {% endcomment %}
+            
           {% endcase %}
         </div>
       {% endfor %}

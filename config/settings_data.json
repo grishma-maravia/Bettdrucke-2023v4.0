@@ -308,6 +308,38 @@
           "text": "<span><span class=\"icon-Schneller-Versand\"><\/span> Schneller Versand<\/span>    <span><span class=\"icon-In-Europa-hergestellt\"><\/span> Hergestellt in Europa<\/span>",
           "secondary_menu": "sub-menu"
         }
+      },
+      "my-cart-upsells": {
+        "type": "my-cart-upsells",
+        "settings": {
+        }
+      },
+      "my-cart": {
+        "type": "my-cart",
+        "blocks": {
+          "eb140b3d-0764-4eb5-8625-f1208e6c1ae3": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "fotodecke",
+                "weisses-kopfkissen"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-fotokissen-kissenbezug-mit-menschen",
+              "enable_upsell_2": true,
+              "upsell_product_2": "3d-kissen-mit-menschen",
+              "enable_upsell_3": false,
+              "upsell_product_3": "3d-geburtskissen-im-wasserfarben-stil-kissen-zur-geburt",
+              "enable_upsell_4": false,
+              "upsell_product_4": "baumwollbezug-amor-und-liebespfeil"
+            }
+          }
+        },
+        "block_order": [
+          "eb140b3d-0764-4eb5-8625-f1208e6c1ae3"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [

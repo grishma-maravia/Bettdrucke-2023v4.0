@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.shopifycdn.com">
     <link rel="preconnect" href="https://v.shopify.com">
     <link rel="preconnect" href="https://cdn.shopifycloud.com">
+    
+    {% comment %} Custom JS and JQuery Library and StarApps - Yurith {% endcomment %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <title>
       {{- page_title -}}
@@ -111,10 +114,8 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'AW-10853667179');
     </script>
-    
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWDYYVY63K"></script>
@@ -122,7 +123,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-DWDYYVY63K');
     </script>
 
@@ -132,94 +132,98 @@
     {% comment %} ICOMOON Link {% endcomment %}
       <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/163995/BETT/style-cf.css?crk8j9">
     {% comment %} Countdown JS {% endcomment %}
-    	{{ 'countdown.js' | asset_url | script_tag }}
+      {{ 'countdown.js' | asset_url | script_tag }}
+    {% comment %} Addons to the Live Preview App - checked green icon when uploading a file {% endcomment %}
+      {%- if template.name == 'product' -%}
+        {{ 'success-icon.js' | asset_url | script_tag }}
+      {% endif %}
     {% comment %} Hide and show Menu JS {% endcomment %}
-        {{ 'hide-and-show-menu.js' | asset_url | script_tag }}
-    {% comment %}Addons to the Live Preview App - checked green icon when uploading a file {% endcomment %}
-      {% comment %} Custom JS and JQuery Library and StarApps - Yurith {% endcomment %}
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        {{ 'success-icon.js' | asset_url | script_tag }}       	
+      {{ 'hide-and-show-menu.js' | asset_url | script_tag }}
+    {% comment %}  Slidecart styles - Yurith {% endcomment %}
+      {{ 'my-cart-styles.css' | asset_url | stylesheet_tag }}
+    
   
-  {% if content_for_header contains 'rio.pwztag.com' %}{% render 'productwiz-rio', product: product, shop: shop, installGuard: true %}{% endif %}
-</head>
+    {% if content_for_header contains 'rio.pwztag.com' %}{% render 'productwiz-rio', product: product, shop: shop, installGuard: true %}{% endif %}
+  </head>
 
   <body class="template-{{ template.name }}" data-instant-allow-query-string {% if settings.reduce_animations %}data-reduce-animations{% endif %}>
-    
+
     <script>!function(){window.SLIDECART=!0;window.SLIDECART_FORMAT='{{shop.money_format}}';var e="https://cdn.jsdelivr.net/gh/apphq/slidecart-dist@master/slidecarthq.js?"+(new Date).getTime(),t=document.createElement("script");t.type="text/javascript",t.src=e,document.querySelector("body").appendChild(t)}();</script>
    
     <!-- APPHQ Slide Cart: Making the rewards available to the customer when a customer buys the same item twice -->
     <script> 
-    window.SLIDECART_UPDATED = async function(cart) {
-      let newCart = cart
-      
-      let duplicatedItems = []
-      let items = newCart.items
-      
-      items.forEach((item)=>{
-        if(item.quantity >= 2){
-          duplicatedItems = [...true]
+      window.SLIDECART_UPDATED = async function(cart) {
+        let newCart = cart
+        
+        let duplicatedItems = []
+        let items = newCart.items
+        
+        items.forEach((item)=>{
+          if(item.quantity >= 2){
+            duplicatedItems = [...true]
+          }
+          
+        })
+  
+        if (duplicatedItems.length > 0){
+          newCart.item_count = 2
+        } else {
+          newCart.item_count = 1
         }
         
-      })
-
-      if (duplicatedItems.length > 0){
-        newCart.item_count = 2
-      } else {
-        newCart.item_count = 1
+        window.SLIDECART_SET_CART(newCart)
       }
-      
-      window.SLIDECART_SET_CART(newCart)
-    }
-  </script>
-<style>
-    #slidecarthq header.header {
-        order: 1;
-    }
-
-    #slidecarthq .rewards {
-        order: 2;
-    }
-
-    #slidecarthq .items {
-        order: 3;
-    }
-
-    #slidecarthq .note {
-        order: 4;
-    }
-
-    #slidecarthq .upsells {
-        order: 5;
-    }
-
-    #slidecarthq .discount-box {
-        order: 6;
-    }
-
-    #slidecarthq .announcements {
-        order: 7;
-    }
-
-    #slidecarthq footer.footer.sticky-footer {
-        order: 8;
-    }
-
-    .footer-row:first-child {
-      display: none!important;
-    }
-
-    #slidecarthq .footer-row ~ .footer-row:last-of-type {
-      border-top: 0px solid!important;
-      padding-top: 0px!important;
-    }
-
-    #slidecarthq .header {
-      padding: 15px;
-    }
-  
-</style>
-    <!-- END APPHQ Slide Cart: Making the rewards available to the customer when a customer buys the same item twice CP -->
+    </script>
     
+    <style>
+        #slidecarthq header.header {
+            order: 1;
+        }
+    
+        #slidecarthq .rewards {
+            order: 2;
+        }
+    
+        #slidecarthq .items {
+            order: 3;
+        }
+    
+        #slidecarthq .note {
+            order: 4;
+        }
+    
+        #slidecarthq .upsells {
+            order: 5;
+        }
+    
+        #slidecarthq .discount-box {
+            order: 6;
+        }
+    
+        #slidecarthq .announcements {
+            order: 7;
+        }
+    
+        #slidecarthq footer.footer.sticky-footer {
+            order: 8;
+        }
+    
+        .footer-row:first-child {
+          display: none!important;
+        }
+    
+        #slidecarthq .footer-row ~ .footer-row:last-of-type {
+          border-top: 0px solid!important;
+          padding-top: 0px!important;
+        }
+    
+        #slidecarthq .header {
+          padding: 15px;
+        }
+    </style>
+    
+    <!-- END APPHQ Slide Cart: Making the rewards available to the customer when a customer buys the same item twice CP -->
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNLS7DX"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -230,31 +234,35 @@
       if(window.Shopify&&window.Shopify.designMode)document.documentElement.className+=' in-theme-editor';
       if(('ontouchstart' in window)||window.DocumentTouch&&document instanceof DocumentTouch)document.documentElement.className=document.documentElement.className.replace(/\bno-touch\b/,'has-touch');
     </script>
-    <a class="skip-to-main" href="#site-main">{{ 'general.accessibility.skip_to_content' | t }}</a>
-    
-    {% section 'static-utility-bar' %}
-    {% section 'top-bar' %}
-    <header
-      id="header"
-      class="site-header site-header-nav--open"
-      role="banner"
-      data-site-header
-    >
-      {% section 'static-header' %}
-      {% section 'static-announcement' %}
-    </header>
-    <div class="intersection-target" data-header-intersection-target></div>
-    <div class="site-main-dimmer" data-site-main-dimmer></div>
-    <main id="site-main" class="site-main" aria-label="Main content" tabindex="-1">
-      {{ content_for_layout }}
-      {% if template.name == "product" %}
-      <div class="back_to_selection back_to_selection-hide" id="backtoselectionID">
-        <a href="#site-main" class="button-primary">Zur Auswahl</a>
-      </div>  
-      {% endif %}
-    </main>
 
-    {% section 'static-footer' %}
+    {% comment %} Theme modified to add our own SLIDE CART - div wrappers added plus the my-cart section - Yurith {% endcomment %}
+    {% comment %}Inject body wrapper for SlideCart opening divs end - Yurith     
+                  <div class="my-container" data-drawer-push>
+                    <div class="MyCart_BodyWrapper"> {% endcomment %}
+                    
+    <div class="my-container" data-drawer-push>
+      <div class="MyCart_BodyWrapper">
+
+        <a class="skip-to-main" href="#site-main">{{ 'general.accessibility.skip_to_content' | t }}</a>
+        {% section 'static-utility-bar' %}
+        {% section 'top-bar' %}
+        <header id="header" class="site-header site-header-nav--open" role="banner" data-site-header >
+          {% section 'static-header' %}
+          {% section 'static-announcement' %}
+        </header>
+        <div class="intersection-target" data-header-intersection-target></div>
+        <div class="site-main-dimmer" data-site-main-dimmer></div>
+        <main id="site-main" class="site-main" aria-label="Main content" tabindex="-1">
+          {{ content_for_layout }}
+          {% if template.name == "product" %}
+          <div class="back_to_selection back_to_selection-hide" id="backtoselectionID">
+            <a href="#site-main" class="button-primary">Zur Auswahl</a>
+          </div>  
+          {% endif %}
+        </main>
+        {% section 'static-footer' %}
+
+
     
     {% comment %}
       Below are various templates used in JavaScript
@@ -482,8 +490,17 @@
         <div class="product-zoom--thumb-scroller" data-photoswipe-thumb-scroller></div>
       </div>
     </div>
-    {% comment %}Inject product-gallery-zoom end{% endcomment %}
 
+    {% comment %}Inject product-gallery-zoom end{% endcomment %}
+        <div id="MyCart_SectionsWrapper" class="MyCart_SectionsWrapper open-cart">
+          {% section 'my-cart-upsells' %}
+          {% section 'my-cart' %}
+        </div>
+        {% render 'my-cart-overlay' %}
+        
+      </div>
+    </div>
+    {% comment %}Inject body wrapper for SlideCart closing divs end - Yurith {% endcomment %}
 
     {%- if template contains 'customer' -%}
       {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
@@ -525,29 +542,6 @@
       </script>
     {% endunless %}
 
-    <script>
-      myID = document.getElementById("backtoselectionID");
-      var myScrollFunc = function() {
-        var y = window.scrollY;
-        if (y >= 1450) {
-          myID.className = "back_to_selection back_to_selection-show";
-        } else {
-          myID.className = "back_to_selection back_to_selection-hide";
-        }
-      };
-
-      window.addEventListener("scroll", myScrollFunc);
-      
-      $(document).scroll(function() {
-        var y = $(this).scrollTop();
-        if (y > 1450) {
-          $('.<em>back_to_selection</em>').fadeIn(5000);
-        } else {
-          $('.<em>back_to_selection</em>').fadeOut(5000);
-        }
-      });
-    </script>
-  
     <script
       src="{{ 'empire.js' | asset_url }}"
       data-scripts
@@ -562,43 +556,36 @@
     {% render 'structured-data' %}
 
     <script>
-    (function () {
-      function handleFirstTab(e) {
-        if (e.keyCode === 9) { // the "I am a keyboard user" key
-          document.body.classList.add('user-is-tabbing');
-          window.removeEventListener('keydown', handleFirstTab);
+      (function () {
+        function handleFirstTab(e) {
+          if (e.keyCode === 9) { // the "I am a keyboard user" key
+            document.body.classList.add('user-is-tabbing');
+            window.removeEventListener('keydown', handleFirstTab);
+          }
         }
-      }
-      window.addEventListener('keydown', handleFirstTab);
-    })();
+        window.addEventListener('keydown', handleFirstTab);
+      })();
     </script>
-
     {% unless settings.reduce_animations %}
       {{ 'ripple.css' | asset_url | stylesheet_tag }}
     {% endunless %}
+    <script src="{{ 'instantPage.min.js' | asset_url }}" type="module" defer ></script>
+    
+    <!-- CleverApp CODE Start -->{% if template.name == 'product'%}{% include 'clever' %}{% endif %}<!-- CleverApp END --> 
+    
+    {% comment %} Code to add the upsell product - Yurith {% endcomment %}
+    {{ 'upsell-product-post.js' | asset_url | script_tag }}
+    {% if template.name == 'product' %}
+      {{ 'back-top-button.js' | asset_url | script_tag }}
+    {% endif %}
+    
+    {% comment %}  Owl carousel library for adding sliders to the theme - Yurith {% endcomment %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" media="all">
 
-    <script
-      src="{{ 'instantPage.min.js' | asset_url }}"
-      type="module"
-      defer
-    >
-    </script>
-  <!-- CleverApp CODE Start -->{% if template.name == 'product'%}{% include 'clever' %}{% endif %}<!-- CleverApp END --> 
-  
-  {% comment %} Code to add the upsell product - Yurith {% endcomment %}
-  <script>
-    function addItem(form_id) {
-       $.ajax({
-          type: 'POST', 
-          url: '/cart/add.js',
-          dataType: 'json', 
-          data: $('#'+form_id).serialize(),
-          success: addToCartOk,
-          error: addToCartFail
-       });
-    }
-  </script>
-  {{ 'option_selection.js' | shopify_asset_url | script_tag }}
-
+    {% comment %}  Gift item styles - Yurith
+                   Add FREE GIFT to slide cart code - Yurith {% endcomment %}
+      {% render 'my-cart-scripts', settings: settings %}
+      {% render 'my-cart-free-gift-scripts', settings: settings %}
   </body>
 </html>

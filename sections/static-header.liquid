@@ -205,7 +205,11 @@
     {% render 'site-header-actions' %}
 
     <div class="site-header-cart">
-      <a class="site-header-cart--button" href="{{ routes.cart_url }}">
+      <a class="site-header-cart--button" 
+        href="{{ routes.cart_url }}"
+        data-ajax-cart-toggle-class-button="js-my-cart-open"
+        onclick="overlayOn()"
+        >
         <span
           class="site-header-cart--count {% if cart.item_count > 0 %}visible{% endif %}"
           data-header-cart-count="{% if cart.item_count > 0 %}{{ cart.item_count }}{% endif %}">
