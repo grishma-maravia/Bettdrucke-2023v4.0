@@ -31563,6 +31563,8 @@ class ProductDetails {
 
   _updateSwatchLabel(variant) {
     if (this.settings.swatches_enable) {
+      console.log("===== the form");
+      console.log(this.$form);
       const swatchLabel = this.$form[0].querySelector('[data-option-swatch-value]');
 
       if (swatchLabel) {
