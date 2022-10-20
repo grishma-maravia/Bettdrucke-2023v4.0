@@ -325,8 +325,7 @@
             "type": "Trigger",
             "settings": {
               "product_list": [
-                "fotodecke",
-                "weisses-kopfkissen"
+                "fotodecke"
               ],
               "enable_upsell_1": true,
               "upsell_product_1": "personalisiertes-fotokissen-kissenbezug-mit-menschen",
@@ -337,10 +336,30 @@
               "enable_upsell_4": false,
               "upsell_product_4": "baumwollbezug-amor-und-liebespfeil"
             }
+          },
+          "61813f2d-089f-4146-bc15-0fc6cafd7829": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "3d-geburtskissen-mit-vielen-linien-kissen-zur-geburt",
+                "3d-geburtskissen-mit-einer-linie-kissen-zur-geburt",
+                "3d-geburtskissen-klassisch-kissen-zur-geburt",
+                "3d-geburtskissen-im-wasserfarben-stil-kissen-zur-geburt"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-3d-kissen-mit-baby",
+              "enable_upsell_2": true,
+              "upsell_product_2": "personalisiertes-3d-kissen-mit-baby-1",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
           }
         },
         "block_order": [
-          "eb140b3d-0764-4eb5-8625-f1208e6c1ae3"
+          "eb140b3d-0764-4eb5-8625-f1208e6c1ae3",
+          "61813f2d-089f-4146-bc15-0fc6cafd7829"
         ],
         "settings": {
         }
