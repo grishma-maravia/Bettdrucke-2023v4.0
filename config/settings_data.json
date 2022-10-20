@@ -372,12 +372,29 @@
               "enable_upsell_4": false,
               "upsell_product_4": ""
             }
+          },
+          "76da06d1-676a-4cf0-85a9-ec8d92fe0bb0": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisierte-fotodecke-bettbezug-fur-kinder"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-kissen-fur-kinder",
+              "enable_upsell_2": false,
+              "upsell_product_2": "",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
           }
         },
         "block_order": [
           "eb140b3d-0764-4eb5-8625-f1208e6c1ae3",
           "61813f2d-089f-4146-bc15-0fc6cafd7829",
-          "e01ec0b3-b4a9-486c-9083-c5e4c3963b64"
+          "e01ec0b3-b4a9-486c-9083-c5e4c3963b64",
+          "76da06d1-676a-4cf0-85a9-ec8d92fe0bb0"
         ],
         "settings": {
         }
