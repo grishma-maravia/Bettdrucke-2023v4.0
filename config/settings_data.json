@@ -184,7 +184,7 @@
         "settings": {
           "sticky_header": false,
           "full_width_header": false,
-          "logo": "shopify:\/\/shop_images\/LOGO-BETTDRUCKE-WEB_058cdb28-e1f4-4cef-befb-3cb8e4900a57.png",
+          "logo": "shopify:\/\/shop_images\/bettdrucke_logo.png",
           "logo_height": 45,
           "logo_width": 180,
           "filter_search_by": "disabled",
@@ -430,13 +430,13 @@
           "cart_widget_enabled": false,
           "item_widget_enabled": true,
           "product_widget_enabled": true,
+          "message_enabled": false,
+          "message_max_length": 250,
+          "variant_selector_type": "select",
           "background_color": "#ffffff",
           "font_color": "#000000",
           "border_color": "#000000",
-          "border_radius": 0,
-          "message_enabled": false,
-          "message_max_length": 250,
-          "variant_selector_type": "select"
+          "border_radius": 0
         }
       },
       "15132424025755801183": {
