@@ -220,9 +220,11 @@
     {% endcapture %}
   {%- endif -%}
 
+{% unless product_title == 'Verpackt in Geschenkpapier (+ 5€)' %}
 <li
   class="{{ classes | strip_newlines }}"
   data-product-item
+  data-test="{{ product_title }}"
   data-product-quickshop-url="{{ product_link }}"
   data-quickshop-hash="{{ to_hash }}"
   {% if recently_viewed %}
@@ -463,3 +465,4 @@
     </script>
   {% endif %}
 </li>
+{% endunless %}
