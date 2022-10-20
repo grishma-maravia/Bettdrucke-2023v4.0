@@ -1126,6 +1126,36 @@
         "id": "text_button_color_hover",
         "label": "Hover: Text color",
         "default": "#222323"
+      },
+      {
+        "type": "header",
+        "content": "BADGES. Design"
+      },
+      {
+        "type": "url",
+        "id": "promo_badge",
+        "label": "Badge design"
+      },
+      {
+        "type": "header",
+        "content": "COLLECTION PAGE. Badge"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_collection_badge",
+        "label": "Enable badge",
+        "info": "[For exception rules:](https:\/\/therapiedecken.myshopify.com\/admin\/themes\/122250559627?key=snippets\/collection-promotional-badge.liquid)",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "collection_badge_max_width",
+        "label": "Width",
+        "min": 80,
+        "max": 180,
+        "step": 10,
+        "unit": "px",
+        "default": 80
       }
     ]
   }
