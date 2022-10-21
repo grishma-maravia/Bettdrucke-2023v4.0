@@ -275,6 +275,7 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
   display: flex;
   justify-content: space-between;
   margin: 0;
+  font-size: 17px;
 }
 /* Text style */
 .MyCart_H2 > a, .MyCartUpsells_ProductHeader{
@@ -312,6 +313,7 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
 }
 .MyCart_HighlightedText{
   color: var(--color-highlights);
+  font-weight: bold;
 }
 .MyCart_ComparedPrice{
   text-decoration: line-through;
@@ -334,7 +336,7 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
   text-align:center;
   background-color: white;
   width: 90%;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 .MyCart_PaymentOptions .inline-list {
  padding:0;
@@ -532,9 +534,6 @@ button.MyCart_CheckoutButton{
   }
   .MyCartUpsells_SuggestedContainer, .MyCartUpsells_MainContainer, .MyCartUpsells_MainContainer > form {
     width: 100%;
-  }
-  .MyCart_Message{
-    padding: 5px 0;
   }
   .MyCartUpsells_Select{
     width: 100%;
