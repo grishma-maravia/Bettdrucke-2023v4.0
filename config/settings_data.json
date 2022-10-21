@@ -676,6 +676,22 @@
               "enable_upsell_4": false,
               "upsell_product_4": ""
             }
+          },
+          "2ff90ce0-9250-4b31-98f1-9a92c4e1ba34": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisiertes-fotokissen-kissen-mit-parchen-foto"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "herzkissen",
+              "enable_upsell_2": true,
+              "upsell_product_2": "kissen-herz-ich-hab-dich-lieb",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
           }
         },
         "block_order": [
@@ -700,7 +716,8 @@
           "24a26449-4a0c-4668-aacf-1320a59ed842",
           "159fc97f-5725-41d5-876d-11d0f101bb22",
           "be0e9de3-98c7-41fa-baf3-0245553af6a8",
-          "fcb2f4e5-af10-486c-ad38-753c7b21f933"
+          "fcb2f4e5-af10-486c-ad38-753c7b21f933",
+          "2ff90ce0-9250-4b31-98f1-9a92c4e1ba34"
         ],
         "settings": {
         }
