@@ -692,6 +692,22 @@
               "enable_upsell_4": false,
               "upsell_product_4": ""
             }
+          },
+          "dbe3a461-fb83-48cc-a0fd-7634cb6438a2": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "herzkissen"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "fotodecke",
+              "enable_upsell_2": true,
+              "upsell_product_2": "kissen-rosa-ich-liebe-dich-1",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
           }
         },
         "block_order": [
@@ -717,7 +733,8 @@
           "159fc97f-5725-41d5-876d-11d0f101bb22",
           "be0e9de3-98c7-41fa-baf3-0245553af6a8",
           "fcb2f4e5-af10-486c-ad38-753c7b21f933",
-          "2ff90ce0-9250-4b31-98f1-9a92c4e1ba34"
+          "2ff90ce0-9250-4b31-98f1-9a92c4e1ba34",
+          "dbe3a461-fb83-48cc-a0fd-7634cb6438a2"
         ],
         "settings": {
         }
