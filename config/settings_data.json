@@ -516,6 +516,38 @@
               "enable_upsell_4": false,
               "upsell_product_4": ""
             }
+          },
+          "2a91d561-7976-4426-acfb-3b62b7aab26d": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisiertes-3d-kissen-hochzeitsparchen"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-3d-kissen-animiertes-parchen",
+              "enable_upsell_2": true,
+              "upsell_product_2": "personalisiertes-3d-kissen-zwei-personen",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
+          },
+          "d0701933-9dae-4548-ac6f-aacfaffc3e0a": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisiertes-kissen-fur-kinder"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisierte-fotodecke-bettbezug-fur-kinder",
+              "enable_upsell_2": false,
+              "upsell_product_2": "",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
           }
         },
         "block_order": [
@@ -530,7 +562,9 @@
           "c8159e7f-d2ea-426f-afb8-e9d70c064b66",
           "426d6160-404a-4da1-81e5-2bef7d88e6c3",
           "66fba716-82d0-4f41-bbad-2062b941d7a5",
-          "2e32d00a-e1c7-4793-afca-39798ab9e446"
+          "2e32d00a-e1c7-4793-afca-39798ab9e446",
+          "2a91d561-7976-4426-acfb-3b62b7aab26d",
+          "d0701933-9dae-4548-ac6f-aacfaffc3e0a"
         ],
         "settings": {
         }
