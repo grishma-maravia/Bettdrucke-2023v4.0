@@ -2,7 +2,7 @@
   --color-price: ;
   --color-highlights: #DD2200;
   --color-light-background1: #fcfcfc;
-  --color-light-shadow: #eee;
+  --color-light-shadow: #a1daf8;
   --color-light-text: ;
   --color-secondary-text: gray;
   --color-overlay: rgb(58 58 58 / 71%);
@@ -144,10 +144,14 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
   text-transform: uppercase;
   margin: 8px 0;
   font-size: 16px;
+  color: #312783;
 }
 .MyCart_CloseSlideCart{
   position: absolute;
   right: 20px;
+}
+.MyCart_CloseSlideCart path{
+  fill: #312783;
 }
 .MyCart_ItemWrapper{
   display: inline-flex;
@@ -492,7 +496,6 @@ button.MyCart_CheckoutButton{
   }
   .MyCartUpsells_SuggestedContainer{
     width: 440px;
-    padding-right: 20px;
   }
   .MyCartUpsells_Select{
     width: 350px;
