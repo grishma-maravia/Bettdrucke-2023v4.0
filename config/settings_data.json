@@ -601,12 +601,12 @@
             "type": "Trigger",
             "settings": {
               "product_list": [
-
+                "personalisiertes-3d-kissen-mit-hunden-1"
               ],
-              "enable_upsell_1": false,
-              "upsell_product_1": "",
-              "enable_upsell_2": false,
-              "upsell_product_2": "",
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-fotokissen-kissen-mit-tieren",
+              "enable_upsell_2": true,
+              "upsell_product_2": "personalisierte-fotodecke-bettbezug-mit-tierfoto",
               "enable_upsell_3": false,
               "upsell_product_3": "",
               "enable_upsell_4": false,
