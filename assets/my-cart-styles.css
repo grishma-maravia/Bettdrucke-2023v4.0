@@ -469,6 +469,7 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
 }
 .MyCartUpsells_OptionLabel[for]{
   cursor: auto;
+  margin-bottom: 5px;
 }
 .MyCartUpsells_Close{
   cursor: pointer;
@@ -482,6 +483,9 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
 }
 button.MyCart_CheckoutButton{
   font-size: 16px;
+}
+.MyCartUpsells_ImageUploadButton label.cl-po--label{
+  margin-bottom: 5px !important;
 }
 /* Tablet and up */
 @media only screen and (min-width: 441px){
