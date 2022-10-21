@@ -388,13 +388,81 @@
               "enable_upsell_4": false,
               "upsell_product_4": ""
             }
+          },
+          "b18a22df-0ba8-453d-9fe8-0e591b03b436": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisiertes-fotokissen-kissenbezug-mit-menschen"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "fotodecke",
+              "enable_upsell_2": false,
+              "upsell_product_2": "",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
+          },
+          "92d694c4-b93a-4ea5-83b3-2b218acadaa6": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisierte-fotodecke-bettbezug-mit-parchen-foto"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-3d-kissen-animiertes-parchen",
+              "enable_upsell_2": true,
+              "upsell_product_2": "personalisiertes-fotokissen-kissenbezug-mit-menschen",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
+          },
+          "86151935-6648-4f55-be66-eb06f1032311": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisierte-fotodecke-bettbezug-mit-tierfoto"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-3d-hundekissen-boxer-welpe",
+              "enable_upsell_2": true,
+              "upsell_product_2": "personalisiertes-3d-hundekissen-zwergspitz",
+              "enable_upsell_3": true,
+              "upsell_product_3": "personalisiertes-3d-kissen-mit-hunden-1",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
+          },
+          "aad4d2f8-f19f-4efa-8021-2974b7a0a56a": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisierte-fotodecke-bettbezug-mit-familien-foto"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-3d-kissen-familie",
+              "enable_upsell_2": true,
+              "upsell_product_2": "personalisiertes-fotokissen-kissen-mit-familien-foto",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
           }
         },
         "block_order": [
           "eb140b3d-0764-4eb5-8625-f1208e6c1ae3",
           "61813f2d-089f-4146-bc15-0fc6cafd7829",
           "e01ec0b3-b4a9-486c-9083-c5e4c3963b64",
-          "76da06d1-676a-4cf0-85a9-ec8d92fe0bb0"
+          "76da06d1-676a-4cf0-85a9-ec8d92fe0bb0",
+          "b18a22df-0ba8-453d-9fe8-0e591b03b436",
+          "92d694c4-b93a-4ea5-83b3-2b218acadaa6",
+          "86151935-6648-4f55-be66-eb06f1032311",
+          "aad4d2f8-f19f-4efa-8021-2974b7a0a56a"
         ],
         "settings": {
         }
