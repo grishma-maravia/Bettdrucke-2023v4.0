@@ -548,6 +548,38 @@
               "enable_upsell_4": false,
               "upsell_product_4": ""
             }
+          },
+          "f2dba01c-a0a1-46a6-93b3-3c5bd0db826e": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisiertes-3d-hundekissen-zwergpinscher"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisierte-fotodecke-bettbezug-mit-tierfoto",
+              "enable_upsell_2": true,
+              "upsell_product_2": "personalisiertes-fotokissen-kissen-mit-tieren",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
+          },
+          "a53f5064-199b-4df2-b93a-89d99fded0b4": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisierte-fotodecke-bettbezug-mit-tierfoto-kopfdruck"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-fotokissen-kissen-mit-tierkopfdruck",
+              "enable_upsell_2": true,
+              "upsell_product_2": "ola-persoanlisierter-schlafanzug-mit-hund",
+              "enable_upsell_3": true,
+              "upsell_product_3": "personalisiertes-3d-kissen-mit-hunden-1",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
           }
         },
         "block_order": [
@@ -564,7 +596,9 @@
           "66fba716-82d0-4f41-bbad-2062b941d7a5",
           "2e32d00a-e1c7-4793-afca-39798ab9e446",
           "2a91d561-7976-4426-acfb-3b62b7aab26d",
-          "d0701933-9dae-4548-ac6f-aacfaffc3e0a"
+          "d0701933-9dae-4548-ac6f-aacfaffc3e0a",
+          "f2dba01c-a0a1-46a6-93b3-3c5bd0db826e",
+          "a53f5064-199b-4df2-b93a-89d99fded0b4"
         ],
         "settings": {
         }
