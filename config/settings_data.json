@@ -644,6 +644,22 @@
               "enable_upsell_4": false,
               "upsell_product_4": ""
             }
+          },
+          "be0e9de3-98c7-41fa-baf3-0245553af6a8": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisiertes-3d-kissen-mit-hase-1"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-fotokissen-kissen-mit-tieren",
+              "enable_upsell_2": true,
+              "upsell_product_2": "bettwaschen-set-weiss-susse-tiere",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
           }
         },
         "block_order": [
@@ -666,7 +682,8 @@
           "1e00432a-10b4-46cb-92de-e8f180346a0b",
           "0cb478b6-618a-4300-bb12-03e571dbefb7",
           "24a26449-4a0c-4668-aacf-1320a59ed842",
-          "159fc97f-5725-41d5-876d-11d0f101bb22"
+          "159fc97f-5725-41d5-876d-11d0f101bb22",
+          "be0e9de3-98c7-41fa-baf3-0245553af6a8"
         ],
         "settings": {
         }
