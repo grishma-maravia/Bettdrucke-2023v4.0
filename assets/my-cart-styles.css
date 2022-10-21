@@ -459,12 +459,9 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
   flex-direction: column;
   padding: 3px 0;
 }
-.MyCartUpsells_ImageUploadButton .cl-po--label{
-  display: none !important;
-}
 .MyCartUpsells_SelectorsWrapper{
   padding-top: 10px;
-  margin-bottom:20px;
+  /*margin-bottom:20px;*/
 }
 .MyCartUpsells_OptionLabel[for]{
   cursor: auto;
@@ -532,6 +529,10 @@ button.MyCart_CheckoutButton{
     bottom: 191px;
     padding-right: 5px;
   }
+  .MyCartUpsells_MainContainer{
+    height: 90vh;
+    overflow-y: scroll;
+  }
   .MyCartUpsells_SuggestedContainer, .MyCartUpsells_MainContainer, .MyCartUpsells_MainContainer > form {
     width: 100%;
   }
@@ -546,9 +547,6 @@ button.MyCart_CheckoutButton{
   }
   .MyCart_ItemWrapper{
     padding: 15px 20px;
-  }
-  .MyCart_ValueItem, .MyCartUpsells_MainTitle, .MyCartUpsells_OptionLabel[for]{
-    font-size: 12px;
   }
   .MyCart_PriceItem{
     font-size: 13px;
