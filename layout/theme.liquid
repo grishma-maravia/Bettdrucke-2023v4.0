@@ -490,14 +490,14 @@
         </div>
         {% comment %}Inject product-gallery-zoom end{% endcomment %}
         
-            <div id="MyCart_SectionsWrapper" class="MyCart_SectionsWrapper open-cart">
-              {% section 'my-cart-upsells' %}
-              {% section 'my-cart' %}
-            </div>
-            {% render 'my-cart-overlay' %}
-            
-          </div>
+        <div id="MyCart_SectionsWrapper" class="MyCart_SectionsWrapper open-cart">
+          {% section 'my-cart-upsells' %}
+          {% section 'my-cart' %}
         </div>
+        {% render 'my-cart-overlay' %}
+            
+      </div>
+    </div>
         {% comment %}Inject body wrapper for SlideCart closing divs end - Yurith {% endcomment %}
 
         {%- if template contains 'customer' -%}
