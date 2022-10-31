@@ -16,11 +16,15 @@
           </a>
         </div>
         {% if cart.item_count > 0 %}
+          {% assign added_message = false %}
           {% for item in cart.items %}
-            {% if item.quantity > 1 %}
-              <div class="MyCart_Message">Super! 🎉 Du hast 10% Rabatt erhalten!</div>
-            {% else %}
-              <div class="MyCart_Message">Wenn du den <b>gleichen</b> Artikel 2x bestellst, erhältst du einmalig <b>10% Rabatt</b>!</div>
+            {% if added_message == false %}
+              {% assign added_message = true %}
+              {% if item.quantity > 1 %}
+                <div class="MyCart_Message">Super! 🎉 Du hast 10% Rabatt erhalten!</div>
+              {% else %}
+                <div class="MyCart_Message">Wenn du den <b>gleichen</b> Artikel 2x bestellst, erhältst du einmalig <b>10% Rabatt</b>!</div>
+              {% endif %}
             {% endif %}
           {% endfor %}
         {% endif %}
