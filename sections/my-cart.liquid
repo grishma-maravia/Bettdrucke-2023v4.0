@@ -73,7 +73,7 @@
                     {% comment %} quanity selector {% endcomment %}
                     <div class="MyCart_QuantityItem">
                       {% comment %} data-ajax-cart-request-button ajaxifies the "Minus one" button {% endcomment %}
-                      <a class="MyCart_QuantityButtonItem" 
+                      <a style="border-radius: 3px 0 0 3px;" class="MyCart_QuantityButtonItem" 
                          data-ajax-cart-request-button 
                          href="{{ routes.cart_change_url }}?line={{ item_index }}&quantity={{ item.quantity | minus: 1 }}" >
                         <svg width="10" viewBox="0 0 12 2" xmlns="http://www.w3.org/2000/svg"><path d="M11.25 0H.75C.3 0 0 .4 0 1s.3 1 .75 1h10.5c.45 0 .75-.4.75-1s-.3-1-.75-1z" fill="#7A7A7A" fill-rule="nonzero"></path></svg>
@@ -85,7 +85,7 @@
                              value="{{ item.quantity }}" 
                              type="number" />
                       {% comment %} data-ajax-cart-request-button ajaxifies the "Plus one" button {% endcomment %}
-                      <a class="MyCart_QuantityButtonItem"
+                      <a style="border-radius: 0 3px 3px 0;" class="MyCart_QuantityButtonItem"
                          data-ajax-cart-request-button
                          href="{{ routes.cart_change_url }}?line={{ item_index }}&quantity={{ item.quantity | plus: 1 }}">
                         <svg width="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M11 5H7V1a1 1 0 00-2 0v4H1a1 1 0 000 2h4v4a1 1 0 002 0V7h4a1 1 0 000-2z" fill="currentColor" fill-rule="nonzero"></path></svg>
