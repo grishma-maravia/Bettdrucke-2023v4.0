@@ -1023,6 +1023,21 @@
     ]
   },
   {
+    "name": "Left Inventory",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Product Left Inventory"
+      },
+      {
+        "type": "checkbox",
+        "id": "left_product_inventory",
+        "label": "Show product inventory when > 0 and < 15",
+        "default": false
+      }
+    ]
+  },
+  {
     "name": "Promotional",
     "settings": [
       {

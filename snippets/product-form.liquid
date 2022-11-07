@@ -735,6 +735,8 @@
         <form data-payment-terms-target style="display: none;"></form>
       </div>
 
+    {% render 'left-inventory', selected_variant:selected_variant %}
+  
     <button
       class="product-form--atc-button {% if selected_variant and selected_variant.available == false %}disabled{% endif %}"
       type="submit"

@@ -76,6 +76,7 @@
     "border_radius_countdown": 0,
     "announcement_countdown_enable": true,
     "text_color_countdown": "#f68566",
+    "left_product_inventory": true,
     "promotional_hero_hp_cover": false,
     "promotional_hero_image": "shopify:\/\/shop_images\/Make_your_bed_day_desktop.jpg",
     "mobile_promotional_hero_image": "shopify:\/\/shop_images\/Make_your_bed_day_mobile.jpg",
@@ -773,8 +774,8 @@
           "message_enabled": false,
           "message_max_length": 250,
           "variant_selector_type": "select",
-          "background_color": "#ffffff",
           "font_color": "#000000",
+          "background_color": "#ffffff",
           "border_color": "#000000",
           "border_radius": 0
         }

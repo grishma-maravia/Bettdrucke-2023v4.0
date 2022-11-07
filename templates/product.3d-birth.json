@@ -25,6 +25,7 @@
         },
         "02c906f5-791e-4905-9b3e-e420cbbdac29": {
           "type": "inventory_status",
+          "disabled": true,
           "settings": {
             "inventory_display": "all_products",
             "inventory_transfer_notice": true
