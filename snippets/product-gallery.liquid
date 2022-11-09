@@ -61,7 +61,24 @@
     </div>
   {% endif %}
 {% endcomment %}
-  
+{% if product.handle == 'weisses-kopfkissen' %}
+  <style>
+    @media only screen and (min-width: 769px){
+      .trust-product-badge{
+        width:120px
+      }
+    }
+    @media only screen and (max-width: 768px){
+      .trust-product-badge{
+        width:100px
+      }
+    }
+    
+  </style>
+  <div class="trust-product-badge" style="position: absolute; z-index: 11;right:10px;top:10px">
+    <img style="width: 100%;" src="https://cdn.shopify.com/s/files/1/0621/3235/5303/files/BETT_Test_Badge.png?v=1652177555">
+  </div>
+{% endif %}
 <div class="product-gallery
     {% if gallery_hover_zoom != 'disabled' %}hover-zoom-enabled{% endif %}
     {% if gallery_click_to_zoom != 'disabled' and gallery_click_to_zoom != 'mobile' %}click-to-zoom-enabled{% endif %} "
@@ -69,6 +86,8 @@
     {% if image_crop %}data-product-gallery-image-crop{% endif %}
     data-product-gallery-aspect-ratio="{{ aspect_ratio }}"
     data-product-gallery-thumbnails="{{ thumbnail_position }}" >
+
+
   
   {% if thumbnail_position == 'left' %}
     {%
