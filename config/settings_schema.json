@@ -1000,25 +1000,53 @@
       },
       {
         "type": "header",
-        "content": "Announcement Bar Countdown"
+        "content": "Announcement bar countdown"
       },
       {
         "type": "checkbox",
         "id": "announcement_countdown_enable",
-        "label": "Enable Countdown on Announcement Bar",
+        "label": "Enable",
         "default": false
       },
       {
         "type": "color",
         "id": "background_countdown",
-        "label": "Background for Annoouncement Countdown Numbers",
+        "label": "Numbers' background",
         "default": "#ffffff"
       },
       {
         "type": "color",
         "id": "text_color_countdown",
-        "label": "Numbers' Color",
+        "label": "Numbers' color",
         "default": "#3A3C3C"
+      },
+      {
+        "type": "header",
+        "content": "Cart countdown"
+      },
+      {
+        "type": "checkbox",
+        "id": "cart_countdown_enable",
+        "label": "Enable",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "cart_countdown_text",
+        "label": "Countdown pre-content",
+        "default": "⚠️ Auf Grund unserer Black Friday Angebote ist Ihr Warenkorb für nur"
+      },
+      {
+        "type": "text",
+        "id": "cart_countdown_text_after",
+        "label": "Countdown post-content",
+        "default": "Minuten reserviert!"
+      },
+      {
+        "type": "text",
+        "id": "cart_countdown_text_over",
+        "label": "Content after countdown is over",
+        "default": "⚠️ Ihr Warenkorb Reservierung ist abgelaufen."
       }
     ]
   },
