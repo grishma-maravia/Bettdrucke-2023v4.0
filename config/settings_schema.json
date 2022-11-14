@@ -1187,7 +1187,7 @@
       {
         "type": "color",
         "id": "text_button_color_hover",
-        "label": "Hover: Text color",
+        "label": "Hover: Button color",
         "default": "#222323"
       },
       {
