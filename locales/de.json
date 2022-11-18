@@ -550,5 +550,12 @@
     "rating": "Produktrezensionen",
     "breadcrumb": "Zurück zu {{ location }}",
     "breadcrumb_generic": "Der Rücken"
+  },
+  "shopify": {
+    "collections": {
+      "sorting": {
+        "best_selling": "Am beliebtesten"
+      }
+    }
   }
 }
