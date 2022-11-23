@@ -48,7 +48,8 @@
           href="{{ section.settings.announcement_link }}"
           ></a>
       {% endif %}
-      
+    
+      {% comment %}
       <div class="announcement-bar-text-mobile"
            {% if settings.announcement_countdown_enable %}
            	 style="margin-bottom:10px;"
@@ -59,15 +60,15 @@
           {{ section.settings.announcement_text }}
         {% endif %}
       </div>
+      {% endcomment %}
       
       {% if section.settings.announcement_text != blank %}
         <div class="announcement-bar-text">
           {{ section.settings.announcement_text }}
+          {% if settings.announcement_countdown_enable %}
+            <span id="countdown_announcement"></span>
+          {% endif %}
         </div>
-      {% endif %}
-      
-      {% if settings.announcement_countdown_enable %}
-        <span id="countdown_announcement"></span>
       {% endif %}
 
 

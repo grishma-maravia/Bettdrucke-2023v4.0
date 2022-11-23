@@ -1022,6 +1022,45 @@
       },
       {
         "type": "header",
+        "content": "Product page countdown"
+      },
+      {
+        "type": "checkbox",
+        "id": "product_countdown_enable",
+        "label": "Enable",
+        "default": false
+      },
+      {
+        "type": "html",
+        "id": "icon_countdown_product",
+        "label": "Add icon span from ICOMOON"
+      },
+      {
+        "type": "text",
+        "id": "countdown_product_text",
+        "label": "Content",
+        "default": "Grey Friday Preis endet"
+      },
+      {
+        "type": "color",
+        "id": "countdown_container_bg_color",
+        "label": "Background Container Color",
+        "default": "#3a3c3c"
+      },
+      {
+        "type": "color",
+        "id": "countdown_product_bg_color",
+        "label": "Background Numbers' Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "countdown_product_numbers_color",
+        "label": "Numbers' Color",
+        "default": "#3a3c3c"
+      },
+      {
+        "type": "header",
         "content": "Cart countdown"
       },
       {
@@ -1060,7 +1099,7 @@
       {
         "type": "checkbox",
         "id": "left_product_inventory",
-        "label": "Show product inventory when > 0 and < 15",
+        "label": "Show product inventory when > 0 and < 30",
         "default": false
       }
     ]

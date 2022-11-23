@@ -51,11 +51,11 @@
 
 /* Variant option with image */
 .option-value-input:checked + .variant-ui__image:before{
-  background-color: #312783;
+  background-color: #14bdad;
   color: white;
 }
 .option-value-input + .variant-ui__image:before{
-  color: #312783;
+  color: #14bdad;
   padding: 0;
   position: relative;
   top: 0;
