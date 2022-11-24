@@ -1254,7 +1254,7 @@
         "id": "collection_badge_max_width",
         "label": "Width",
         "min": 80,
-        "max": 180,
+        "max": 250,
         "step": 10,
         "unit": "px",
         "default": 80
