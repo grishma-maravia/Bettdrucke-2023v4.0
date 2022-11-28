@@ -64,15 +64,16 @@
                     <p class="MyCart_ValueItem">{{ option.value }}</p>
                   {% endfor %}
                   {%- for property in item.properties -%}
-                         {%- if property.first.first == '_' -%}{% continue %}{%- endif -%}
-                          <p class="MyCart_ValueItem">
-                            {% if property.first == 'upload' %}
-                              Datei:
-                            {% else %}
-                              <b>{{ property.first }}: </b>
-                            {% endif %}
-                            <span>{{ property.last }}</span>
-                          </p>
+                    {%- if property.first.first == '_' -%}{% continue %}{%- endif -%}
+                    {%- if property.first == 'total_inventory_quantity' -%}{% continue %}{%- endif -%}
+                    <p class="MyCart_ValueItem">
+                      {% if property.first == 'upload' %}
+                        Datei:
+                      {% else %}
+                        <b>{{ property.first }}: </b>
+                      {% endif %}
+                      <span>{{ property.last }}</span>
+                    </p>
                   {%- endfor -%}
                   <div class="MyCart_QuantityItemWrapper">
                     {% comment %} quanity selector {% endcomment %}
