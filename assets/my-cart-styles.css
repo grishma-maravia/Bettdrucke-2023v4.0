@@ -613,3 +613,7 @@ button.MyCart_CheckoutButton{
   margin: 0;
   display: flex;
 }
+/* Extras for BETT */
+.UpProdOpt_infoWr.MyCartUpsells_infoWr div[data-controller="wrapped-product"]{
+  display: none;
+}
