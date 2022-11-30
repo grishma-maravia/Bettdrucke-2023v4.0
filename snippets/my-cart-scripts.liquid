@@ -3,7 +3,7 @@
 </script>
 
 <script type="module">
-    import '{{ "liquid-ajax-cart-v1.10.0.js" | asset_url }}';
+    import '{{ "liquid-ajax-cart-v1.10.3.js" | asset_url }}';
 </script>
 
 <script type="application/json" data-ajax-cart-configuration>
@@ -22,7 +22,7 @@
 
 
 <script type="module">
-    import { cartRequestAdd, cartRequestChange, subscribeToCartStateUpdate } from '{{ "liquid-ajax-cart-v1.10.0.js" | asset_url }}';
+    import { cartRequestAdd, cartRequestChange, subscribeToCartStateUpdate } from '{{ "liquid-ajax-cart-v1.10.3.js" | asset_url }}';
 
     function suggestedUpsells() {
         // Slider for suggested upsell products
@@ -60,8 +60,14 @@
         });
     }
     suggestedUpsells();
-
+  
     subscribeToCartStateUpdate(state => {
+      const upSlideCart = $("section.atc-banner--container");
+      console.log("upSlideCart");
+      console.log(upSlideCart);
+      if (upSlideCart){
+        upSlideCart.css("display", "none");
+      }
       suggestedUpsells();
     });
 
@@ -69,7 +75,7 @@
 
 
 <script type="module">
-  import { cartRequestAdd, cartRequestChange, subscribeToCartStateUpdate } from '{{ "liquid-ajax-cart-v1.10.0.js" | asset_url }}';
+  import { cartRequestAdd, cartRequestChange, subscribeToCartStateUpdate } from '{{ "liquid-ajax-cart-v1.10.3.js" | asset_url }}';
   
   subscribeToCartStateUpdate(state => {
     addCartTotalDiscount();
@@ -168,7 +174,6 @@
   }
 
   function selectVariable() {
-    console.log("function select Variable");
     const productId = event.target.dataset.productId;
     //console.log("productId " + productId);
     let blockIndex = parseInt(event.target.dataset.blockIndex, 10);
@@ -345,16 +350,13 @@
     } else {
         document.getElementById('product-select-' + productId).value = '';
     }
-    console.log("available");
-    console.log(available);
+    
     if (available === true) {
-      console.log("Hinzufügen");
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton span').innerHTML = 'Hinzufügen';
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton').removeAttribute("disabled");
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton').classList.remove("Button--secondary");
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton').classList.add("Button--primary");
     } else {
-      console.log("Ausverkauft");
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton span').innerHTML = 'Ausverkauft';
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton').setAttribute("disabled", "disabled");
       document.querySelector('.MyCartUpsells_MainContainer[data-status=active] button.MyCartUpsells_SubmitButton').classList.remove("Button--primary");
