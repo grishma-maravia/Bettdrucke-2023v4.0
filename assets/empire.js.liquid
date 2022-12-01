@@ -28916,6 +28916,10 @@ class AddToCartFlyout {
   }
 
   _updateCart() {
+    _closeFlyOut() {
+    if (this.flyOut) {
+      return;
+    }
     const flyOut = this.atcTemplate.cloneNode(true);
     const quantityField = this.formData.filter(data => data.name === 'quantity');
     const quantity = quantityField[0].value;
