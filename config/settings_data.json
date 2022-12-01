@@ -82,7 +82,7 @@
     "countdown_container_bg_color": "#000000",
     "countdown_product_bg_color": "#ff84ff",
     "countdown_product_numbers_color": "#000000",
-    "cart_countdown_enable": true,
+    "cart_countdown_enable": false,
     "cart_countdown_text": "⚠️ Auf Grund der aktuellen Rabattaktion ist Ihr Warenkorb für nur",
     "left_product_inventory": true,
     "promotional_hero_hp_cover": true,
@@ -322,11 +322,6 @@
           "color": "#302783",
           "text": "<span><span class=\"icon-Schneller-Versand\"><\/span> Schneller Versand<\/span>    <span><span class=\"icon-In-Europa-hergestellt\"><\/span> Hergestellt in Europa<\/span>",
           "secondary_menu": "sub-menu"
-        }
-      },
-      "my-cart-upsells": {
-        "type": "my-cart-upsells",
-        "settings": {
         }
       },
       "my-cart": {
