@@ -42111,6 +42111,8 @@ class DynamicSlideshow extends pxs_slideshow_dist_index_es {
   }
 
   _setContentHeight() {
+    // Add return - Yurith
+    return;
     /* Error caused as code is not finding flickity after change on announcement bar by Grishma, 
     so instead of looking what the error is, I just cancelled the const and added a conditional to not run the rest if we do not find the const - Yurith */
     const currentSlide = this.slides[this.flickity?.selectedIndex];
