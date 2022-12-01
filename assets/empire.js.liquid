@@ -28916,6 +28916,7 @@ class AddToCartFlyout {
   }
 
   _updateCart() {
+    // added a return so the function does not run - Yurith
     return;
     const flyOut = this.atcTemplate.cloneNode(true);
     const quantityField = this.formData.filter(data => data.name === 'quantity');
