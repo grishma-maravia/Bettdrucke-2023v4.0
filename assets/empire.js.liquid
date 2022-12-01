@@ -42141,10 +42141,8 @@ class DynamicSlideshow extends pxs_slideshow_dist_index_es {
     this.el.style.setProperty('--header-height', `${currentHeaderHeight - currentAnnouncementHeight}px`);
 
     this._setContentHeight();
-
-    if (this.flickity){
-      this.flickity.resize();
-    }
+    
+    this.flickity.resize();
   }
 
 }
@@ -42266,7 +42264,7 @@ class DynamicHighlightsBanner {
   }
 
   _destroyFlickity() {
-    if (this.flickity) {
+    if (!this.flickity) {
       return;
     }
 
