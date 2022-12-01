@@ -289,7 +289,7 @@
       "static-announcement": {
         "type": "static-announcement",
         "settings": {
-          "show_announcement": true,
+          "show_announcement": false,
           "homepage_announcement": false,
           "announcement_text": "⚞<span style=\"border-radius:4px;padding: 1px 5px; background-color:#ff84ff;font-weight:800;font-style:italic\"><span style=\"color:black;\">Cyber  <\/span><span style=\"color:white;\">WOCHE!<\/span><\/span>⚟ <span style=\"font-weight:900;margin-right:4px\">Bis zu <span style=\"color:#19d6fc;\">60% Rabatt <\/span>auf alles!<\/span> 🤑 Endet in",
           "announcement_text_mobile": "",
