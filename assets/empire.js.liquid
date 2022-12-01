@@ -42266,7 +42266,7 @@ class DynamicHighlightsBanner {
   }
 
   _destroyFlickity() {
-    if (!this.flickity) {
+    if (this.flickity) {
       return;
     }
 
