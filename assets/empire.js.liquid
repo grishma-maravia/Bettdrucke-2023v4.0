@@ -42111,39 +42111,7 @@ class DynamicSlideshow extends pxs_slideshow_dist_index_es {
   }
 
   _setContentHeight() {
-    /* Error caused as code is not finding flickity after change on announcement bar by Grishma, 
-    so instead of looking what the error is, I just cancelled the const and added a conditional to not run the rest if we do not find the const - Yurith */
-    const currentSlide = this.slides[this.flickity?.selectedIndex];
-    if(currentSlide){
-    const slideContent = currentSlide.querySelector('.slideshow-slide__content'); // Determine absolute height
-    const getAbsoluteHeight = el => {
-      el = typeof el === 'string' ? document.querySelector(el) : el;
-      const styles = window.getComputedStyle(el);
-      const margin = parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
-      return Math.ceil(el.offsetHeight + margin);
-    };
-
-    const currentSlideContentHeight = getAbsoluteHeight(slideContent);
-    this.el.style.setProperty('--content-height', `${currentSlideContentHeight}px`);
-      
-    }
-
-  }
-
-  _setupCCSVariables() {
-    const currentHeaderHeight = this.header.offsetHeight;
-    let currentAnnouncementHeight = 0; // Check for the announcement bar
-
-    if (this.announcmentBar) {
-      currentAnnouncementHeight = document.querySelector('.announcement-bar').offsetHeight;
-    }
-
-    this.el.style.setProperty('--header-height', `${currentHeaderHeight - currentAnnouncementHeight}px`);
-
-    this._setContentHeight();
-
-    this.flickity.resize();
-  }
+    
 
 }
 ;// CONCATENATED MODULE: ./source/scripts/sections/DynamicVideo.js
