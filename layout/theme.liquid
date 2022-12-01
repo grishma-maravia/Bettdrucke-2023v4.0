@@ -133,7 +133,8 @@
     {% render 'judgeme_core' %}
     {% comment %} ICOMOON Link {% endcomment %}
       <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/163995/BETT/style-cf.css?crk8j9">
-    
+    {% comment %} Countdown JS {% endcomment %}
+      {{ 'countdown.js' | asset_url | script_tag }}
     {% comment %} Addons to the Live Preview App - checked green icon when uploading a file {% endcomment %}
       {%- if template.name == 'product' -%}
         {{ 'success-icon.js' | asset_url | script_tag }}
@@ -289,7 +290,7 @@
             </div>
           </div>
           {% comment %}Inject message-banner end{% endcomment %}
-
+    
           {% comment %}Inject atc-banner begin{% endcomment %}
           <section class="atc-banner--container" role="log" data-atc-banner>
             <div class="atc-banner--outer">
