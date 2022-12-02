@@ -94,7 +94,7 @@
     "promo_art_width": 90,
     "promo_art_y_content": 50,
     "promo_art_width_mobile": 100,
-    "promo_art_y_content_mobile": 50,
+    "promo_art_y_content_mobile": 40,
     "button_1_text": "Zu den Produkten",
     "button_1_link": "\/collections\/all?sort_by=best-selling",
     "button_color": "#009fe3",
