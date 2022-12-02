@@ -289,7 +289,7 @@
       "static-announcement": {
         "type": "static-announcement",
         "settings": {
-          "show_announcement": false,
+          "show_announcement": true,
           "homepage_announcement": false,
           "announcement_text": "<span style=\"font-weight:70;\"><span style=\"color:#3baada;font-weight:900\">WINTER  <\/span><span style=\"color:#283275;font-weight:900\">SALE! <\/span><\/span>🌲 <span style=\"margin-right:4px\">Bis zu 50% reduziert + <span style=\"color:#d20040\">Garantierte Weihnachtszustellung<\/span> <\/span> · Endet in",
           "announcement_text_mobile": "",
