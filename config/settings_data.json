@@ -71,7 +71,7 @@
     "continue_shopping_url": "shopify:\/\/collections\/all",
     "continue_url_cart": true,
     "continue_url_404": true,
-    "countdown_date": "December 26, 2022 23:59 GMT+0100",
+    "countdown_date": "December 31, 2022 23:59 GMT+0100",
     "enable_days_view": false,
     "border_radius_countdown": 4,
     "announcement_countdown_enable": true,
