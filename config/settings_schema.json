@@ -1265,7 +1265,7 @@
       },
       {
         "type": "checkbox",
-        "id": "product_page_discount message",
+        "id": "product_page_discount_message",
         "label": "Enable",
         "default": false
       }
