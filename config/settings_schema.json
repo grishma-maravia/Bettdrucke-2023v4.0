@@ -1265,9 +1265,13 @@
       },
       {
         "type": "checkbox",
-        "id": "product_page_discount_message",
+        "id": "enable_product_page_discount_message",
         "label": "Enable",
         "default": false
+      },
+      {
+        "type": "liquid",
+        "id": "product_page_discount_message"
       }
     ]
   }
