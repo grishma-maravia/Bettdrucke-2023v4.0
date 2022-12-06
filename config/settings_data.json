@@ -103,6 +103,7 @@
     "promo_badge": "https:\/\/cdn.shopify.com\/s\/files\/1\/0621\/3235\/5303\/files\/BETT_CW_Badge.svg?v=1669314315",
     "enable_collection_badge": false,
     "collection_badge_max_width": 220,
+    "product_page_discount_message": "<b>Black Friday Sale!<\/b> Weitere ... <br>- 15% Rabatt - ab 2 Produkten<br>- 25% Rabatt - ab 4 Produkten<br>- 25% Rabatt - 6+ Produkten<br>",
     "checkout_logo_image": "shopify:\/\/shop_images\/BETT_-_Checkout_Banner.jpg",
     "checkout_logo_position": "center",
     "checkout_logo_size": "small",
