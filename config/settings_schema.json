@@ -1271,7 +1271,8 @@
       },
       {
         "type": "liquid",
-        "id": "product_page_discount_message"
+        "id": "product_page_discount_message",
+        "label": "Discount message"
       }
     ]
   }
