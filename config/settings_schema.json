@@ -1258,6 +1258,16 @@
         "step": 10,
         "unit": "px",
         "default": 80
+      },
+      {
+        "type": "header",
+        "content": "PRODUCT PAGE"
+      },
+      {
+        "type": "checkbox",
+        "id": "product_page_discount message",
+        "label": "Enable",
+        "default": false
       }
     ]
   }
