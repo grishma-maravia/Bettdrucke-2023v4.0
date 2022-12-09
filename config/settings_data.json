@@ -293,7 +293,7 @@
         "settings": {
           "show_announcement": true,
           "homepage_announcement": false,
-          "announcement_text": "<span style=\"font-weight:70;\"><span style=\"color:#3baada;font-weight:900\">WINTER  <\/span><span style=\"color:#283275;font-weight:900\">SALE! <\/span><\/span>🌲 <span style=\"margin-right:4px\">Bis zu 50% reduziert + <span style=\"color:#d20040\">Garantierte Weihnachtszustellung<\/span> <\/span> · Endet in",
+          "announcement_text": "<span style=\"font-weight:70;\"><span style=\"color:#3baada;font-weight:900\">WINTER  <\/span><span style=\"color:#283275;font-weight:900\">SALE! <\/span><\/span>🌲 <span style=\"margin-right:4px\">50% Rabatt + <span style=\"color:#d20040\">Garantierte Weihnachtszustellung<\/span> <\/span> · Endet in",
           "announcement_text_mobile": "",
           "announcement_link": "\/collections\/all?sort_by=best-selling",
           "announcement_color": "#1d1d1d",
