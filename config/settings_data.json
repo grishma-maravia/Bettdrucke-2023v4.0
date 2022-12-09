@@ -209,10 +209,10 @@
           "menu": "main-menu",
           "secondary_menu": "",
           "small_promo_heading": "",
-          "small_promo_text": "<p><\/p>",
-          "small_promo_text_mobile": "<p><\/p>",
+          "small_promo_text": "",
+          "small_promo_text_mobile": "",
           "small_promo_link": "",
-          "small_promo_icon": "icon-gift-card",
+          "small_promo_icon": "none",
           "cart_icon": "icon-cart"
         }
       },
