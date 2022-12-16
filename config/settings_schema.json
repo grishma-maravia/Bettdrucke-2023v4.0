@@ -1266,7 +1266,7 @@
       {
         "type": "checkbox",
         "id": "enable_product_page_discount_message",
-        "label": "Enable",
+        "label": "Enable discount message",
         "default": false
       },
       {
