@@ -455,7 +455,7 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
   bottom: 0;
   right: 0;
   transition: transform .5s;
-  transform: translateX(100%);
+  /*transform: translateX(100%);*/
 }
 .MyCartUpsells_MainContainer > form{
   background-color: #fff;

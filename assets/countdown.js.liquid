@@ -34,8 +34,10 @@
     let countDown = getNextDate();
     if (countDown === null) {
       countdownAnnouncement.innerHTML = "";
-      document.getElementById("countdown_product").innerHTML = "";
-      document.getElementById("countdown_product_wrapper").className = " no-js"; 
+      if (countdownProduct){
+        document.getElementById("countdown_product").innerHTML = "";
+        document.getElementById("countdown_product_wrapper").className = " no-js"; 
+      }
       clearInterval(intervallId);
       return;
     }

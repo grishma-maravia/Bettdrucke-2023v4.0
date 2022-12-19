@@ -58,6 +58,12 @@
         "slideshow_text_below_image": false
       }
     },
+    "333eac53-c3b9-43b8-80c5-6b92d36cdee7": {
+      "type": "dynamic-custom-liquid",
+      "settings": {
+        "custom_liquid": "<form action=\"\/cart\/add\" method=\"post\" id=\"formUpsell_7539322847463\" novalidate=\"\">\n            \n\n<div data-live-options=\"7539322847463\" class=\"MyCartUpsells_ImageUploadButton\" style=\"margin-top:3px\"><\/div>\n\n<\/form>"
+      }
+    },
     "dynamic_highlights_banner": {
       "type": "dynamic-highlights-banner",
       "blocks": {
@@ -374,6 +380,7 @@
   },
   "order": [
     "dynamic_slideshow",
+    "333eac53-c3b9-43b8-80c5-6b92d36cdee7",
     "dynamic_highlights_banner",
     "1643760994b4e23dca",
     "dynamic_promo_mosaic",

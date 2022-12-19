@@ -2,8 +2,7 @@
 
 <div class="MyCart_FloatingCart">
   <div id="MyCart_Slider" data-ajax-cart-section>
-    <form id="MyCart_Form" action="{{ routes.cart_url }}" 
-          method="post" class="my-cart" data-ajax-cart-section-scroll>
+    <form id="MyCart_Form" action="{{ routes.cart_url }}" method="post" class="my-cart" data-ajax-cart-section-scroll>
           {% comment %} data-ajax-cart-section makes the element's HTML update
           when the cart gets changed {% endcomment %}
       <div>
@@ -120,7 +119,8 @@
                       <ul class="MyCartItem__DiscountList" style="margin:0;">
                         {%- for discount_allocation in item.line_level_discount_allocations -%}
                         <li class="MyCartItem__Discount">
-                          {%- render 'my-cart-sale-icon' -%}{{ discount_allocation.discount_application.title }}: -{{ discount_allocation.amount | money }}
+                          {%- render 'my-cart-sale-icon' -%}
+                          {{ discount_allocation.discount_application.title }}: -{{ discount_allocation.amount | money }}
                         </li>
                         {%- endfor -%}
                       </ul>
@@ -140,29 +140,6 @@
         </div>
       </form>
 
-
-      {% if product.handle == 'fotodecke' %}
-        {% assign upsell_product_page = all_products['personalisiertes-fotokissen-kissenbezug-mit-menschen'] %}
-      {% elsif product.handle == 'personalisiertes-fotokissen-kissenbezug-mit-menschen' %}
-        {% assign upsell_product_page = all_products['fotodecke'] %}
-      {% elsif product.handle == 'personalisierte-fotodecke-bettbezug-mit-tierfoto' %}
-        {% assign upsell_product_page = all_products['personalisiertes-fotokissen-kissen-mit-tieren'] %}
-      {% elsif product.handle == 'personalisiertes-fotokissen-kissen-mit-tieren' %}
-        {% assign upsell_product_page = all_products['personalisierte-fotodecke-bettbezug-mit-tierfoto'] %}
-      {% elsif product.handle == 'personalisierte-fotodecke-bettbezug-mit-familien-foto' %}
-        {% assign upsell_product_page = all_products['personalisiertes-fotokissen-kissen-mit-familien-foto'] %}
-      {% elsif product.handle == 'personalisiertes-fotokissen-kissen-mit-familien-foto' %}
-        {% assign upsell_product_page = all_products['personalisierte-fotodecke-bettbezug-mit-familien-foto'] %}
-      {% elsif product.handle == 'personalisierte-fotodecke-bettbezug-mit-tierfoto-kopfdruck' %}
-        {% assign upsell_product_page = all_products['personalisiertes-fotokissen-kissen-mit-tierkopfdruck'] %}
-      {% elsif product.handle == 'personalisiertes-fotokissen-kissen-mit-tierkopfdruck' %}
-        {% assign upsell_product_page = all_products['personalisierte-fotodecke-bettbezug-mit-tierfoto-kopfdruck'] %}
-      {% elsif product.handle == 'personalisierte-fotodecke-bettbezug-mit-parchen-foto' %}
-        {% assign upsell_product_page = all_products['personalisiertes-fotokissen-kissen-mit-parchen-foto'] %}
-      {% elsif product.handle == 'personalisiertes-fotokissen-kissen-mit-parchen-foto' %}
-        {% assign upsell_product_page = all_products['personalisierte-fotodecke-bettbezug-mit-parchen-foto'] %}
-      {% endif %}
-
       {% comment %} data-ajax-cart-static-element keeps the container unchanged when the cart and the surrounding HTML get updated {% endcomment %}
       <div style="display:none" data-ajax-cart-static-element class="my-cart__app-container"></div>
       <div class="MyCart_BottomSection">
@@ -174,31 +151,26 @@
               {% assign enable_upsell_2 = block.settings.enable_upsell_2 %}
               {% assign enable_upsell_3 = block.settings.enable_upsell_3 %}
               {% assign enable_upsell_4 = block.settings.enable_upsell_4 %}
-              {% assign upsell_product_1 = block.settings.upsell_product_1 %}
-              {% assign upsell_product_2 = block.settings.upsell_product_2 %}
-              {% assign upsell_product_3 = block.settings.upsell_product_3 %}
-              {% assign upsell_product_4 = block.settings.upsell_product_4 %}
-              {% assign upsell_product_1_variant_id = block.settings.upsell_product_1_variant_id %}
-              {% assign upsell_product_2_variant_id = block.settings.upsell_product_2_variant_id %}
-              {% assign upsell_product_3_variant_id = block.settings.upsell_product_3_variant_id %}
-              {% assign upsell_product_4_variant_id = block.settings.upsell_product_4_variant_id %}
-
-              {% comment %}
-              upsell_product_page: upsell_product_page,
-              {% endcomment %}
-              
-              {% render 'my-cart-suggested-upsells', 
-                cart: cart,
-                section: section,
-                settings: settings,
-                block:block, forloop: forloop,
+              {% assign upsell_product_1_handle = block.settings.upsell_product_1 %}
+              {% assign upsell_product_2_handle = block.settings.upsell_product_2 %}
+              {% assign upsell_product_3_handle = block.settings.upsell_product_3 %}
+              {% assign upsell_product_4_handle = block.settings.upsell_product_4 %}
+              {% assign loop = forloop.index | plus: 0 %}
+            
+              {% render 'my-cart-suggested-upsells',
                 product_list: product_list,
-                enable_upsell_1: enable_upsell_1, enable_upsell_2: enable_upsell_2, enable_upsell_3: enable_upsell_3, enable_upsell_4: enable_upsell_4,
-                upsell_product_1: upsell_product_1, upsell_product_1_variant_id: upsell_product_1_variant_id,
-                upsell_product_2: upsell_product_2, upsell_product_2_variant_id: upsell_product_2_variant_id,
-                upsell_product_3: upsell_product_3, upsell_product_3_variant_id: upsell_product_3_variant_id,
-                upsell_product_4: upsell_product_4, upsell_product_4_variant_id: upsell_product_4_variant_id %}
+                loop: loop,
+                enable_upsell_1: enable_upsell_1, 
+                enable_upsell_2: enable_upsell_2, 
+                enable_upsell_3: enable_upsell_3, 
+                enable_upsell_4: enable_upsell_4,
+                upsell_product_1_handle: upsell_product_1_handle,
+                upsell_product_2_handle: upsell_product_2_handle,
+                upsell_product_3_handle: upsell_product_3_handle,
+                upsell_product_4_handle: upsell_product_4_handle %}
+
             {% endfor %}
+            
           </div>
         </div>
         {% if cart.item_count != 0 %}
@@ -228,53 +200,11 @@
           </div>
       {% endif %}
     </div>
-    {% assign upsell_count = 0 %}
-    <script type="text/javascript">
-      {%  for block in section.blocks %}
-        {% assign loop = forloop.index | plus: 0 %}
-        // Add an exeption later
-        window.upsell1_block{{ loop }} = {{ all_products[block.settings.upsell_product_1.handle] | json }}
-        window.upsell2_block{{ loop }} = {{ all_products[block.settings.upsell_product_2.handle] | json }}
-        window.upsell3_block{{ loop }} = {{ all_products[block.settings.upsell_product_3.handle] | json }}
-        window.upsell4_block{{ loop }} = {{ all_products[block.settings.upsell_product_4.handle] | json }}
-      {% endfor %}
-    </script>
-  </div>
+  </div>  
 </div>
 
-<section>
-  
-  {% for block in section.blocks %}
-    {% assign product_list = block.settings.product_list %}
-    {% assign upsell_product_1_handle = block.settings.upsell_product_1 %}
-    {% assign upsell_product_1 = all_products[upsell_product_1_handle] %}
-    {% assign upsell_product_2_handle = block.settings.upsell_product_2 %}
-    {% assign upsell_product_2 = all_products[upsell_product_2_handle] %}
-    {% assign upsell_product_3_handle = block.settings.upsell_product_3 %}
-    {% assign upsell_product_3 = all_products[upsell_product_3_handle] %}
-    {% assign upsell_product_4_handle = block.settings.upsell_product_4 %}
-    {% assign upsell_product_4 = all_products[upsell_product_4_handle] %}
-    {% assign upsell_product_1_variant_id = block.settings.upsell_product_1_variant_id %}
-    {% assign upsell_product_2_variant_id = block.settings.upsell_product_2_variant_id %}
-    {% assign upsell_product_3_variant_id = block.settings.upsell_product_3_variant_id %}
-    {% assign upsell_product_4_variant_id = block.settings.upsell_product_4_variant_id %}
-    {% assign loop = forloop.index %}
-    
-     {% render 'my-cart-upsells', 
-      cart: cart, 
-      section: section,
-      settings: settings,
-      block: block,
-      loop: loop,
-      upsell_count: upsell_count,
-      product_list: product_list,
-      upsell_product_1_handle: upsell_product_1_handle, upsell_product_1: upsell_product_1, upsell_product_1_variant_id: upsell_product_1_variant_id,
-      upsell_product_2_handle: upsell_product_2_handle, upsell_product_2: upsell_product_2, upsell_product_2_variant_id: upsell_product_2_variant_id,
-      upsell_product_3_handle: upsell_product_3_handle, upsell_product_3: upsell_product_3, upsell_product_3_variant_id: upsell_product_3_variant_id,
-      upsell_product_4_handle: upsell_product_4_handle, upsell_product_4: upsell_product_4, upsell_product_4_variant_id: upsell_product_4_variant_id
-    %}
-  {% endfor %}
-</section>
+<section id="MyCart_UpsellsContainer"></section>
+
 <div id="MyCart_UpsellOverlay"></div>
         
 {% schema %}
@@ -286,6 +216,7 @@
         "name": "My cart"
       }
     ],
+    "max_blocks": 25,
     "blocks": [
       {
         "type": "Trigger",

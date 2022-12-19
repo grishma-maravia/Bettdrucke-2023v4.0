@@ -39,6 +39,7 @@
         },
         "411d5d07-def9-4b18-aba9-216da8b7cdca": {
           "type": "discount-message",
+          "disabled": true,
           "settings": {
           }
         },

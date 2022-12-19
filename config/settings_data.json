@@ -209,8 +209,8 @@
           "menu": "main-menu",
           "secondary_menu": "",
           "small_promo_heading": "",
-          "small_promo_text": "",
-          "small_promo_text_mobile": "",
+          "small_promo_text": "<p><\/p>",
+          "small_promo_text_mobile": "<p><\/p>",
           "small_promo_link": "",
           "small_promo_icon": "none",
           "cart_icon": "icon-cart"
@@ -339,9 +339,9 @@
               "upsell_product_1": "personalisiertes-fotokissen-kissenbezug-mit-menschen",
               "enable_upsell_2": true,
               "upsell_product_2": "3d-kissen-mit-menschen",
-              "enable_upsell_3": false,
+              "enable_upsell_3": true,
               "upsell_product_3": "3d-geburtskissen-im-wasserfarben-stil-kissen-zur-geburt",
-              "enable_upsell_4": false,
+              "enable_upsell_4": true,
               "upsell_product_4": "baumwollbezug-amor-und-liebespfeil"
             }
           },
@@ -358,10 +358,10 @@
               "upsell_product_1": "personalisiertes-3d-kissen-mit-baby",
               "enable_upsell_2": true,
               "upsell_product_2": "personalisiertes-3d-kissen-mit-baby-1",
-              "enable_upsell_3": false,
-              "upsell_product_3": "",
-              "enable_upsell_4": false,
-              "upsell_product_4": ""
+              "enable_upsell_3": true,
+              "upsell_product_3": "decken-sommerbezug-altrosa-mit-pampasgras",
+              "enable_upsell_4": true,
+              "upsell_product_4": "decken-baumwollbezug-be-mine"
             }
           },
           "e01ec0b3-b4a9-486c-9083-c5e4c3963b64": {
@@ -375,22 +375,151 @@
               "upsell_product_1": "3d-geburtskissen-klassisch-kissen-zur-geburt",
               "enable_upsell_2": true,
               "upsell_product_2": "3d-geburtskissen-mit-vielen-linien-kissen-zur-geburt",
-              "enable_upsell_3": false,
-              "upsell_product_3": "",
-              "enable_upsell_4": false,
-              "upsell_product_4": ""
+              "enable_upsell_3": true,
+              "upsell_product_3": "decken-baumwollbezug-auge",
+              "enable_upsell_4": true,
+              "upsell_product_4": "decken-sommerbezug-beige-mit-streifen"
             }
           },
           "76da06d1-676a-4cf0-85a9-ec8d92fe0bb0": {
             "type": "Trigger",
             "settings": {
               "product_list": [
-                "personalisierte-fotodecke-bettbezug-fur-kinder"
+                "personalisierte-fotodecke-bettbezug-fur-kinder",
+                "personalisiertes-kissen-fur-kinder"
               ],
               "enable_upsell_1": true,
               "upsell_product_1": "personalisiertes-kissen-fur-kinder",
               "enable_upsell_2": true,
               "upsell_product_2": "3d-puppen",
+              "enable_upsell_3": true,
+              "upsell_product_3": "personalisierte-fotodecke-bettbezug-fur-kinder",
+              "enable_upsell_4": true,
+              "upsell_product_4": "decken-sommerbezug-blau-mit-blumenstrauss"
+            }
+          },
+          "3bf91a42-11bd-432c-9d0e-43f61c662bbf": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisiertes-fotokissen-kissenbezug-mit-menschen"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "fotodecke",
+              "enable_upsell_2": true,
+              "upsell_product_2": "decken-baumwollbezug-abstrakte-kreise",
+              "enable_upsell_3": true,
+              "upsell_product_3": "3d-geburtskissen-mit-vielen-linien-kissen-zur-geburt",
+              "enable_upsell_4": true,
+              "upsell_product_4": "decken-sommerbezug-altrosa-mit-pampasgras"
+            }
+          },
+          "66d31a5e-39d3-45fe-93ed-5a092d46b990": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisierte-fotodecke-bettbezug-mit-parchen-foto"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-3d-kissen-animiertes-parchen",
+              "enable_upsell_2": true,
+              "upsell_product_2": "personalisiertes-fotokissen-kissenbezug-mit-menschen",
+              "enable_upsell_3": true,
+              "upsell_product_3": "decken-sommerbezug-blau-mit-eisbar",
+              "enable_upsell_4": true,
+              "upsell_product_4": "decken-sommerbezug-abstraktes-weihnachten"
+            }
+          },
+          "733d4860-1aa3-4fdc-9d47-28fef5c897a6": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisierte-fotodecke-bettbezug-mit-tierfoto"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-3d-hundekissen-boxer-welpe",
+              "enable_upsell_2": true,
+              "upsell_product_2": "personalisiertes-3d-hundekissen-zwergspitz",
+              "enable_upsell_3": true,
+              "upsell_product_3": "personalisiertes-3d-kissen-mit-hunden-1",
+              "enable_upsell_4": true,
+              "upsell_product_4": "personalisiertes-3d-kissen-mit-pferd"
+            }
+          },
+          "34b05ab8-56ec-48cf-a817-42c562f5009f": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisierte-fotodecke-bettbezug-mit-familien-foto"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-3d-kissen-familie",
+              "enable_upsell_2": true,
+              "upsell_product_2": "personalisiertes-fotokissen-kissen-mit-familien-foto",
+              "enable_upsell_3": true,
+              "upsell_product_3": "decken-baumwollbezug-auge",
+              "enable_upsell_4": true,
+              "upsell_product_4": "decken-baumwollbezug-blau-weisse-wellen"
+            }
+          },
+          "8e73c279-d553-4d49-9ae7-4b95e50c336e": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisiertes-3d-kissen-mit-katze-1"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-3d-kissen-mit-katze",
+              "enable_upsell_2": false,
+              "upsell_product_2": "",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
+          },
+          "51329c6d-0291-41a4-8729-bc16de190337": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisiertes-kissen-fur-kinder"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "3d-geburtskissen-mit-vielen-linien-kissen-zur-geburt",
+              "enable_upsell_2": true,
+              "upsell_product_2": "personalisiertes-3d-hundekissen-langhaardackel",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
+          },
+          "78656392-ebd9-4e24-a5d6-1ae8b67c32d9": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "personalisiertes-3d-kissen-mit-pferd-1"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "kissen-mit-pferde-muster-fur-kinder",
+              "enable_upsell_2": false,
+              "upsell_product_2": "",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
+          },
+          "bfb0f749-7602-4af8-a7e7-0b0b1abe2d95": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "herzkissen"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "personalisiertes-3d-kissen-mit-hamster",
+              "enable_upsell_2": false,
+              "upsell_product_2": "",
               "enable_upsell_3": false,
               "upsell_product_3": "",
               "enable_upsell_4": false,
@@ -402,7 +531,15 @@
           "eb140b3d-0764-4eb5-8625-f1208e6c1ae3",
           "61813f2d-089f-4146-bc15-0fc6cafd7829",
           "e01ec0b3-b4a9-486c-9083-c5e4c3963b64",
-          "76da06d1-676a-4cf0-85a9-ec8d92fe0bb0"
+          "76da06d1-676a-4cf0-85a9-ec8d92fe0bb0",
+          "3bf91a42-11bd-432c-9d0e-43f61c662bbf",
+          "66d31a5e-39d3-45fe-93ed-5a092d46b990",
+          "733d4860-1aa3-4fdc-9d47-28fef5c897a6",
+          "34b05ab8-56ec-48cf-a817-42c562f5009f",
+          "8e73c279-d553-4d49-9ae7-4b95e50c336e",
+          "51329c6d-0291-41a4-8729-bc16de190337",
+          "78656392-ebd9-4e24-a5d6-1ae8b67c32d9",
+          "bfb0f749-7602-4af8-a7e7-0b0b1abe2d95"
         ],
         "settings": {
         }
@@ -414,12 +551,6 @@
     "blocks": {
       "14060646107696862457": {
         "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "1787840288555608609": {
-        "type": "shopify:\/\/apps\/live-product-options\/blocks\/app-embed\/88bfdf40-5e27-4962-a966-70c8d1e87757",
         "disabled": false,
         "settings": {
         }
@@ -450,6 +581,12 @@
       },
       "15132424025755801183": {
         "type": "shopify:\/\/apps\/upload-lift-image-upload\/blocks\/app-embed\/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "1787840288555608609": {
+        "type": "shopify:\/\/apps\/live-product-options\/blocks\/app-embed\/88bfdf40-5e27-4962-a966-70c8d1e87757",
         "disabled": false,
         "settings": {
         }

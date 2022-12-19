@@ -28859,15 +28859,13 @@ const setupRippleEffect = rootElement => {
 /* harmony default export */ const Ripple = ({
   setupRippleEffect
 });
-;// CONCATENATED MODULE: ./source/scripts/components/AddToCartFlyout.js
+;
 
-
-
-
-
-
+// CONCATENATED MODULE: ./source/scripts/components/AddToCartFlyout.js
 
 class AddToCartFlyout {
+  {% comment %}
+  // Commented in order to block the Flyout from showing up - Yurith
   constructor(formData, options, callbacks = {}) {
     this.formData = formData;
     this.settings = {
@@ -28916,8 +28914,6 @@ class AddToCartFlyout {
   }
 
   _updateCart() {
-    // added a return so the function does not run - Yurith
-    return;
     const flyOut = this.atcTemplate.cloneNode(true);
     const quantityField = this.formData.filter(data => data.name === 'quantity');
     const quantity = quantityField[0].value;
@@ -29178,7 +29174,7 @@ class AddToCartFlyout {
 
     this._closeFlyOut(e);
   }
-
+  {% endcomment %}
 }
 ;// CONCATENATED MODULE: ./node_modules/drift-zoom/es/util/dom.js
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -31605,6 +31601,8 @@ class ProductDetails {
   }
 
   _addToCartFlyout(event) {
+    {% comment %}
+    // Commented in order to block the Flyout from showing up - Yurith
     event.preventDefault();
 
     if (!this.variantsUI.currentVariant) {
@@ -31626,6 +31624,7 @@ class ProductDetails {
       }
     };
     this.addToCartFlyout = new AddToCartFlyout(formData, options, this.atcCallbacks);
+    {% endcomment %}
   }
 
 }

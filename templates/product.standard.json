@@ -39,6 +39,7 @@
         },
         "411d5d07-def9-4b18-aba9-216da8b7cdca": {
           "type": "discount-message",
+          "disabled": true,
           "settings": {
           }
         },
@@ -60,6 +61,7 @@
         },
         "e0c7f8f8-0787-466d-853b-5ca48e02c952": {
           "type": "upsell-product-options",
+          "disabled": true,
           "settings": {
             "upsell_product": ""
           }
