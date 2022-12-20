@@ -4,12 +4,7 @@
     window.upsell{{ position }}_block{{ loop }} = {{ all_products[upsell] | json }};
   </script>
 
-
-  <script type="application/json" id="ProductJson-liveOptions{{ position }}_{{ loop }}" class="ProductJson-liveOptions">
-      {% comment %}
-    {{ all_products[upsell] | json }}
-    {% endcomment %}
-  </script>
+  <script type="application/json" id="ProductJson-liveOptions{{ position }}_{{ loop }}" class="ProductJson-liveOptions"></script>
   
   <div class="MyCart_ImageItemWrapper">
     <img class="MyCart_ImageItem" src="{{ upsell.featured_image | image_url: width: 70 }}">
