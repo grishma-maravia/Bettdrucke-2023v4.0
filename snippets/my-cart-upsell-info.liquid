@@ -1,9 +1,0 @@
-<script type="application/json" id="ProductJson-{{ section.id }}">
-  {{ upsell_json | json }}
-</script>
-  
-<div class="MyCartUpsells_MainContainer" id="cartUpsellWrapper_{{ upsell.id }}" style="display:none">
-  <form action="/cart/add" method="post" id="formUpsell_{{ upsell.id }}">
-    <div data-live-options="{{ upsell.id }}" class="MyCartUpsells_ImageUploadButton" style="margin-top:3px"></div>
-  </form>
-</div>
