@@ -1,4 +1,3 @@
-console.log("ajax js logged");
 var t = {
         d: (e, r) => {
             for (var o in r) t.o(r, o) && !t.o(e, o) && Object.defineProperty(e, o, {
