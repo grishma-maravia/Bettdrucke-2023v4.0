@@ -313,7 +313,7 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
 #MyCart_DiscountWrapper > span {
   padding-right: 5px;
 }
-.MyCart_Price.MyCart_ItemDiscount, #MyCart_ItemDiscountTotal, .MyCart_ComparedPrice, .MyCartUpsells_OptionLabel[for]{
+.MyCart_Price.MyCart_ItemDiscount, .MyCart_ComparedPrice, .MyCartUpsells_OptionLabel[for]{
   font-size: 14px;
 }
 .MyCart_Price.MyCart_ItemDiscount, .MyCart_ComparedPrice{
