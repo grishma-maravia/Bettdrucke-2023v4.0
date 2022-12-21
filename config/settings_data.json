@@ -148,6 +148,7 @@
         "blocks": {
           "1517255946962": {
             "type": "meganav_images",
+            "disabled": true,
             "settings": {
               "meganav_trigger": "decken",
               "text_1": "Personalisierte",
@@ -162,6 +163,7 @@
           },
           "ff9e6854-1318-4c95-a027-c4108d1e961d": {
             "type": "meganav_images",
+            "disabled": true,
             "settings": {
               "meganav_trigger": "",
               "text_1": "",
@@ -176,6 +178,7 @@
           },
           "aacc6bf5-ac55-497a-802f-1e9025ff8687": {
             "type": "meganav_images",
+            "disabled": true,
             "settings": {
               "meganav_trigger": "",
               "text_1": "",
@@ -209,8 +212,8 @@
           "menu": "main-menu",
           "secondary_menu": "",
           "small_promo_heading": "",
-          "small_promo_text": "<p><\/p>",
-          "small_promo_text_mobile": "<p><\/p>",
+          "small_promo_text": "",
+          "small_promo_text_mobile": "",
           "small_promo_link": "",
           "small_promo_icon": "none",
           "cart_icon": "icon-cart"
