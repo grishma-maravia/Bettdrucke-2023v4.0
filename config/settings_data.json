@@ -379,9 +379,9 @@
               "enable_upsell_2": true,
               "upsell_product_2": "3d-geburtskissen-mit-vielen-linien-kissen-zur-geburt",
               "enable_upsell_3": true,
-              "upsell_product_3": "decken-baumwollbezug-auge",
+              "upsell_product_3": "personalisiertes-3d-kissen-animiertes-parchen",
               "enable_upsell_4": true,
-              "upsell_product_4": "decken-sommerbezug-beige-mit-streifen"
+              "upsell_product_4": "personalisierte-fotodecke-bettbezug-mit-parchen-foto"
             }
           },
           "76da06d1-676a-4cf0-85a9-ec8d92fe0bb0": {
@@ -398,7 +398,7 @@
               "enable_upsell_3": true,
               "upsell_product_3": "personalisierte-fotodecke-bettbezug-fur-kinder",
               "enable_upsell_4": true,
-              "upsell_product_4": "decken-sommerbezug-blau-mit-blumenstrauss"
+              "upsell_product_4": "personalisiertes-3d-hundekissen-boxer-welpe"
             }
           },
           "3bf91a42-11bd-432c-9d0e-43f61c662bbf": {
@@ -410,7 +410,7 @@
               "enable_upsell_1": true,
               "upsell_product_1": "fotodecke",
               "enable_upsell_2": true,
-              "upsell_product_2": "decken-baumwollbezug-abstrakte-kreise",
+              "upsell_product_2": "personalisiertes-3d-kissen-mit-baby-1",
               "enable_upsell_3": true,
               "upsell_product_3": "3d-geburtskissen-mit-vielen-linien-kissen-zur-geburt",
               "enable_upsell_4": true,
@@ -428,9 +428,9 @@
               "enable_upsell_2": true,
               "upsell_product_2": "personalisiertes-fotokissen-kissenbezug-mit-menschen",
               "enable_upsell_3": true,
-              "upsell_product_3": "decken-sommerbezug-blau-mit-eisbar",
+              "upsell_product_3": "personalisiertes-3d-kissen-familie",
               "enable_upsell_4": true,
-              "upsell_product_4": "decken-sommerbezug-abstraktes-weihnachten"
+              "upsell_product_4": "personalisierte-fotodecke-bettbezug-mit-parchen-foto"
             }
           },
           "733d4860-1aa3-4fdc-9d47-28fef5c897a6": {
@@ -460,9 +460,9 @@
               "enable_upsell_2": true,
               "upsell_product_2": "personalisiertes-fotokissen-kissen-mit-familien-foto",
               "enable_upsell_3": true,
-              "upsell_product_3": "decken-baumwollbezug-auge",
+              "upsell_product_3": "personalisiertes-3d-kissen-mit-baby-1",
               "enable_upsell_4": true,
-              "upsell_product_4": "decken-baumwollbezug-blau-weisse-wellen"
+              "upsell_product_4": "personalisierte-fotodecke-bettbezug-fur-kinder"
             }
           },
           "8e73c279-d553-4d49-9ae7-4b95e50c336e": {
@@ -505,8 +505,8 @@
               ],
               "enable_upsell_1": true,
               "upsell_product_1": "kissen-mit-pferde-muster-fur-kinder",
-              "enable_upsell_2": false,
-              "upsell_product_2": "",
+              "enable_upsell_2": true,
+              "upsell_product_2": "personalisiertes-3d-kissen-mit-pferd",
               "enable_upsell_3": false,
               "upsell_product_3": "",
               "enable_upsell_4": false,
@@ -520,9 +520,9 @@
                 "herzkissen"
               ],
               "enable_upsell_1": true,
-              "upsell_product_1": "personalisiertes-3d-kissen-mit-hamster",
-              "enable_upsell_2": false,
-              "upsell_product_2": "",
+              "upsell_product_1": "personalisierte-fotodecke-bettbezug-mit-parchen-foto",
+              "enable_upsell_2": true,
+              "upsell_product_2": "personalisiertes-3d-kissen-animiertes-parchen",
               "enable_upsell_3": false,
               "upsell_product_3": "",
               "enable_upsell_4": false,
