@@ -95,11 +95,6 @@
                         </svg>
                       </a>
                     </div>
-                    {% comment %} final price of item 
-                    <div class="MyCart_PriceItem">
-                      {{ item.final_line_price | money }}
-                    </div>
-                    {% endcomment %}
                     <div class="MyCart_PriceContainer">
                       {% if item.original_line_price > item.final_line_price %}
                         <span class="MyCart_Price MyCart_HighlightedText">{{ item.final_line_price | money }}</span>
