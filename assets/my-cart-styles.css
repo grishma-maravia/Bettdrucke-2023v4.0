@@ -405,7 +405,7 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
   margin-top: 10px;
   cursor: pointer;
   display: inline-flex;
-  font-size: 10px;
+  font-size: 12px;
 }
 .MyCartUpsells_Bttn[disabled]{
   cursor: none;
