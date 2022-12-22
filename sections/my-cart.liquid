@@ -103,7 +103,9 @@
                       <a style="border-radius: 0 3px 3px 0;" class="MyCart_QuantityButtonItem"
                          data-ajax-cart-request-button
                          href="{{ routes.cart_change_url }}?line={{ item_index }}&quantity={{ item.quantity | plus: 1 }}">
-                        <svg width="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M11 5H7V1a1 1 0 00-2 0v4H1a1 1 0 000 2h4v4a1 1 0 002 0V7h4a1 1 0 000-2z" fill="currentColor" fill-rule="nonzero"></path></svg>
+                        <svg width="11" height="11" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                          <path d="M5.5 0v11M0 5.5h11"></path>
+                        </svg>
                       </a>
                     </div>
                     {% comment %} final price of item 
