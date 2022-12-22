@@ -11,28 +11,28 @@
         {% if enable_upsell_1 and upsell_product_1_handle != blank and upsell_product_1_handle.handle != product.handle %}
           {% assign upsell = upsell_product_1_handle %}
 
-          {% render 'my-cart-suggested-upsells-info', upsell: upsell, position: 1, loop: loop, upsell_json: upsell_product_1 %}
+          {% render 'my-cart-suggested-upsells-info', upsell: upsell, position: 1, loop: loop, theme_button_style: theme_button_style, upsell_json: upsell_product_1 %}
           
         {% endif %}
   
         {% if enable_upsell_2 and upsell_product_2_handle != blank and upsell_product_2_handle.handle != product.handle %}
           {% assign upsell = upsell_product_2_handle %}
 
-          {% render 'my-cart-suggested-upsells-info', upsell: upsell, position: 2, loop: loop, upsell_json: upsell_product_2 %}
+          {% render 'my-cart-suggested-upsells-info', upsell: upsell, position: 2, loop: loop, theme_button_style: theme_button_style, upsell_json: upsell_product_2 %}
           
         {% endif %}
   
         {% if enable_upsell_3 and upsell_product_3_handle != blank and upsell_product_3_handle.handle != product.handle %}
           {% assign upsell = upsell_product_3_handle %}
 
-          {% render 'my-cart-suggested-upsells-info', upsell: upsell, position: 3, loop: loop, upsell_json: upsell_product_3 %}
+          {% render 'my-cart-suggested-upsells-info', upsell: upsell, position: 3, loop: loop, theme_button_style: theme_button_style, upsell_json: upsell_product_3 %}
           
         {% endif %}
   
         {% if enable_upsell_4 and upsell_product_4_handle != blank and upsell_product_4_handle.handle != product.handle %}
           {% assign upsell = upsell_product_4_handle %}
 
-          {% render 'my-cart-suggested-upsells-info', upsell: upsell, position: 4, loop: loop, upsell_json: upsell_product_4 %}
+          {% render 'my-cart-suggested-upsells-info', upsell: upsell, position: 4, loop: loop, theme_button_style: theme_button_style, upsell_json: upsell_product_4 %}
           
         {% endif %}
       {% endif %}
