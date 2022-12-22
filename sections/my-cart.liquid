@@ -20,24 +20,7 @@
             </svg>
           </a>
         </div>
-        {% if cart.item_count > 0 %}
-          <div class="MyCart_MessageContainer">
-            {% if settings.cart_countdown_enable %}
-              <div id="MyCart_Countdown"></div>
-            {% endif %}
-            {% assign added_message = false %}
-            {% for item in cart.items %}
-              {% if added_message == false %}
-                {% assign added_message = true %}
-                {% if item.quantity > 1 %}
-                  <div class="MyCart_Message">Super! 🎉 Du hast 10% Rabatt erhalten!</div>
-                {% else %}
-                  <div class="MyCart_Message">Wenn du den <b>gleichen</b> Artikel 2x bestellst, erhältst du einmalig <b>10% Rabatt</b>!</div>
-                {% endif %}
-              {% endif %}
-            {% endfor %}
-          </div>
-        {% endif %}
+        {% render 'my-cart-header-message' %}
         {% comment %} data-ajax-cart-section-scroll keeps the scroll position unchanged
         when the element's HTML is changed {% endcomment %}
         <div class="MyCart_ItemsContainer">
