@@ -118,6 +118,12 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
   height: 50vh;
   color: var(--color-secondary-text);
 }
+.MyCart_EmptyMessage{
+  font-size: 18px;
+}
+.MyCart_CartIcon svg{
+  fill: var(--color-secondary-text);
+}
 .MyCart_Header{
   display: flex;
   justify-content: center;
