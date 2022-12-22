@@ -398,10 +398,10 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
 .MyCartUpsells_SubmitButton{
   width: 100%;
 }
-.MyCartUpsells_Bttn.Button{
+.MyCartUpsells_Bttn{
   height: unset;
-  padding: 10px 20px;
-  width: fit-content;
+  padding: 10px 20px !important;
+  width: fit-content !important;
   margin-top: 10px;
   cursor: pointer;
   display: inline-flex;
