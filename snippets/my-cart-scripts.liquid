@@ -138,7 +138,7 @@
   function openCartUpsell(position, block) {
 
     //CHANGE const depending on the theme's submit buttons styling
-    const themeSubmitStyle = 'bttn';
+    const themeSubmitStyle = 'button-primary product-form--atc-button mdc-ripple-surface mdc-ripple-upgraded Button--primary';
     //find the right upsell Json file and take the info from there
     const upsellOverlay = document.querySelector("#MyCart_UpsellOverlay");
     upsellOverlay.style.display = 'block';
@@ -225,7 +225,7 @@
               <div data-live-options="${upsell.id}" class="MyCartUpsells_ImageUploadButton" style="margin-top:3px"></div>
               <button type="submit"
                       name="formUpsell_${upsell.id}"
-                      class="MyCartUpsells_SubmitButton button-primary product-form--atc-button mdc-ripple-surface mdc-ripple-upgraded Button--primary"
+                      class="MyCartUpsells_SubmitButton "
                       onClick="closeUpsell()"
                       ${availability}>
                 <span>${submitUpsellText}</span>
