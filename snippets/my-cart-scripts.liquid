@@ -136,7 +136,9 @@
 
   // Change to have more usells - Yurith
   function openCartUpsell(position, block) {
-    
+
+    //CHANGE const depending on the theme's submit buttons styling
+    const themeSubmitStyle = 'bttn';
     //find the right upsell Json file and take the info from there
     const upsellOverlay = document.querySelector("#MyCart_UpsellOverlay");
     upsellOverlay.style.display = 'block';
