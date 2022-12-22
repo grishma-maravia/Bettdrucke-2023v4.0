@@ -68,6 +68,11 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
   transition: transform .5s;
   transform: translateX(100%);
 }
+#MyCart_Slider a, .MyCartUpsells_MainContainer a {
+  color: unset;
+  text-decoration: unset;
+  fill: #3c3c3c;
+}
 .MyCart_FooterWrapper, #MyCart_Slider, .MyCart_EmptyMessage, .MyCart_PriceContainer, .MyCart_FlexColumn{
   display: flex;
   flex-direction: column;
