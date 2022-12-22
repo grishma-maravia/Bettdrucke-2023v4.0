@@ -73,7 +73,7 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
   text-decoration: unset;
   fill: #3c3c3c;
 }
-.MyCart_FooterWrapper, #MyCart_Slider, .MyCart_EmptyMessage, .MyCart_PriceContainer, .MyCart_FlexColumn{
+.MyCart_FooterWrapper, #MyCart_Slider, .MyCart_EmptyMessageWrapper, .MyCart_PriceContainer, .MyCart_FlexColumn{
   display: flex;
   flex-direction: column;
 }
@@ -112,7 +112,7 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
   cursor:pointer;
   padding-right: 15px;
 }
-.MyCart_EmptyMessage{
+.MyCart_EmptyMessageWrapper{
   justify-content: center;
   align-items: center;
   height: 50vh;
