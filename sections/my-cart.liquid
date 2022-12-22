@@ -192,7 +192,7 @@
                 <p class="">Zwischensumme</p>
                 <p class="MyCart_FinalPrice" data-ajax-cart-bind-state="cart.total_price | money_with_currency">{{ cart.total_price | money_with_currency }}</p>
               </div>
-              <button class="MyCart_CheckoutButton button-primary product-form--atc-button" 
+              <button class="MyCart_CheckoutButton {{ theme_button_style }}" 
                       type="submit" 
                       name="checkout"
                       form="MyCart_Form">
