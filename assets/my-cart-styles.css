@@ -490,8 +490,10 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
   border: 1px solid #a7a2d6;
   font-family: Nunito Sans,sans-serif;
   color: #1d1d1d;
-  border: 1px solid var(--color-bett-border);
   width: 100%;
+}
+.MyCartUpsells_Select, .MyCartUpsells_Select > option {
+  border: 1px solid var(--color-bett-border);
 }
 @media only screen and (min-width: 720px){
   .MyCartUpsells_Select{
