@@ -400,17 +400,13 @@
     for (var i = 0; i < selectedUpsell.variants.length; i++) {
       let variant = selectedUpsell.variants[i];
       variantId = variant.id;
-      //console.log("variantId" + variantId);
       let variantPrice = variant.price;
       let variantComparePrice = variant.compare_at_price;
       let priceElement = document.querySelector(`#formUpsell_${productId} .MyCart_UpsellPrice`);
       let comparePriceElement = document.querySelector(`#formUpsell_${productId} .MyCart_ComparedPrice`);
       let variantAvailability = variant.available;
-      let variantImagePosition = variant.featured_image.position;
-      console.log("variantImagePosition: " + variantImagePosition);
+      let variantImagePosition = variant.featured_image?.position;
       let variantImage = selectedUpsell.images[variantImagePosition - 1];
-      //console.log("variantImage");
-      //console.log(variantImage);
       
       variantPrice = variantPrice / 100;
       variantComparePrice = variantComparePrice / 100;
