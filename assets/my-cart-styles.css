@@ -539,9 +539,6 @@ button.MyCart_CheckoutButton{
   .MyCartUpsells_SuggestedContainer{
     width: 440px;
   }
-  .MyCartUpsells_Select{
-    width: 350px;
-  }
   .MyCartUpsells_SuggestedImageWrapper{
     max-width: 70px;
     margin: 0 15px;
