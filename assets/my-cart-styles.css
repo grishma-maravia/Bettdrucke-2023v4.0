@@ -579,9 +579,6 @@ button.MyCart_CheckoutButton{
   .MyCartUpsells_SuggestedContainer, .MyCartUpsells_MainContainer, .MyCartUpsells_MainContainer > form {
     width: 100%;
   }
-  .MyCartUpsells_Select{
-    width: 100%;
-  }
   .MyCartUpsells_SuggestedImageWrapper{
     max-width: 70px;
   }
