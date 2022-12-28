@@ -57,43 +57,57 @@
     });
   }
   
-  function addCartTotalDiscount() {   
-    const discountsWrapper = document.querySelector("#MyCart_DiscountWrapper");
-    const discounts = document.querySelectorAll(".MyCart_ItemDiscount");
-    if (discountsWrapper) {
-        discountsWrapper.remove();
-    }
+  function addCartTotalDiscount() {
+    const priceContainers = document.querySelectorAll(".MyCart_PriceContainer");
     
-    const totalCartWrapper = document.querySelector("#MyCart_TotalFinalWrapper");
-    if (totalCartWrapper) {
-      totalCartWrapper.insertAdjacentHTML("afterend",
-        `<div id="MyCart_DiscountWrapper" class="MyCart_DiscountInfo MyCart_FooterText MyCart_HighlightedText">
-            <span>Sie sparen  </span>
-            <p id="MyCart_ItemDiscountTotal"></p>
-        </div>`);
-    }
-    
-    let sum = 0;
-    let totalPrice = 0;
-    if (discounts) {
-      totalPrice = document.querySelector(".MyCart_FinalPrice");
-      if (totalPrice){
-        totalPrice = totalPrice.innerText;
-        totalPrice = totalPrice.replace("€", "").trim();
-        totalPrice = 0 + parseFloat(totalPrice.replace(".", "").replace(",", "."));
+    if (priceContainers.length > 0){
+      let totalItemDiscounted = 0;
+      let totalDiscounted = 0;
+      priceContainers.forEach(item => {
+        
+        let discountElement = item.children[1];
+        if (discountElement){
+          let total = item.children[0].innerText;
+          let discount = item.children[1].innerText;
+          
+
+          total = total.replace("€", "").trim();
+          total = 0 + parseFloat(total.replace(".", "").replace(",", "."));
+
+          discount = discount.replace("€", "").trim();
+          discount = 0 + parseFloat(discount.replace(".", "").replace(",", "."));
+
+          totalItemDiscounted = discount - total;
+          totalDiscounted = totalDiscounted + totalItemDiscounted;
+        }
+      });
+
+      totalDiscounted = Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(totalDiscounted);
+      
+      const discountsWrapper = document.querySelector("#MyCart_DiscountWrapper");
+      const discounts = document.querySelectorAll(".MyCart_ItemDiscount");
+      if (discountsWrapper) {
+          discountsWrapper.remove();
       }
       
-      discounts.forEach(element => {
-        let discount = element.innerText.replace("€", "").trim();
-        sum = sum + parseFloat(discount.replace(".", "").replace(",", "."));
-      });
-      sum = sum - totalPrice;
-      sum = Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(sum);
-    }
-    
-    const totalDiscountElement = document.querySelector("#MyCart_ItemDiscountTotal");
-    if (totalDiscountElement) {
-      totalDiscountElement.innerText = sum;
+      const totalCartWrapper = document.querySelector("#MyCart_TotalFinalWrapper");
+      if (totalCartWrapper) {
+        totalCartWrapper.insertAdjacentHTML("afterend",
+          `<div id="MyCart_DiscountWrapper" class="MyCart_DiscountInfo MyCart_FooterText MyCart_HighlightedText">
+              <span>Sie sparen  </span>
+              <p id="MyCart_ItemDiscountTotal"></p>
+          </div>`);
+      }
+      
+      const totalDiscountElement = document.querySelector("#MyCart_ItemDiscountTotal");
+      if (totalDiscountElement && totalDiscounted != '0,00 €') {
+        totalDiscountElement.innerText = totalDiscounted;
+      } else {
+        if (discountsWrapper){
+          console.log("no discounts!");
+          document.querySelector("#MyCart_DiscountWrapper").innerHTML = '';       
+        }
+      }
     }
   }
   
