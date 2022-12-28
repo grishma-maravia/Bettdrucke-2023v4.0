@@ -10,6 +10,8 @@
   --color-dark-green: #008f2d;
   --color-light-green: #c6ffc6;
   --color-light-border: rgba(0,0,0,0.1);
+
+  --color-bett-border: #a7a2d6;
 }
 /* Animation when cart opens */
 @keyframes mycartmove {
