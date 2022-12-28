@@ -413,6 +413,14 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
 .MyCartUpsells_SubmitButton{
   width: 100%;
 }
+.MyCartUpsells_SubmitButton[disabled], .MyCartUpsells_SubmitButton[disabled]:before, .MyCartUpsells_SubmitButton[disabled]:hover{
+  background-color: var(--color-bett-dark-disabled);
+  border: 1px solid var(--color-bett-dark-disabled);
+  color: var(--color-bett-light-disabled);
+}
+.MyCartUpsells_SubmitButton[disabled]:hover{
+  cursor: not-allowed;
+}
 .MyCartUpsells_Bttn{
   height: unset;
   padding: 10px 20px !important;
