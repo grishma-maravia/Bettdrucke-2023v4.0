@@ -164,7 +164,7 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
 }
 .MyCart_CloseSlideCart{
   position: absolute;
-  right: 20px;
+  right: 30px;
 }
 .MyCart_CloseSlideCart path{
   fill: #312783;
