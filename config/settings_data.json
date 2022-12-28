@@ -528,6 +528,22 @@
               "enable_upsell_4": false,
               "upsell_product_4": ""
             }
+          },
+          "d89473d0-2fe7-4b20-90db-d80f67c5624c": {
+            "type": "Trigger",
+            "settings": {
+              "product_list": [
+                "test-product"
+              ],
+              "enable_upsell_1": true,
+              "upsell_product_1": "testing-personalisiertes-herzkissen",
+              "enable_upsell_2": false,
+              "upsell_product_2": "",
+              "enable_upsell_3": false,
+              "upsell_product_3": "",
+              "enable_upsell_4": false,
+              "upsell_product_4": ""
+            }
           }
         },
         "block_order": [
@@ -542,7 +558,8 @@
           "8e73c279-d553-4d49-9ae7-4b95e50c336e",
           "51329c6d-0291-41a4-8729-bc16de190337",
           "78656392-ebd9-4e24-a5d6-1ae8b67c32d9",
-          "bfb0f749-7602-4af8-a7e7-0b0b1abe2d95"
+          "bfb0f749-7602-4af8-a7e7-0b0b1abe2d95",
+          "d89473d0-2fe7-4b20-90db-d80f67c5624c"
         ],
         "settings": {
         }
@@ -575,30 +592,6 @@
         "type": "shopify:\/\/apps\/live-product-options\/blocks\/app-embed\/88bfdf40-5e27-4962-a966-70c8d1e87757",
         "disabled": false,
         "settings": {
-        }
-      },
-      "15014643352720781508": {
-        "type": "shopify:\/\/apps\/gift-wrap-and-options-wrapped\/blocks\/app-embed\/1714fc7d-e525-4a14-8c3e-1b6ed95734c5",
-        "disabled": true,
-        "settings": {
-          "cart_widget_enabled": false,
-          "item_widget_enabled": true,
-          "product_widget_enabled": true,
-          "message_enabled": false,
-          "sender_recipient": "none",
-          "message_max_length": 250,
-          "show_pricing": false,
-          "variant_selector_type": "select",
-          "disabled_checkbox": false,
-          "font_scale": 100,
-          "font_color": "#000000",
-          "checkbox_radio_color": "rgba(0,0,0,0)",
-          "background_color": "#ffffff",
-          "border_color": "#000000",
-          "border_radius": 0,
-          "cart_widget_text_alignment": "--wrapped-checkbox--label-right",
-          "item_widget_text_alignment": "--wrapped-checkbox--label-left",
-          "product_widget_text_alignment": "--wrapped-checkbox--label-left"
         }
       }
     }
