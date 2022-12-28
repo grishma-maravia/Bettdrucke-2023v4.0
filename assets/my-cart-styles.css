@@ -12,6 +12,8 @@
   --color-light-border: rgba(0,0,0,0.1);
 
   --color-bett-border: #a7a2d6;
+  --color-bett-dark-disabled: #696969;
+  --color-bett-light-disabled: white;
 }
 /* Animation when cart opens */
 @keyframes mycartmove {
