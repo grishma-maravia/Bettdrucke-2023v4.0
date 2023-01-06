@@ -1,0 +1,108 @@
+{% style %}
+  .voucher_wrapper{
+    position: relative;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  .white-rabat{
+    background:#fff;
+    padding:10px;
+  	width: fit-content;
+    margin: -10px auto 20px auto;
+    width: max-content;
+  }
+  .tresc{
+  	border: 2px solid #525252;
+    padding: 20px 20px 10px 20px;
+    border-style: dashed;
+    width: 80%;
+    margin: 25px auto 0;
+    background: #e6f5fc;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px 10px #e6f5fc;
+    display: inline-block;
+  }
+  .tresc h4{
+    color: #312783;
+  }
+  .image-rabat img, .mob-img img {
+      max-width: 100%;
+  }
+  @media only screen and (max-width: 640px){  
+    .voucher_wrapper {
+      margin: 0 auto 50px;
+    }
+    .tresc{
+      margin-top: 0;
+    }
+  }
+{% endstyle %}
+
+<div class="voucher_wrapper">
+  <div class="tresc">
+    <h4>{{ section.settings.discount_heading }}</h4>
+    <p>{{ section.settings.discount_subheading }}</p>
+    <div class="white-rabat"><b>{{ section.settings.discount_code }}</b></div>
+    <a href="{{ section.settings.button_url }}" class="button-primary">{{ section.settings.button_text }}</a>
+    <p style="margin-bottom: 30px;">
+      Verfällt am <b>{% assign days = 5 | times: 86400 %}{{ "now" | date: "%s" | plus: days | date: "%-d.%m.%Y" }}</b>
+    </p>
+    {{ section.settings.content }}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Voucher",
+    "settings": [
+      {
+        "type": "text",
+        "id": "discount_heading",
+        "label": "Discount heading",
+        "default": "5€ Rabatt für Ihren personalisierten Druck!"
+      },
+      {
+        "type": "text",
+        "id": "discount_subheading",
+        "label": "Discount subheading",
+        "default": "Ihr Bettdrucke Rabattcode"
+      },
+      {
+        "type": "text",
+        "id": "discount_code",
+        "label": "Discount subheading",
+        "default": "BETT5"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text",
+        "default": "JETZT EINLÖSEN"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button link"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content",
+        "default": "<p>Durch das Klicken auf die Schaltfläche JETZT EINLÖSEN wird der Rabattcode automatisch zu Ihrem Warenkorb hinzugefügt uns ist im Bestellprozess sichtbar. *Gültig für Bestellungen ab 50€ Einkaufswert.</p>"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Voucher"
+      }
+    ],
+    "templates": ["page"]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

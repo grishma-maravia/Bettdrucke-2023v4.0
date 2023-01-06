@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "3f6681b9-c879-4db8-b553-0fcefca9faa4": {
+      "type": "dynamic-rich-text",
+      "settings": {
+        "width": "regular",
+        "title": "Jetzt sparen Sie mit dem Rabattcode von Bettdrucke.de!",
+        "text": "",
+        "heading_size": "medium",
+        "text_alignment": "center"
+      }
+    },
+    "803eddcb-b23b-45ae-aca6-b15173b14693": {
+      "type": "dynamic-image-with-text",
+      "settings": {
+        "section_heading": "",
+        "image": "shopify:\/\/shop_images\/Desktop_Rabattcode_1.jpg",
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "left",
+        "mobile_image_alignment": "top",
+        "heading": "Jetzt weitere Rabatte sichern!",
+        "subheading": "<p>Sichern Sie sich mit unserem Bettdrucke Rabattcode weitere Prozente auf Ihre Bestellung! Ob 3DKissen, personalisierte Decken oder Kissen für Sie oder Ihre Liebsten - der Rabattcode ist für alle Produkte auf Bettdrucke.de gültig!<\/p>",
+        "text_alignment": "left",
+        "button_label": "Button",
+        "button_link": ""
+      }
+    },
+    "19b25cbc-f227-4710-a338-fe6fd4cd4329": {
+      "type": "dynamic-image-with-text",
+      "settings": {
+        "section_heading": "",
+        "image": "shopify:\/\/shop_images\/Desktop_Rabattcode_2.jpg",
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "right",
+        "mobile_image_alignment": "top",
+        "heading": "Mit Bettdrucke Rabattcode sparen und individuelle Bettwäsche und Kissen zaubern!",
+        "subheading": "<p>Einfallsreiche und individuelle Geschenkideen für Familie und Freunde oder eine ganz persönliche Erinnerung an die schönsten Momente mit unseren Decken und Kissen von Bettdrucke -<br\/>Einfach bestellen und mit Rabattcode sparen!<\/p>",
+        "text_alignment": "left",
+        "button_label": "Button",
+        "button_link": ""
+      }
+    },
+    "1efa749f-8a7e-4959-a668-c2c1affb62f3": {
+      "type": "voucher",
+      "settings": {
+        "discount_heading": "5€ Rabatt für Ihren personalisierten Druck!",
+        "discount_subheading": "Ihr Bettdrucke Rabattcode",
+        "discount_code": "BETT5",
+        "button_text": "JETZT EINLÖSEN",
+        "button_url": "",
+        "date": "XX.XX.XXXX",
+        "content": "<p>Durch das Klicken auf die Schaltfläche JETZT EINLÖSEN wird der Rabattcode automatisch zu Ihrem Warenkorb hinzugefügt uns ist im Bestellprozess sichtbar.<\/p><p>*Gültig für Bestellungen ab 50€ Einkaufswert.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "3f6681b9-c879-4db8-b553-0fcefca9faa4",
+    "803eddcb-b23b-45ae-aca6-b15173b14693",
+    "19b25cbc-f227-4710-a338-fe6fd4cd4329",
+    "1efa749f-8a7e-4959-a668-c2c1affb62f3"
+  ]
+}
