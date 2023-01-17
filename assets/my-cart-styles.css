@@ -184,7 +184,7 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
 .MyCart_QuantityItemWrapper{
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 .MyCart_RemoveItem{
   position: absolute;
