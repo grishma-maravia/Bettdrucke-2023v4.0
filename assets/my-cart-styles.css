@@ -636,3 +636,11 @@ button.MyCart_CheckoutButton{
 .UpProdOpt_infoWr.MyCartUpsells_infoWr div[data-controller="wrapped-product"]{
   display: none;
 }
+
+.MyCart_ContentItem-wrapper {
+  display: flex;
+}
+
+.MyCart_ValueItem {
+  margin-right: 5px;
+}
