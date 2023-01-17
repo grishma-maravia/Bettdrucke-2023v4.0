@@ -644,8 +644,10 @@ button.MyCart_CheckoutButton{
 .MyCart_ValueItem {
   margin-right: 10px;
 
-  &::after {
-    content: "|";
-    display: inline-block;
-  }
+  &
+}
+
+.MyCart_ValueItem:after {
+  content: "|";
+  display: inline-block;
 }
