@@ -642,5 +642,10 @@ button.MyCart_CheckoutButton{
 }
 
 .MyCart_ValueItem {
-  margin-right: 5px;
+  margin-right: 10px;
+
+  &::after {
+    content: "|";
+    display: inline-block;
+  }
 }
