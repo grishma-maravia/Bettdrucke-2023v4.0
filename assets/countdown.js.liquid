@@ -51,7 +51,7 @@
     
     {% if settings.announcement_countdown_enable %}
       countdowns.forEach(item => {
-        item.innerHTML = `<span class="countdown_days"><span class="countdown_text" style="padding-left:3px">${days}</span>` + "<span class=`countdown_text-name`>T " + `</span></span>` + `<span class="countdown_text">${hours}</span>` + `<span class="countdown_text-name">` + "Std "
+        item.innerHTML = `<span class="countdown_days"><span class="countdown_text" style="padding-left:3px">${days}</span>` + `<span class="countdown_text-name">`"T " + `</span></span>` + `<span class="countdown_text">${hours}</span>` + `<span class="countdown_text-name">` + "Std "
       + `</span><span class="countdown_text">${minutes}</span><span class="countdown_text-name">` + "Min " + `</span><span class="countdown_text">${seconds}</span><span class="countdown_text-name">` + "S " + `</span>`;
       });
     {% endif %}
