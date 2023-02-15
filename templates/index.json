@@ -113,7 +113,9 @@
         "highlight-3"
       ],
       "settings": {
+        "heading": "",
         "section_spacing": false,
+        "is_stars": true,
         "section_width": "full-width",
         "icon_layout": "center",
         "title_color": "#1d1d1d",
@@ -360,7 +362,9 @@
         "16445725930292e9c3-1"
       ],
       "settings": {
+        "heading": "",
         "section_spacing": false,
+        "is_stars": false,
         "section_width": "full-width",
         "icon_layout": "center",
         "title_color": "#1d1d1d",
