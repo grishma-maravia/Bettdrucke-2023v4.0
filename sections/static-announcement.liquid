@@ -6,6 +6,28 @@
   data-section-type="static-announcement">
 </script>
 
+<style>
+  .countdown-announcement.uppercase {
+    text-transform: uppercase;
+  }
+
+  .countdown-announcement.capitalize {
+    text-transform: capitalize;
+  } 
+
+  .countdown-announcement.lowercase {
+    text-transform: lowercase;
+  }
+
+  .countdown-announcement.bold {
+    font-weight: bold;
+  } 
+
+  .countdown-announcement.normal {
+    font-weight: normal;
+  }
+</style>
+
 {% assign show_everywhere = false %}
 {% assign homepage_only = false %}
 
@@ -66,7 +88,7 @@
         <div class="announcement-bar-text">
           {{ section.settings.announcement_text }}
           {% if settings.announcement_countdown_enable %}
-            <span id="countdown_announcement" class="{{ settings.timer_text_capitals }} {{ settings.timer_text_fw }}"></span>
+            <span id="countdown_announcement" class="countdown-announcement {{ settings.timer_text_capitals }} {{ settings.timer_text_fw }}"></span>
           {% endif %}
         </div>
       {% endif %}
