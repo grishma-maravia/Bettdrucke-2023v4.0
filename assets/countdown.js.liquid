@@ -51,13 +51,13 @@
     
     {% if settings.announcement_countdown_enable %}
       countdownAnnouncement.innerHTML = `<span class="countdown_days"><span class="countdown_text">${days}</span><span class="countdown-text_name">` + "T " + `</span></span>` + `<span class="countdown_text">${hours}</span><span class="countdown-text_name">` + "Std "
-      + `</span><span class="countdown_text">${minutes}</span><span class="countdown-text_name">` + "Min " + `</span><span class="countdown_text">${seconds}</span>` + "S ";
+      + `</span><span class="countdown_text">${minutes}</span><span class="countdown-text_name">` + "Min " + `</span><span class="countdown_text">${seconds}</span><span class="countdown-text_name">` + "S " + `</span>`;
     {% endif %}
 
     if (countdownProduct){
       {% if settings.product_countdown_enable %}
-        countdownProduct.innerHTML = `<span>{{ settings.countdown_product_text }} </span><span class="countdown_days"><span class="countdown_text">${days}</span>` + "T " + `</span>` + `<span class="countdown_text">${hours}</span>` + "STD "
-      + `<span class="countdown_text">${minutes}</span>` + "MIN " + `<span class="countdown_text">${seconds}</span>` + "S ";
+        countdownProduct.innerHTML = `<span>{{ settings.countdown_product_text }} </span><span class="countdown_days"><span class="countdown_text">${days}</span><span class="countdown-text_name">` + "T " + `</span></span>` + `<span class="countdown_text">${hours}</span><span class="countdown-text_name">` + "Std "
+      + `</span><span class="countdown_text">${minutes}</span><span class="countdown-text_name">` + "Min " + `</span><span class="countdown_text">${seconds}</span><span class="countdown-text_name">` + "S " + `</span>`;
       {% endif %}
     }
 
