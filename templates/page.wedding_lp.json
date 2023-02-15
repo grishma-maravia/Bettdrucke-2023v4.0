@@ -2,11 +2,98 @@
   "sections": {
     "main": {
       "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "a681f1dc-ee00-4797-94d8-d9eaded305bd": {
+      "type": "image-heading",
+      "settings": {
+        "text_title": "Momente festhalten für die Ewigkeit",
+        "text_subtitle": "Mit Ihrem ganz persönlich und indivudell hergestellten Kissen, Bettwäsche und Leinwänden von Bettdrucke.de!"
+      }
+    },
+    "9b11f165-e7ce-40ff-9295-d6ecaa38492c": {
+      "type": "dynamic-rich-text",
+      "settings": {
+        "width": "regular",
+        "title": "Eine ganz persönliche Erinnerung",
+        "text": "<p>Du suchst ein ganz persönliches Hochzeitsgeschenk für deine Freunde oder möchtest den schönsten Tag in deinem Leben für die Ewigkeit festhalten? Mit unseren ganz individuellen Kissen und Bettwaren halten wir deinen Lieblingsmoment für die Ewigkeit fest!<\/p>",
+        "heading_size": "medium",
+        "text_alignment": "center"
+      }
+    },
+    "451a58bf-4abe-47d9-81fe-3e0545e1cf4c": {
+      "type": "dynamic-image-with-text",
+      "settings": {
+        "section_heading": "",
+        "image": "shopify:\/\/shop_images\/Product_1_bedding.jpg",
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "left",
+        "mobile_image_alignment": "top",
+        "heading": "Personalisierte Hochzeitsgeschenke",
+        "subheading": "<p>Werde kreativ! Du suchst noch das passende Hochzeitsgeschenk? Du möchtest deinen Schatz mit einem ganz persönlichen Geschenk zu eurem großen Tag überraschen? Dann schenke etwas ganz besonderes! Ganz einfach dein Foto mit deinem Lieblingsmenschen hochladen und den Moment dank personalisierter Bettwäsche, Kissen und Decken für die Ewigkeit festhalten!<\/p>",
+        "text_alignment": "left",
+        "button_label": "Mehr erfahren",
+        "button_link": "shopify:\/\/collections\/bettwasche"
+      }
+    },
+    "41da8b31-dcb1-4657-9390-81c63744cc9d": {
+      "type": "dynamic-image-with-text",
+      "settings": {
+        "section_heading": "",
+        "image": "shopify:\/\/shop_images\/Product_2_3D_pillow.jpg",
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "right",
+        "mobile_image_alignment": "top",
+        "heading": "3D Kissen für die Ewigkeit",
+        "subheading": "<p>Ein einzigartiges und persönliches Hochzeitsgeschenk für das glückliche Paar! Du bist auf der Suche nach dem perfekten Hochzeitsgeschenk? Ein ganz individuelles 3DKissen ist perfekt und eine ganz besondere Erinnerung an den Hochzeitstag! <\/p>",
+        "text_alignment": "left",
+        "button_label": "Mehr erfahren",
+        "button_link": "shopify:\/\/collections\/3d-kissen"
+      }
+    },
+    "c4b7fb8c-5ff1-43b4-b652-b4cf987751fc": {
+      "type": "voucher",
+      "settings": {
+        "discount_heading": "5€ Rabatt für Ihren personalisierten Druck!",
+        "discount_subheading": "Ihr Bettdrucke Rabattcode",
+        "discount_code": "HEIRATEN5",
+        "button_text": "Jetzt einlösen",
+        "button_url": "",
+        "content": "<p>Durch das Klicken auf die Schaltfläche \"JETZT EINLÖSEN\" wird der Rabattcode automatisch zu Ihrem Warenkorb hinzugefügt uns ist im Bestellprozess sichtbar. <\/p><p><\/p><p><em>*Gültig für Bestellungen ab 50€ Einkaufswert.<\/em><\/p>"
+      }
+    },
+    "74c3a13d-c596-4f07-b67e-78938583b46b": {
+      "type": "dynamic-blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "blog": "",
+        "show_date": true,
+        "show_author": false,
+        "show_excerpt": true
+      }
+    },
+    "63270944-5f63-455a-afa7-da9795b3a983": {
+      "type": "upsell-product-options",
+      "disabled": true,
       "settings": {
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "a681f1dc-ee00-4797-94d8-d9eaded305bd",
+    "9b11f165-e7ce-40ff-9295-d6ecaa38492c",
+    "451a58bf-4abe-47d9-81fe-3e0545e1cf4c",
+    "41da8b31-dcb1-4657-9390-81c63744cc9d",
+    "c4b7fb8c-5ff1-43b4-b652-b4cf987751fc",
+    "74c3a13d-c596-4f07-b67e-78938583b46b",
+    "63270944-5f63-455a-afa7-da9795b3a983"
   ]
 }
