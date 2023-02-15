@@ -50,15 +50,16 @@
     var seconds = Math.floor((distanceNow % (1000 * 60)) / 1000);
     
     {% if settings.announcement_countdown_enable %}
-      countdownAnnouncement.innerHTML = `<span class="countdown_days"><span class="countdown_text">${days}</span><span class="countdown_text-name">` + "T " + `</span></span>` + `<span class="countdown_text">${hours}</span><span class="countdown_text-name>"` + "STD "
-      + `</span><span class="countdown_text">${minutes}</span><span class="countdown_text-name>"` + "MIN " + `</span><span class="countdown_text">${seconds}</span><span class="countdown-text-name>"` + "S "`</span>`;
+      countdownAnnouncement.innerHTML = `<span class="countdown_days"><span class="countdown_text">${days}</span>` + "T " + `</span>` + `<span class="countdown_text">${hours}</span>` + "STD "
+      + `<span class="countdown_text">${minutes}</span>` + "MIN " + `<span class="countdown_text">${seconds}</span>` + "S ";
     {% endif %}
 
     if (countdownProduct){
       {% if settings.product_countdown_enable %}
-        countdownProduct.innerHTML = `<span>{{ settings.countdown_product_text }} </span><span class="countdown_days"><span class="countdown_text">${days}</span><span class="countdown_text-name">` + "T " + `</span></span>` + `<span class="countdown_text">${hours}</span><span class="countdown_text-name">` + "STD "
-      + `</span><span class="countdown_text">${minutes}</span><span class="countdown_text-name">` + "MIN " + `</span><span class="countdown_text">${seconds}</span><span class="countdown_text-name">` + "S "`</span>`;
+        countdownProduct.innerHTML = `<span>{{ settings.countdown_product_text }} </span><span class="countdown_days"><span class="countdown_text">${days}</span>` + "T " + `</span>` + `<span class="countdown_text">${hours}</span>` + "STD "
+      + `<span class="countdown_text">${minutes}</span>` + "MIN " + `<span class="countdown_text">${seconds}</span>` + "S ";
       {% endif %}
+    }
 
   }, 1000);
 {% endif %}
