@@ -50,8 +50,8 @@
     var seconds = Math.floor((distanceNow % (1000 * 60)) / 1000);
     
     {% if settings.announcement_countdown_enable %}
-      countdownAnnouncement.innerHTML = `<span class="countdown_days"><span class="countdown_text">${days}</span>` + "T " + `</span>` + `<span class="countdown_text">${hours}</span>` + "STD "
-      + `<span class="countdown_text">${minutes}</span>` + "MIN " + `<span class="countdown_text">${seconds}</span>` + "S ";
+      countdownAnnouncement.innerHTML = `<span class="countdown_days"><span class="countdown_text">${days}</span><span class="countdown-text_name">` + "T " + `</span></span>` + `<span class="countdown_text">${hours}</span><span class="countdown-text_name">` + "STD "
+      + `</span><span class="countdown_text">${minutes}</span><span class="countdown-text_name">` + "MIN " + `</span><span class="countdown_text">${seconds}</span>` + "S ";
     {% endif %}
 
     if (countdownProduct){
