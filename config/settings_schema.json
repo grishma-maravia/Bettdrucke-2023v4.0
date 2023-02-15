@@ -972,6 +972,40 @@
         "info": "November 21, 2022 00:00 GMT+0100"
       },
       {
+        "type": "select",
+        "id": "timer_text_capitals",
+        "label": "Timer Text capitals",
+        "options": [
+          {
+            "value": "capitalize",
+            "label": "capitalize"
+          },
+          {
+            "value": "uppercase",
+            "label": "uppercase"
+          },
+          {
+            "value": "lowercase",
+            "label": "lowercase"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "timer_text_fw",
+        "label": "Timer Text font weight",
+        "options": [
+          {
+            "value": "bold",
+            "label": "bold"
+          },
+          {
+            "value": "normal",
+            "label": "normal"
+          }
+        ]
+      },
+      {
         "type": "checkbox",
         "id": "enable_days_view",
         "label": "Hide days on Countdown",
