@@ -72,10 +72,9 @@
     "continue_url_cart": true,
     "continue_url_404": true,
     "countdown_date": "November 21, 2023 00:00 GMT+0100",
-    "timer_text_capitals": "capitalize",
     "enable_days_view": true,
     "border_radius_countdown": 4,
-    "announcement_countdown_enable": true,
+    "announcement_countdown_enable": false,
     "background_countdown": "#3baada",
     "text_color_countdown": "#ffffff",
     "product_countdown_enable": false,
@@ -295,7 +294,7 @@
       "static-announcement": {
         "type": "static-announcement",
         "settings": {
-          "show_announcement": true,
+          "show_announcement": false,
           "homepage_announcement": false,
           "announcement_text": "<span style=\"font-weight:70;\"><span style=\"color:#3baada;font-weight:900\">WINTER  <\/span><span style=\"color:#283275;font-weight:900\">SALE! <\/span><\/span>🌲 <span style=\"margin-right:4px\">Bis zu 50% Rabatt auf alles! · Endet in<\/span>",
           "announcement_text_mobile": "",
