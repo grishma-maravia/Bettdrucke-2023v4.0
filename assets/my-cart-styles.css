@@ -138,7 +138,8 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
   background-color: var(--color-light-blue);
   border-bottom: 1px solid var(--color-light-border);
   z-index: 1;
-  padding-top: 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .MyCartUpsells_TitleInfoWr{
   text-decoration: none;
