@@ -57,7 +57,7 @@
                   <div class="MyCart_ContentItem-wrapper">
                     {% for option in item.options_with_values %}
                       {% if option.value != 'Default Title' %}
-                        <p class="MyCart_ValueItem">{{ option.value }}</p>
+                        <span class="MyCart_ValueItem">{{ option.value }}</span>
                       {% endif %}
                     {% endfor %}
                   </div>
