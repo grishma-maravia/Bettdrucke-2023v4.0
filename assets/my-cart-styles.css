@@ -186,8 +186,11 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
 }
 .MyCart_ContentItem{
   width: fit-content;
-  padding-right: 30px;
   flex-grow: 1;
+}
+.MyCart_ContentItem h2{
+  padding-right: 90px;
+  min-height: 35px;
 }
 .MyCart_QuantityItemWrapper{
   display: flex;
