@@ -160,10 +160,16 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
 .MyCart_Heading{
   text-align: center;
   text-transform: uppercase;
-  margin: 5px 0;
+  margin: 0;
   font-size: 14px;
   color: #312783;
   font-weight: 600;
+}
+.MyCart_Heading svg {
+  vertical-align: sub;
+  width: 20px;
+  margin-left: 5px;
+  height: auto;
 }
 .MyCart_CloseSlideCart{
   position: absolute;
@@ -175,7 +181,8 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
 .MyCart_ItemWrapper{
   display: inline-flex;
   border-top: 1px solid var(--color-light-border);
-  width: 100%
+  width: 100%;
+  position: relative;
 }
 .MyCart_ContentItem{
   width: fit-content;
