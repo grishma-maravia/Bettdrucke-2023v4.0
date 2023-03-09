@@ -196,8 +196,8 @@ body.js-my-cart-open .MyCartUpsells_SuggestedContainer{
 }
 .MyCart_RemoveItem{
   position: absolute;
-  right: 30px;
-  margin-top: -5px;
+  left: 20px;
+  top: 10px;
 }
 .MyCart_ImageItem{
   width: 70px !important;
@@ -315,6 +315,23 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
   font-size: 17px;
 }
 /* Text style */
+span.MyCart_ValueItem{
+  position: relative;
+  padding-left: 10px;
+  display: inline-block;
+}
+span.MyCart_ValueItem:first-child{
+  padding-left: 0;
+}
+span.MyCart_ValueItem:after{
+  content: '|';
+  position: absolute;
+  margin: 0 5px;
+  line-height: 16px;
+}
+span.MyCart_ValueItem:last-child:after{
+  display: none;
+}
 .MyCart_ValueItem{
   margin: 0;
   line-height: 1.2;
@@ -356,10 +373,18 @@ input.MyCart_InputItem::-webkit-inner-spin-button, input.MyCart_InputItem::-webk
 .MyCart_PriceContainer{
   text-align: right;
   padding-left: 10px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
 }
 /* Cart messages */
 .MyCart_Message{
   padding: 5px 20px;
+}
+.MyCart_Message .icon-delivery{
+  font-size: 16px;
+  vertical-align: text-bottom;
+  margin-right: 3px;
 }
 .MyCart_MessageContainer{
   text-align: center;
